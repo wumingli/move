@@ -1,0 +1,57 @@
+/*公用样式*/
+.clear {
+  display: block;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.ellipsis {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-break: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.indent {
+  text-indent: 2em;
+}
+.text-none {
+  text-decoration: none;
+}
+.text-none:hover {
+  text-decoration: none;
+}
+.inner-box {
+  width: 1000px;
+  margin: 0 auto;
+}
+.title1 {
+  width: 200px;
+  height: 59px;
+  padding: 0 70px 0 44px;
+  font-size: 26px;
+  color: #fff;
+  line-height: 59px;
+}
+.title1 i {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.title1 .icon1 {
+  background: url("../img/icon1.png") no-repeat 0 0;
+}

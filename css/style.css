@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/*common style*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul {
+    list-style: none
+}
+
+:focus {
+    outline: 0
+}
+
+a img {
+    border: 0
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    vertical-align: middle
+}
+
+table {
+    empty-cells: show
+}
+
+ins {
+    text-decoration: none
+}
+
+del {
+    text-decoration: line-through
+}
+
+em {
+    font-style: normal
+}
+
+button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=file] > input[type=button]::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Microsoft Yahei, Simsun;
+}
+
+.nav {
+    height: 113px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    float: left;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 5px solid #28abcc;
+}
+
+.nav .logo img {
+    margin-top: 13px;
+}
+
+.nav > ul {
+    float: right;
+    margin: 50px -15px 0 0;
+}
+
+.nav .bbs {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #666;
+    border: 1px solid #ff7900;
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.nav > ul > li {
+    float: left;
+    position: relative;
+    height: 40px;
+}
+
+.nav > ul > li > a {
+    font-size: 16px;
+    color: #666;
+    display: block;
+    padding: 0 20px 5px;
+}
+
+.subnav {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background: #fff;
+    border: 1px solid #afafaf;
+    padding: 10px 0;
+}
+
+.subnav em {
+    display: block;
+    width: 17px;
+    height: 8px;
+    background: url(../images/arr-top.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -8.5px;
+    top: -8px;
+    z-index: 2;
+}
+
+.subnav li {
+    height: 28px;
+    line-height: 28px;
+}
+
+.subnav li a {
+    padding: 0 5px;
+    text-align: center;
+    color: #666;
+}
+
+.subnav li a:hover {
+    border-bottom: 2px solid #;
+}
+
+.nav > ul > li.active > a,
+.subnav li a:hover,
+.subnav li.active a,
+.nav > ul > li:hover > a /* */  {
+    border-bottom: 2px solid #ff9433;
+}
+
+.nav > ul > li.hasSubNav:hover > a {
+    border: none;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.focus {
+    overflow: hidden;
+    height: 357px;
+}
+
+.ck-slide ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ck-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.ck-slide ul.ck-slide-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.ck-slide ul.ck-slide-wrapper li {
+    height: 357px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.ck-slidebox {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    z-index: 30;
+}
+
+.ck-slidebox ul {
+    height: 20px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ck-slidebox ul li {
+    float: left;
+    height: 12px;
+    margin: 4px 4px;
+}
+
+.ck-slidebox ul li em {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #fff;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.ck-slidebox ul li.current em {
+    background-color: #fe6500;
+}
+
+.ck-slidebox ul li em:hover {
+    background-color: #fe6500;
+}
+
+.f1 a,
+.f3 a {
+    display: block;
+    width: 144px;
+    height: 41px;
+    background: url(../images/f1.png);
+    position: absolute;
+    left: 0;
+    top: 257px;
+}
+
+.f1 a:hover {
+    background-image: url(../images/f1-hover.png);
+}
+
+.f3 a {
+    width: 142px;
+    height: 39px;
+    background-image: url(../images/f3.png);
+    left: 645px;
+}
+
+.f3 a:hover {
+    background-image: url(../images/f3-hover.png);
+}
+
+.green-bg {
+    background-color: #d4e2e0;
+}
+
+.green2-bg {
+    background-color: #e1ebea;
+}
+
+.wider {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+}
+
+.country {
+    height: 210px;
+}
+
+.country li {
+    float: left;
+    cursor: pointer;
+}
+
+.banner {
+    height: 200px;
+    background: url(../images/about-banner.jpg) center top no-repeat;
+}
+
+.service-banner {
+    background-image: url(../images/service-banner.jpg);
+}
+
+.fsq-banner {
+    background-image: url(../images/fsq-banner.jpg);
+}
+
+.qsf-banner {
+    background-image: url(../images/qsf-banner.jpg);
+}
+
+.country-container {
+    display: none;
+}

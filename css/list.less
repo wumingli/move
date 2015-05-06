@@ -1,0 +1,222 @@
+@import "common";
+/*投资列表*/
+.part1 {
+    width: 1280px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+.sidecol {
+    float: left;
+    width: 250px;
+    margin-right: 50px;
+}
+.maincol {
+    float: left;
+    width: 700px;
+}
+.country-nav {
+    width: 100%;
+    height: 38px;
+    border-bottom: 2px solid #34b5d0;
+    li {
+        float: left;
+        width: 140px;
+        height: 38px;
+        font-size: 18px;
+        line-height: 38px;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            .c(#666);
+            img, span {
+                display: inline-block;
+            }
+            img {
+                width: 38px;
+                height: 25px;
+                margin: 0 8px 0 25px;
+            }
+            .text {
+
+            }
+            .bor {
+                float: right;
+                color: #ccc;
+            }
+        }
+    }
+    .active {
+        a {
+            background: #34b5d0;
+            .c(#fff);
+            .bor {
+                display: none;
+            }
+        }
+    }
+}
+.search-option {
+    margin: 20px 0 10px 0;
+    background: #fff;
+    border: 1px solid #d6d4d4;
+    dl {
+        height: 38px;
+        padding: 0 20px;
+        font-size: 14px;
+        color: #333;
+        line-height: 38px;
+        border-bottom: 1px solid #d6d4d4;
+        dt {
+            float: left;
+            width: 75px;
+        }
+        dd {
+            float: left;
+            a {
+                display: inline-block;
+
+                height: 20px;
+                padding: 0 10px;
+                color: #333;
+                line-height: 20px;
+            }
+            .active {
+                color: #fff;
+                background: #ff6600;
+            }
+            select {
+                width: 136px;
+                height: 31px;
+                font-size: 14px;
+                color: #333;
+                background: url("../images/list/icon.png") no-repeat 0 0;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+            }
+        }
+    }
+}
+.search-active {
+    width: 654px;
+    padding: 0 23px;
+    font-size: 14px;
+    color: #333;
+    span {
+        display: block;
+        float: left;
+        height: 20px;
+        margin: 0 10px 5px 0;
+        line-height: 20px;
+    }
+    .s-option-t {
+        width: 128px;
+    }
+    .s-option {
+        float: left;
+        width: 515px;
+        span {
+            padding: 0 10px;
+            color: #fff;
+            background: #999;
+            em {
+                float: right;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.sort {
+    margin-bottom: 4px;
+    dl {
+        float: right;
+        height: 21px;
+        padding: 0 8px;
+        margin-left: 6px;
+        color: #333;
+        line-height: 21px;
+        background: #fff;
+        border: 1px solid #d6d4d4;
+    }
+    dt, dd {
+        display: block;
+        float: left;
+    }
+    dt {
+        margin-right: 7px;
+        font-size: 12px;
+    }
+    dd {
+        width: 7px;
+        height: 20px;
+        i {
+            display: block;
+            width: 7px;
+            height: 4px;
+            cursor: pointer;
+        }
+        .asc {
+            margin: 3px 0 4px 0;
+            &:after {
+                float: right;
+                content: "";
+                width: 0px;
+                height: 0px;
+                overflow: hidden;
+                //border-top: 5px solid transparent;
+                border-left: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom-color: #666;
+            }
+        }
+        .desc {
+            &:after {
+                float: right;
+                content: "";
+                width: 0px;
+                height: 0px;
+                overflow: hidden;
+                border-top: 5px solid transparent;
+                border-left: 5px solid transparent;
+                //border-bottom: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top-color: #666;
+            }
+        }
+    }
+    .active {
+        color: #fff;
+        background: #ff6600;
+        border: 1px solid #ff6600;
+        dd {
+            .asc {
+                &:after {
+                    border-bottom-color: #fff;
+                }
+            }
+            .desc {
+                &:after {
+                    border-top-color: #fff;
+                }
+            }
+        }
+    }
+}
+.house-list {
+    width: 100%;
+    border-top: 2px solid #34b5d0;
+    dt {
+
+    }
+}
+
+
+
+
+
+
+
