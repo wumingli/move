@@ -47,7 +47,7 @@ button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #fff;
     font-family: Microsoft Yahei, Simsun;
 }
 
@@ -300,4 +300,85 @@ body {
 
 .country-container {
     display: none;
+}
+
+
+/*Add at 2015-05-07*/
+.wrap-detail {
+    padding-top: 15px;
+    color: #333;
+}
+.wrap .article {
+    width: 650px;
+    float: left;
+    line-height: 24px;
+    font-size: 14px;
+}
+/*05投资列表-1*/
+div.pos {
+    font-size: 14px;
+    color: #333;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f4f4f4;
+}
+.pos a {
+    color: #333;
+}
+.wrapper-white-full {
+    width: 100%;
+    background-color: #fff;
+}
+.article-title {
+    font-size: 18px;
+    font: bold 18px/24px Microsoft Yahei, Simhei, Simsun;
+    color: #666;
+    float: left;
+    margin: 10px 0 20px;
+}
+.price-info {
+    float: right;
+    margin: 10px 0 20px;
+}
+.price-info li {
+    display: inline-block;
+    color: #666;
+    font-size: 16px;
+}
+.price-info li.red {
+    color: #f60;
+}
+.article-tab {
+    border-bottom: 2px solid #33a7d8;
+    font-size: 0;
+    margin-top: 20px;
+}
+.article-tab li {
+    display: inline-block;
+    border: 1px solid #33a7d8;
+    border-bottom: 0;
+    font-size: 16px;
+    height: 37px;
+    line-height: 37px;
+}
+.article-tab li.nob {
+    border-left: 0;
+    border-right: 0;
+}
+.article-tab li a {
+    display: block;
+    padding: 0 33px;
+    color: #333;
+}
+.article-tab li a:before {
+    
+}
+.article-tab li.active a {
+    background-color: #33a7d8;
+    color: #fff;
+}
+.content {
+    border: 1px solid #ccc;
+    border-top: 0;
+    padding: 15px 30px;
 }
