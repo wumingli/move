@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>关于我们——动不动 | 活用您的不动产</title>
-<meta name="description" content="不动产,海外置业,买房,房产">
-<meta name="keywords" content="动不动，活用您的不动产">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/list.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
+    <meta charset="utf-8">
+    <title>关于我们——动不动 | 活用您的不动产</title>
+    <meta name="description" content="不动产,海外置业,买房,房产">
+    <meta name="keywords" content="动不动，活用您的不动产">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
 <div class="wider header">
@@ -35,139 +35,477 @@
         <a href="" class="bbs">BBS论坛</a>
     </div>
 </div>
-<div class="banner service-banner"></div>
+<div class="banner list-banner"></div>
 <div class="part1">
-    <div class="wrap">
-        <div class="sidecol">
-            左侧
-        </div>
-        <div class="maincol">
-            <ul class="country-nav">
-                <li class="active">
-                    <a href="#">
-                        <span class="bor">|</span>
-                        <img src="images/list/england.png" />
-                        <span>英国</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="bor">|</span>
-                        <img src="images/list/america.png" />
-                        <span>美国</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="bor">|</span>
-                        <img src="images/list/canada.png" />
-                        <span>加拿大</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="bor">|</span>
-                        <img src="images/list/australia.png" />
-                        <span>澳洲</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/list/new-zealand.png" />
-                        <span>新西兰</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="search-option">
-                <dl>
-                    <dt>城市：</dt>
-                    <dd>
-                        <a href="#" class="active">全部</a>
-                        <a href="#">伦敦</a>
-                        <a href="#">利物浦</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>物业类型：</dt>
-                    <dd>
-                        <a href="#">全部</a>
-                        <a href="#" class="active">别墅（HOUSE）</a>
-                        <a href="#">公寓(CONDO)</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>房屋总价：</dt>
-                    <dd>
-                        <a href="#" class="active">全部</a>
-                        <a href="#">100万以下</a>
-                        <a href="#">100-300万</a>
-                        <a href="#">300-500万</a>
-                        <a href="#">700-900万</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>更多条件：</dt>
-                    <dd>
-                        <select>
-                            <option>卧室数量:</option>
-                            <option>1</option>
-                            <option>2</option>
-                        </select>
-                        <select>
-                            <option>使用面积</option>
-                            <option>100平米</option>
-                            <option>200平米</option>
-                        </select>
-                    </dd>
-                </dl>
-            </div>
-            <div class="search-active">
-                <span class="s-option-t">当前您的搜索条件：</span>
-                <div class="s-option">
-                    <span><em>X</em>别墅（HOUSE）</span>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="sort">
-                <dl>
-                    <dt>面积</dt>
-                    <dd>
-                        <i class="asc"></i>
-                        <i class="desc"></i>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>总价</dt>
-                    <dd>
-                        <i class="asc"></i>
-                        <i class="desc"></i>
-                    </dd>
-                </dl>
-                <dl class="active">
-                    <dt>发布时间</dt>
-                    <dd>
-                        <i class="asc"></i>
-                        <i class="desc"></i>
-                    </dd>
-                </dl>
-                <div class="clear"></div>
-            </div>
-            <div class="house-list">
-                <dl>
-                    <dt>
-                        <img src="images/banner01.jpg" />
-                    </dt>
-                    <dd>
-                        内容
-                    </dd>
-                </dl>
-            </div>
-            <div class="page">
-                翻页
-            </div>
-        </div>
-        <div class="clear"></div>
+<div class="wrap">
+<div class="sidecol">
+    <div class="s-title s-title1">
+        <i></i>
+        <span>房生钱贷款计算器</span>
     </div>
+    <div class="side-box">
+        <form class="fangdai-form">
+            <dl class="fd-row1">
+                <dt>房屋市值：</dt>
+                <dd class="market">
+                    <input type="text" class="market-ipt" value="500" />万元
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款成数：</dt>
+                <dd>
+                    <select class="fd-select1">
+                        <option>七成</option>
+                        <option>八成</option>
+                        <option>九成</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>年限：</dt>
+                <dd>
+                    <select class="fd-select1">
+                        <option>12个月</option>
+                        <option>24个月</option>
+                        <option>36个月</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款类型：</dt>
+            </dl>
+            <dl class="fd-row2">
+                <dd><label><input type="radio" name="daikuan" value="个人消费贷款" checked="checked" />个人消费贷款</label></dd>
+                <dd><label><input type="radio" name="daikuan" value="企业经营贷款" />企业经营贷款</label></dd>
+            </dl>
+            <dl class="fd-row3">
+                <dt>利率：</dt>
+                <dd>
+                    <select class="fd-select2">
+                        <option>基准利率1.2倍</option>
+                        <option>基准利率1.0倍</option>
+                        <option>基准利率0.8倍</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row4">
+                <dd>
+                    <input type="submit" value="计算" />
+                    <button>重置</button>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款总额：</dt>
+                <dd>
+                   <span class="sum"></span><span>元</span>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>每月还息：</dt>
+                <dd>
+                    <span class="sum"></span><span>元</span>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>合计还款：</dt>
+                <dd>
+                    <span class="sum"></span><span>元</span>
+                </dd>
+            </dl>
+        </form>
+    </div>
+
+    <div class="s-title s-title2">
+        <i></i>
+        <span>目标国汇率计算器</span>
+    </div>
+    <div class="side-box">
+        <form class="huilv-form">
+            <dl class="fd-row1">
+                <dt>持有货币：</dt>
+                <dd>
+                    <select class="fd-select1">
+                        <option>人民币</option>
+                        <option>美元</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>兑换货币：</dt>
+                <dd>
+                    <select class="fd-select1">
+                        <option>人民币</option>
+                        <option>美元</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>持有金额：</dt>
+                <dd class="sum-have">
+                    <input type="text" value="">人民币
+                </dd>
+            </dl>
+            <dl class="fd-row4">
+                <dd>
+                    <input type="submit" value="计算">
+                    <button>重置</button>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>兑换金额：</dt>
+                <dd class="sum-cash">
+                    <input type="text" value="">美元
+                </dd>
+            </dl>
+        </form>
+    </div>
+    <div class="s-title s-title3">
+        <i></i>
+        <span>海外房贷计算器</span>
+    </div>
+
+    <div class="s-title s-title4">
+        <i></i>
+        <span>客户购房能力评估</span>
+    </div>
+
+    <div class="s-title s-title5">
+        <i></i>
+        <span>投资回报率计算器</span>
+    </div>
+    <div class="wechat">
+        <img src="images/list/wechat.jpg" />
+        <dl>
+            <dt>动不动官方微信</dt>
+            <dd>关注我们，制定您的专属投资方案，实时了解海外最新房源和资讯</dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="move-wechat">公众微信号：movenomove</div>
+    </div>
+    <div class="side-box">
+        <form class="consult-form">
+            <p>快速咨询您感兴趣的房源</p>
+            <input type="text" placeholder="您的姓名" />
+            <input type="text" placeholder="手机号码" />
+            <input type="text" placeholder="您的邮箱" />
+            <textarea placeholder="填写您的购买意向"></textarea>
+            <input type="submit" value="联系经纪人" />
+        </form>
+    </div>
+</div>
+<div class="maincol">
+<ul class="country-nav">
+    <li class="active">
+        <a href="#">
+            <span class="bor">|</span>
+            <img src="images/list/england.png"/>
+            <span>英国</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="bor">|</span>
+            <img src="images/list/america.png"/>
+            <span>美国</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="bor">|</span>
+            <img src="images/list/canada.png"/>
+            <span>加拿大</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="bor">|</span>
+            <img src="images/list/australia.png"/>
+            <span>澳洲</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <img src="images/list/new-zealand.png"/>
+            <span>新西兰</span>
+        </a>
+    </li>
+</ul>
+<div class="search-option">
+    <dl>
+        <dt>城市：</dt>
+        <dd>
+            <a href="#" class="active">全部</a>
+            <a href="#">伦敦</a>
+            <a href="#">利物浦</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>物业类型：</dt>
+        <dd>
+            <a href="#">全部</a>
+            <a href="#" class="active">别墅（HOUSE）</a>
+            <a href="#">公寓(CONDO)</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>房屋总价：</dt>
+        <dd>
+            <a href="#" class="active">全部</a>
+            <a href="#">100万以下</a>
+            <a href="#">100-300万</a>
+            <a href="#">300-500万</a>
+            <a href="#">700-900万</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>更多条件：</dt>
+        <dd>
+            <select>
+                <option>卧室数量:</option>
+                <option>1</option>
+                <option>2</option>
+            </select>
+            <select>
+                <option>使用面积</option>
+                <option>100平米</option>
+                <option>200平米</option>
+            </select>
+        </dd>
+    </dl>
+</div>
+<div class="search-active">
+    <span class="s-option-t">当前您的搜索条件：</span>
+
+    <div class="s-option">
+        <span><em>X</em>别墅（HOUSE）</span>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="sort">
+    <dl>
+        <dt>面积</dt>
+        <dd>
+            <i class="asc"></i>
+            <i class="desc"></i>
+        </dd>
+    </dl>
+    <dl>
+        <dt>总价</dt>
+        <dd>
+            <i class="asc"></i>
+            <i class="desc"></i>
+        </dd>
+    </dl>
+    <dl class="active">
+        <dt>发布时间</dt>
+        <dd>
+            <i class="asc"></i>
+            <i class="desc"></i>
+        </dd>
+    </dl>
+    <div class="clear"></div>
+</div>
+<div class="house-list">
+    <dl class="h-active">
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <img src="images/banner01.jpg"/>
+        </dt>
+        <dd>
+            <div class="h-title">
+                <div class="rmb">¥ 323万元</div>
+                <a href="#">伦敦·温布尔登名宅官邸（最后一席）</a>
+            </div>
+            <div class="h-city">
+                <span class="dollar">52.9万美元</span>
+
+                <div class="city"><i></i><span>悉尼新南威尔士市州</span></div>
+            </div>
+            <ul class="h-info">
+                <li><i class="property"></i><span>物业类型：公寓</span></li>
+                <li><i class="area"></i><span>使用面积：155平米</span></li>
+                <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
+            </ul>
+        </dd>
+    </dl>
+</div>
+<!--翻页-->
+<div class="pagejump">
+    <a href="#" class="page-prev"><i></i></a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <span>...</span>
+    <a href="#">10</a>
+    <a href="#">11</a>
+    <a href="#" class="page-next"><i></i></a>
+    <span class="goto">跳转到
+        <input type="text" class="goto-input" />
+        <input type="button" class="submit" value="GO">
+    </span>
+    <span class="bar-number">总共111条</span>
+    <span class="page-number">共11页</span>
+</div>
+<!--翻页-->
+</div>
+<div class="clear"></div>
+</div>
 </div>
 
 

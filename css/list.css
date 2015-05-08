@@ -61,6 +61,10 @@
   margin: 0 auto;
   background: #f4f4f4;
 }
+.list-banner {
+  margin-bottom: 50px;
+  background: url("../images/list/banner-list.jpg") no-repeat center 0;
+}
 .sidecol {
   float: left;
   width: 250px;
@@ -70,6 +74,97 @@
   float: left;
   width: 700px;
 }
+/*左侧样式 开始*/
+.s-title {
+  width: 215px;
+  height: 40px;
+  padding-left: 35px;
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.s-title i {
+  display: block;
+  float: left;
+  width: 26px;
+  height: 27px;
+  margin: 6px 10px 0 0;
+  background: url("../images/list/icon.png") no-repeat;
+}
+.s-title1 {
+  background: #34b5d0;
+}
+.s-title1 i {
+  background-position: -104px -154px;
+}
+.s-title2 {
+  background: #64bc7f;
+}
+.s-title2 i {
+  background-position: -146px -153px;
+}
+.s-title3,
+.s-title4,
+.s-title5 {
+  margin-bottom: 20px;
+}
+.s-title3 {
+  background: #aabc64;
+}
+.s-title3 i {
+  background-position: -145px -183px;
+}
+.s-title4 {
+  background: #d9ae2a;
+}
+.s-title4 i {
+  background-position: -144px -218px;
+}
+.s-title5 {
+  background: #ff9900;
+}
+.s-title5 i {
+  background-position: -191px -154px;
+}
+.side-box {
+  width: 248px;
+  margin-bottom: 29px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.wechat {
+  width: 230px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background: #fd6d03;
+}
+.wechat img {
+  float: left;
+  width: 102px;
+  height: 102px;
+  margin-right: 10px;
+  border: 1px solid #ffe9d8;
+}
+.wechat dl {
+  float: left;
+  width: 116px;
+  font-size: 14px;
+  color: #fff;
+}
+.wechat dl dt {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+.wechat .move-wechat {
+  width: 210px;
+  height: 30px;
+  padding: 0 10px;
+  margin-top: 11px;
+  line-height: 30px;
+  color: #f60;
+  background: #fff;
+}
+/*左侧样式 结束*/
 .country-nav {
   width: 100%;
   height: 38px;
@@ -257,4 +352,344 @@
 .house-list {
   width: 100%;
   border-top: 2px solid #34b5d0;
+}
+.house-list dl {
+  padding: 25px 0;
+  overflow: hidden;
+  zoom: 1;
+  border-bottom: 1px dashed #bebebe;
+}
+.house-list dt,
+.house-list dd {
+  float: left;
+}
+.house-list dt {
+  width: 160px;
+  margin-right: 28px;
+}
+.house-list dt img {
+  width: 160px;
+  height: 120px;
+}
+.house-list dd {
+  width: 512px;
+}
+.house-list .h-title {
+  overflow: hidden;
+  zoom: 1;
+  color: #f60;
+  font-size: 18px;
+}
+.house-list .h-title .rmb {
+  float: right;
+}
+.house-list .h-title a {
+  display: block;
+  width: 400px;
+  color: #f60;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-break: normal;
+}
+.house-list .h-title a:hover {
+  text-decoration: underline;
+}
+.house-list .h-city {
+  overflow: hidden;
+  zoom: 1;
+  color: #666;
+  font-size: 14px;
+}
+.house-list .h-city .dollar {
+  float: right;
+}
+.house-list .h-city .city {
+  width: 400px;
+  margin-top: 10px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-break: normal;
+}
+.house-list .h-city .city i,
+.house-list .h-city .city span {
+  display: block;
+  float: left;
+}
+.house-list .h-city .city i {
+  width: 13px;
+  height: 19px;
+  margin-right: 5px;
+  background: url("../images/list/icon.png") no-repeat -7px -158px;
+}
+.house-list .h-info li {
+  float: left;
+  width: 210px;
+  margin: 10px 10px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+.house-list .h-info li i,
+.house-list .h-info li span {
+  display: block;
+  float: left;
+}
+.house-list .h-info li i {
+  width: 20px;
+  height: 15px;
+  margin: 4px 5px 0 0;
+  background: url("../images/list/icon.png") no-repeat;
+}
+.house-list .h-info li .property {
+  background-position: -4px -199px;
+}
+.house-list .h-info li .area {
+  background-position: -4px -230px;
+}
+.house-list .h-info li .type {
+  background-position: -57px -159px;
+}
+.house-list .h-info li .carport {
+  background-position: -59px -188px;
+}
+.house-list .h-active {
+  background: #fff;
+}
+/*翻页*/
+.pagejump {
+  margin: 40px 0 75px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+.pagejump a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 2px;
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  line-height: 24px;
+  border: 1px solid #ccc;
+}
+.pagejump .active {
+  color: #fff;
+  background: #28abcc;
+  border: 1px solid #28abcc;
+}
+.pagejump span {
+  height: 24px;
+  line-height: 24px;
+}
+.pagejump .page-prev i,
+.pagejump .page-next i {
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  background: url("../images/list/icon.png") no-repeat -63px -212px;
+}
+.pagejump .page-next i {
+  background-position: -65px -228px;
+}
+.pagejump .goto {
+  margin: 0 10px;
+}
+.pagejump .goto-input,
+.pagejump .submit {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  line-height: 24px;
+  text-align: center;
+  color: #666;
+  border: 1px solid #ccc;
+}
+.pagejump .goto-input {
+  margin-right: 5px;
+}
+/*房贷计算器*/
+.side-box .fangdai-form,
+.side-box .huilv-form {
+  margin: 20px 0;
+}
+.side-box dl {
+  height: 31px;
+  margin: 0 15px 10px 15px;
+  font-size: 16px;
+  color: #313538;
+  line-height: 31px;
+}
+.side-box dt,
+.side-box dd {
+  display: inline-block;
+  float: left;
+}
+.side-box .fd-row1 dt {
+  width: 80px;
+}
+.side-box .fd-row1 dd {
+  width: 138px;
+}
+.side-box .fd-row1 .market {
+  width: 136px;
+  height: 29px;
+  line-height: 29px;
+  border: 1px solid #d6d4d4;
+}
+.side-box .fd-row1 .market input {
+  width: 72px;
+  height: 29px;
+  padding: 0 5px;
+  margin-right: 10px;
+  color: #313538;
+  background: none;
+  border: none;
+  border-right: 1px solid #d6d4d4;
+}
+.side-box .fd-row1 .fd-select1 {
+  width: 136px;
+  height: 31px;
+  font-size: 16px;
+  color: #333;
+  background: url("../images/list/icon.png") no-repeat 0 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+.side-box .fd-row1 .sum {
+  display: inline-block;
+  float: left;
+  width: 113px;
+  height: 29px;
+  margin-right: 5px;
+  background: #ddd;
+  border: 1px solid #d6d4d4;
+}
+.side-box .fd-row1 .sum-have {
+  width: 136px;
+  height: 29px;
+  line-height: 29px;
+  border: 1px solid #d6d4d4;
+}
+.side-box .fd-row1 .sum-have input {
+  width: 72px;
+  height: 29px;
+  padding: 0 5px;
+  color: #313538;
+  background: none;
+  border: none;
+}
+.side-box .fd-row1 .sum-cash {
+  width: 136px;
+  height: 29px;
+  line-height: 29px;
+  background: #ddd;
+  border: 1px solid #d6d4d4;
+}
+.side-box .fd-row1 .sum-cash input {
+  width: 85px;
+  height: 29px;
+  padding: 0 5px;
+  color: #313538;
+  background: none;
+  border: none;
+}
+.side-box .fd-row2 dd {
+  float: left;
+  width: 48%;
+  margin-right: 7px;
+  font-size: 14px;
+}
+.side-box .fd-row2 dd:last-child {
+  margin-right: 0;
+}
+.side-box .fd-row2 dd input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin: 2px 2px 0 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: url("../images/list/icon.png") no-repeat -107px -211px;
+}
+.side-box .fd-row2 dd input[type="radio"]:checked {
+  background: url("../images/list/icon.png") no-repeat -107px -189px;
+}
+.side-box .fd-row3 .fd-select2 {
+  width: 170px;
+  height: 31px;
+  font-size: 16px;
+  color: #333;
+  background: url("../images/list/icon.png") no-repeat 0 -39px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+.side-box .fd-row4 {
+  padding: 0 15px 20px 15px;
+  margin: 18px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+.side-box .fd-row4 dd {
+  width: 218px;
+}
+.side-box .fd-row4 dd input,
+.side-box .fd-row4 dd button {
+  float: left;
+  width: 104px;
+  height: 35px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  border: 0;
+}
+.side-box .fd-row4 dd input[type="submit"] {
+  margin-right: 10px;
+  background: #28abcc;
+}
+.side-box .fd-row4 dd button {
+  background: #999;
+}
+.consult-form {
+  padding: 20px 15px;
+}
+.consult-form p {
+  font-size: 18px;
+  color: #666;
+}
+.consult-form input[type="text"],
+.consult-form textarea {
+  width: 198px;
+  padding: 0 10px;
+  margin-top: 12px;
+  font-size: 16px;
+  border: 1px solid #d6d4d4;
+}
+.consult-form input[type="text"] {
+  height: 29px;
+  line-height: 29px;
+}
+.consult-form textarea {
+  height: 110px;
+  padding: 5px 10px;
+}
+.consult-form input[type="submit"] {
+  width: 220px;
+  height: 36px;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #fff;
+  background: #f60;
+  border: none;
 }
