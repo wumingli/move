@@ -6,9 +6,11 @@
 <meta name="description" content="不动产,海外置业,买房,房产">
 <meta name="keywords" content="动不动，活用您的不动产">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/list.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/main.js"></script>
+<script src="js/slider.js"></script>
 </head>
 <body>
 <div class="wider header">
@@ -42,40 +44,105 @@
 </div>
 <div class="wrap wrap-detail">
     <div class="article">
-        <h1 class="article-title">伦敦东三区内布鲁克· 稀缺联排别墅全新开盘 </h1>
         <ul class="price-info">
             <li class="red">￥323万元</li>
             <li>|</li>
             <li>$52.9万美元</li>
         </ul>
-        <!-- 焦点图，临时用一张图片 -->
-        <img src="images/focus.jpg" />
-        <!-- 焦点图，临时用一张图片 -->
+        <h1 class="article-title">伦敦东三区内布鲁克· 稀缺联排别墅全新开盘 </h1>
+        <div class="clear"></div>
+        <!-- 焦点图 begin -->
+        <div id="slider" class="slider carousel slide force">
+            <ol>
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1" class=""></li>
+                <li data-target="#slider" data-slide-to="2" class=""></li>
+                <li data-target="#slider" data-slide-to="3" class=""></li>
+                <li data-target="#slider" data-slide-to="4" class=""></li>
+            </ol>
+            <a class="left slider-btn" href="#slider" data-slide="prev"></a>
+            <div class="slider-inner">
+                <dl class="item active">
+                    <dt><img src="images/list/america.png" alt=""></dt>
+                    <dd class="carousel-caption">
+                        <i></i>
+                        <p>1/10</p>
+                    </dd>
+                </dl>
+                <dl class="item">
+                    <dt><img src="images/list/canada.png" alt=""></dt>
+                    <dd>
+                        <i></i>
+                        <p>1/10</p>
+                    </dd>
+                </dl>
+                <dl class="item">
+                    <dt><img src="images/list/australia.png" alt=""></dt>
+                    <dd>
+                        <i></i>
+                        <p>1/10</p>
+                    </dd>
+                </dl>
+                <dl class="item">
+                    <dt><img src="images/list/england.png" alt=""></dt>
+                    <dd>
+                        <i></i>
+                        <p>1/10</p>
+                    </dd>
+                </dl>
+                <dl class="item">
+                    <dt><img src="images/list/wechat.jpg" alt=""></dt>
+                    <dd>
+                        <i></i>
+                        <p>1/10</p>
+                    </dd>
+                </dl>
+            </div>
+            <a class="right slider-btn" href="#slider" data-slide="next"></a>
+            <div class="clear"></div>
+            <div class="slider-thumbs">
+                <ul class="slider-thumbs-list">
+                        <li data-target="#slider" data-slide-to="0" class="active">
+                            <img src="images/list/america.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="1" class="">
+                            <img src="images/list/canada.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="2" class="">
+                            <img src="images/list/australia.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="3" class="">
+                            <img src="images/list/england.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="4" class="">
+                            <img src="images/list/wechat.jpg" alt="">
+                        </li>
+                    </ul>
+                <a class="left slider-thumbs-control" href="#slider" data-thumbs-slide="prev">‹</a>
+                <a class="right slider-thumbs-control inactive" href="#slider" data-thumbs-slide="next">›</a>
+            </div>
+
+
+        </div>
+        <!-- 焦点图 end -->
 
         <!-- 房源详情 -->
         <a name="detail"> </a>
         <ul class="article-tab">
-            <li class="house active"><a href="#detail">房源详情</a></li>
-            <li class="map nob"><a href="#map">地图</a></li>
-            <li class="price"><a href="#zoushi">房价走势</a></li>
+            <li class="house active"><a href="#detail"><i></i>房源详情</a></li>
+            <li class="map nob"><a href="#map"><i></i>地图</a></li>
+            <li class="price"><a href="#zoushi"><i></i>房价走势</a></li>
         </ul>
         <div class="con-with-border">
             <div class="content">
-                <ul class="source">
-                    <li class="pos">项目地址：英国，伦敦，Greenwich,London</li>
-                    <li class="wuye half">
-                        物业类型：公寓
-                    </li>
-                    <li class="area half">
-                        使用面积：155平米
-                    </li>
-                    <li class="hx half">
-                        主力户型：3卧2卫
-                    </li>
-                    <li class="car">
-                        车位信息：双车位可上锁车库
-                    </li>
+                <div class="city"><i></i><span>项目地址：英国，伦敦，Greenwich,London</span></div>
+                <ul class="h-info">
+                    <li><i class="property"></i><span>物业类型：公寓</span></li>
+                    <li><i class="area"></i><span>使用面积：155平米</span></li>
+                    <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                    <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
                 </ul>
+                <div class="clear"></div>
             </div>
             <div class="content">
                 <dl>
@@ -106,8 +173,8 @@
         <!-- 地图 & 街景 -->
         <a name="map"></a>
         <ul class="article-tab">
-            <li class="map active">地图</li>
-            <li class="street">街景</li>
+            <li class="map active"><a href="#"><i></i><span>地图</span></a></li>
+            <li class="street"><a href="#"><i></i>街景</a></li>
         </ul>
         <div class="mapinfo">
             <img src="images/map.jpg">
@@ -115,13 +182,175 @@
         <!-- 地图 & 街景end -->
         <!-- 房价走势 -->
         <ul class="article-tab">
-            <li class="zoushi active">英国伦敦房价走势</li>
+            <li class="zoushi active"><a href="#"><i></i><span>英国伦敦房价走势</span></a></li>
         </ul>
         <div class="zoushi-img">
             <img src="images/zoushi.jpg">
         </div>
         <!-- 房价走势 end -->
     </div>
+    <div class="sidecol">
+        <ul class="count-list">
+            <li class="s-title1 count1"><i></i><span>房生钱贷款计算器</span></li>
+            <li class="s-title2"><i></i><span>目标国汇率计算器</span></li>
+            <li class="s-title3 count1"><i></i><span>海外房贷计算器</span></li>
+            <li class="s-title4"><i></i><span>客户购房能力评估</span></li>
+            <li class="s-title5 count1"><i></i><span>投资回报率计算器</span></li>
+        </ul>
+
+        <div class="side-box">
+            <form class="consult-form">
+                <p>快速咨询您感兴趣的房源</p>
+                <input type="text" placeholder="您的姓名">
+                <input type="text" placeholder="手机号码">
+                <input type="text" placeholder="您的邮箱">
+                <textarea placeholder="填写您的购买意向"></textarea>
+                <input type="submit" value="联系经纪人">
+            </form>
+        </div>
+
+        <div class="tel-box">
+            <p class="tel"> <i></i><span>了解详情请致电</span><span class="clear"></span> </p>
+            <p class="tel-400">400-800-95118</p>
+            <p>工作时间：周一至周五 9:00-18:00</p>
+        </div>
+
+        <div class="house-source">
+            <div class="hs-title">
+                <a href="#" class="more">更多 ></a>
+                <i></i>
+                <span>周边类似房源</span>
+                <span class="clear"></span>
+            </div>
+            <div class="hs-list">
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="house-source">
+            <div class="hs-title">
+                <a href="#" class="more">更多 ></a>
+                <i></i>
+                <span>英国同价位房源</span>
+                <span class="clear"></span>
+            </div>
+            <div class="hs-list">
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="#"> <img src="images/list/america.png" /></a> </dt>
+                    <dd>
+                        <p>伦敦维斯苑泰晤士...</p>
+                        <p>地址：英国，伦敦...</p>
+                        <p>房屋类型：公寓</p>
+                        <p>价格：<span>￥815万元</span></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+<div class="clear"></div>
 </div>
+<div class="footer">
+    <div class="wrap">
+        <p>
+            <a href="#">关于我们</a>
+            <a href="#">招贤纳士</a>
+            <a href="#">网站地图</a>
+            <a href="#">帮助中心</a>
+            <a href="#">联系我们</a>
+        </p>
+        <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
+    </div>
+</div>
+<script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/core/js/core.min.js"></script>
+<script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/support/js/support.min.js"></script>
+<script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/helper/js/helper.min.js"></script>
+<script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/carousel/js/carousel.min.js"></script>
+<script>
+    $('#slider').carousel({
+        interval: 1000
+    });
+</script>
+
 </body>
 </html>

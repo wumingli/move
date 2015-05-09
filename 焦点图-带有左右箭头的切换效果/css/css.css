@@ -1,0 +1,74 @@
+* {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+BODY {
+	FONT-SIZE: 12px; BACKGROUND: #d9d9d9; FONT-FAMILY: Arial,"宋体",Helvetica
+}
+LI {
+	FONT-SIZE: 12px; LIST-STYLE-TYPE: none
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+A {
+	TEXT-DECORATION: none
+}
+.clear {
+	CLEAR: both
+}
+#featured {
+	OVERFLOW: hidden; WIDTH: 480px; POSITION: relative; HEIGHT: 200px
+}
+#featured .word {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; Z-INDEX: 10; BACKGROUND: url(/1/bg_transparent.gif) no-repeat; LEFT: 0px; PADDING-BOTTOM: 5px; WIDTH: 470px; COLOR: #fff; BOTTOM: 0px; PADDING-TOP: 5px; POSITION: absolute; HEIGHT: 32px
+}
+#featured .word H3 {
+	FONT-SIZE: 13px
+}
+#featured .ui-els-hide {
+	DISPLAY: none
+}
+#thumbs {
+	WIDTH: 480px; LIST-STYLE-TYPE: none; HEIGHT: 28px;
+}
+* HTML #thumbs {
+	HEIGHT: 100%
+}
+#thumbs LI {
+	DISPLAY: inline; FLOAT: left; WIDTH: 52px; MARGIN-RIGHT: 4px; HEIGHT: 24px
+}
+#thumbs UL {
+	MARGIN-TOP: 3px
+}
+#thumbs LI.last_img {
+	MARGIN-RIGHT: 4px
+}
+#thumbs LI.first {
+	MARGIN: 5px 10px 0pt 15px; WIDTH: 20px; CURSOR: pointer; HEIGHT: 13px
+}
+#thumbs LI.last {
+	MARGIN: 5px 12px 0pt 8px; WIDTH: 20px; CURSOR: pointer; HEIGHT: 13px
+}
+#thumbs LI A {
+	BORDER-RIGHT: #9c9c9c 2px solid; BORDER-TOP: #9c9c9c 2px solid; DISPLAY: block; FONT-SIZE: 0px; BORDER-LEFT: #9c9c9c 2px solid; WIDTH: 48px; BORDER-BOTTOM: #9c9c9c 2px solid
+}
+#thumbs LI A:hover {
+	BORDER-RIGHT: #99cc33 2px solid; BORDER-TOP: #99cc33 2px solid; BORDER-LEFT: #99cc33 2px solid; BORDER-BOTTOM: #99cc33 2px solid
+}
+#thumbs LI A.current {
+	BORDER: #5FC243 2px solid;
+}
+#thumbs LI.first IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#thumbs LI.last IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#topstory {
+	MARGIN-TOP: 5px; MARGIN-left: 5px; BACKGROUND: #fff; FLOAT: left; WIDTH: 490px; HEIGHT: 237px
+}
+#highlight {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 5px; WIDTH: 470px; PADDING-TOP: 5px
+}
+
+//站点基地 http://www.zdbase.com
