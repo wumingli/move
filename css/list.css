@@ -56,10 +56,14 @@
   background: url("../img/icon1.png") no-repeat 0 0;
 }
 .banner {
-  width: 1280px;
+  width: 100%;
   height: 200px;
   margin: 0 auto 50px;
-  background: none;
+  /*background: none;*/
+}
+.list-banner {
+  background-image: url(../images/list/banner-list.jpg);
+  background-color: #acd8e8;
 }
 .footer {
   width: 100%;
@@ -83,7 +87,7 @@
   background: #f4f4f4;
 }
 .part1 .wrap {
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .sidecol {
   float: left;
@@ -282,6 +286,7 @@
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
+  text-indent: 7px;
 }
 .search-active {
   width: 654px;
@@ -391,6 +396,10 @@
   zoom: 1;
   border-bottom: 1px dashed #bebebe;
 }
+.house-list dl:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
 .house-list dt,
 .house-list dd {
   float: left;
@@ -489,9 +498,9 @@
 .h-info li .carport {
   background-position: -59px -188px;
 }
-.h-active {
-  background: #fff;
-}
+/*.h-active {
+    background: #fff;
+}*/
 /*翻页*/
 .pagejump {
   margin: 40px 0 75px 0;
@@ -595,6 +604,7 @@
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
+  text-indent: 7px;
 }
 .side-box .fd-row1 .sum {
   display: inline-block;
@@ -666,6 +676,7 @@
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
+  text-indent: 7px;
 }
 .side-box .fd-row4 {
   padding: 0 15px 20px 15px;

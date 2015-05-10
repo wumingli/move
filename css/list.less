@@ -1,9 +1,13 @@
 @import "common";
 .banner {
-    width: 1280px;
+    width: 100%;
     height: 200px;
     margin: 0 auto 50px;
-    background: none;
+    /*background: none;*/
+}
+.list-banner {
+    background-image: url(../images/list/banner-list.jpg);
+    background-color: #acd8e8;
 }
 .footer {
     width: 100%;
@@ -26,7 +30,7 @@
     margin: 0 auto;
     background: #f4f4f4;
     .wrap {
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
 }
 
@@ -231,6 +235,7 @@
                 -webkit-appearance: none;
                 -ms-appearance: none;
                 appearance: none;
+                text-indent: 7px;
             }
         }
     }
@@ -353,6 +358,10 @@
         overflow: hidden;
         zoom: 1;
         border-bottom: 1px dashed #bebebe;
+        &:hover {
+            background-color: #fff;
+            cursor: pointer;
+        }
     }
     dt, dd {
         float: left;
@@ -443,9 +452,9 @@
         }
     }
 }
-.h-active {
+/*.h-active {
     background: #fff;
-}
+}*/
 /*翻页*/
 .pagejump {
     margin: 40px 0 75px 0;
@@ -552,6 +561,7 @@
             -webkit-appearance: none;
             -ms-appearance: none;
             appearance: none;
+            text-indent: 7px;
         }
         .sum {
             display: inline-block;
@@ -627,6 +637,7 @@
             -webkit-appearance: none;
             -ms-appearance: none;
             appearance: none;
+            text-indent: 7px;
         }
     }
     .fd-row4 {
