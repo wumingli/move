@@ -296,10 +296,12 @@ body.gray-bg {
 
 .fsq-banner {
     background-image: url(../images/fsq-banner.jpg);
+    background-color: #c6e4ef;
 }
 
 .qsf-banner {
     background-image: url(../images/qsf-banner.jpg);
+    background-color: #c6e4ef;
 }
 
 .country-container {
@@ -395,6 +397,13 @@ div.pos {
     background: url(../images/04_title.png) center bottom no-repeat;
     text-align: center;
     padding-bottom: 10px;
+    font-weight: normal;
+}
+.service-wrap .fsq-item h1 {
+    margin-top: 0;
+}
+.fsq-item {
+    margin-top: 30px;
 }
 .service-img {
     display: block;
@@ -538,4 +547,119 @@ p.ys {
 }
 .footer p {
     padding-bottom: 35px;
+}
+
+.fsq-item dl {
+    background-color: #f4b453;
+    padding: 20px 30px 30px;
+    width: 418px;
+    height: 200px;
+    margin: 0;
+    vertical-align: top;
+    margin-bottom: 40px;
+}
+.fsq-item dl.a,
+.fsq-item dl.c {
+    margin-right: 39px;
+}
+.fsq-item dl dt {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px;
+}
+.fsq-item dl dd {
+    text-indent: 2em;
+}
+.fsq-item dl dt i {
+    width: 37px;
+    height: 38px;
+    background: url(../images/abcd.png) 0 0 no-repeat;
+    border: 0;
+    border-radius: 0;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.fsq-item h1 {
+    margin-top: 0;
+}
+.fsq-item dl.b {
+    background-color: #e9c862;
+}
+.fsq-item dl.b dt i {
+    background-position: -37px 0;
+}
+.fsq-item dl.c {
+    background-color: #c5ca66;
+}
+.fsq-item dl.c dt i {
+    background-position: -74px 0;
+}
+.fsq-item dl.d {
+    background-color: #74c38c;
+}
+.fsq-item dl.d dt i {
+    background-position: -111px 0;
+}
+.qsf-item dl dt i {
+    background-image: url(../images/03-2-abcd.png);
+}
+.qsf-item dl.a {
+    background-color: #8ec9d1;
+}
+.qsf-item dl.b {
+    background-color: #83c999;
+}
+.qsf-item dl.c {
+    background-color: #bdd16b;
+}
+.qsf-item dl.d {
+    background-color: #e1be55;
+}
+
+.fsq-list {
+    margin: 30px auto;
+}
+.fsq-list dl dt {
+    width: 178px;
+    text-align: center;
+    float: left;
+}
+.fsq-list dl {
+    clear: both;
+    border-bottom: 1px dashed #ccc;
+    padding: 30px 50px 0 0;
+    height: 149px;
+}
+.fsq-list dl.nb {
+    border-bottom: 0;
+}
+.fsq-list dl dd {
+    margin-left: 178px;
+}
+.fsq-list dl dd h3 {
+    color: #0ebfdd;
+    font-size: 21px;
+    font-weight: normal;
+}
+.fsq-list dl dd p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+}
+.service-wrap h1.org {
+    background-image: url(../images/title-orange.png);
+    color: #e57200;
+}
+.last-wrap {
+    padding-bottom: 130px;
+}
+.green-bg1 {
+    background-color: #e1ebe9;
+}
+.green-bg2 {
+    background-color: #d4e2e0;
+}
+.qsf-list {
+    padding-bottom: 30px;
 }
