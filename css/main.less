@@ -1,11 +1,470 @@
+@import "common";
 /*首页*/
-.part1 {
-    width: 1280px;
-    margin: 0 auto;
+.ck-slide {
+    position: relative;
+    overflow: hidden;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .ck-slide-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        li {
+            height: 357px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .f1, .f2, .f3 {
+            a {
+                display: block;
+                width: 144px;
+                height: 41px;
+                background: url(../images/f1.png);
+                position: absolute;
+                left: 0;
+                top: 257px;
+            }
+
+        }
+
+        .f1 {
+            a {
+                &:hover {
+                    background-image: url(../images/f1-hover.png);
+                }
+            }
+        }
+
+        .f3, .f2  {
+            a {
+                width: 142px;
+                height: 39px;
+                background-image: url(../images/f3.png);
+                left: 645px;
+                &:hover {
+                    background-image: url(../images/f3-hover.png);
+                }
+            }
+        }
+        .f2 {
+            a {
+                left: 850px;
+            }
+        }
+    }
+}
+.focus {
+    overflow: hidden;
+    height: 357px;
+}
+.ck-slidebox {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    z-index: 30;
+    ul {
+        height: 20px;
+        padding: 0 4px;
+        li {
+            float: left;
+            width: 16px;
+            height: 16px;
+            margin: 4px 15px;
+            em {
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-radius: 100%;
+                background-color: #fff;
+                text-indent: -9999px;
+                cursor: pointer;
+            }
+        }
+        .current {
+            em {
+                background-color: #28abcc;
+                &:hover {
+                    background-color: #28abcc;
+                }
+            }
+        }
+    }
+}
+.wrap-box {
+    width: 100%;
+    padding: 40px 0 50px 0;
     background: #f4f4f4;
 }
-.
+.index-h1 {
+    width: 200px;
+    height: 59px;
+    padding: 0 35px 0 44px;
+    font-size: 26px;
+    color: #fff;
+    line-height: 59px;
+    background: #28abcc;
+    .icon1, .icon2 {
+        display: block;
+        float: left;
+        width: 33px;
+        height: 33px;
+        margin: 11px 20px 0 0;
+        background: url("../images/list/icon.png") no-repeat;
+    }
+    .icon1 {
+        background-position: -107px -114px;
+    }
+    .icon2 {
+        background-position: -172px -114px;
+    }
+    &:after {
+        float: right;
+        content: "";
+        width: 0px;
+        height: 0px;
+        margin-right: -65px;
+        overflow: hidden;
+        border-top: 40px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top-color: #28abcc;
+        border-left-color: #28abcc;
+    }
+}
+/*房生钱 begin*/
+.fsq {
+    position: relative;
+    z-index: 1;
+    width: 1000px;
+    height: 288px;
+    margin-bottom: 30px;
+    background: url("../images/list/fsq.jpg") no-repeat;
+    a {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        display: block;
+    }
+    .fsq-1 {
+        left: 47px;
+        width: 504px;
+        height: 262px;
+        &:hover {
+            background: url("../images/list/fsq-hover1.png") no-repeat 0 0;
+        }
+    }
+    .fsq-2 {
+        right: 30px;
+        width: 497px;
+        height: 213px;
+        &:hover {
+            background: url("../images/list/fsq-hover2.png") no-repeat 0 0;
+        }
+    }
+}
 
+/*投资列表 begin*/
+.tz-list {
+
+}
+.tz-nav {
+    padding: 24px 0 30px 0;
+    width: 1000px;
+    text-align: center;
+    background: url("../images/border.jpg") no-repeat center bottom;
+    li {
+        display: inline-block;
+        height: 33px;
+        padding: 0 18px;
+        line-height: 33px;
+        background: url("../images/border-right.jpg") no-repeat right 9px;
+        &:last-child {
+            background: none;
+        }
+        i, span {
+            display: block;
+            float: left;
+        }
+        i {
+            width: 51px;
+            height: 33px;
+            margin-right: 10px;
+        }
+    }
+    .england {
+        i {
+            background: url("../images/list/england.png") no-repeat 0 0;
+        }
+    }
+    .america {
+        i {
+            background: url("../images/list/america.png") no-repeat 0 0;
+        }
+    }
+    .canada {
+        i {
+            background: url("../images/list/canada.png") no-repeat 0 0;
+        }
+    }
+    .australia {
+        i {
+            background: url("../images/list/australia.png") no-repeat 0 0;
+        }
+    }
+    .new-zealand {
+        i {
+            background: url("../images/list/new-zealand.png") no-repeat 0 0;
+        }
+    }
+}
+.tz-box {
+    height: 204px;
+    margin-top: 25px;
+    overflow: hidden;
+    zoom: 1;
+}
+.tz-left, .tz-right {
+    float: left;
+}
+.tz-left {
+    width: 375px;
+    margin-right: 40px;
+    .tz-left-img {
+        float: left;
+        width: 273px;
+        height: 204px;
+        margin-right: 18px;
+        img {
+            width: 273px;
+            height: 204px;
+        }
+    }
+    ul {
+        float: left;
+        width: 84px;
+        overflow: hidden;
+        li {
+            width: 84px;
+            height: 62px;
+            margin-bottom: 9px;
+            img {
+                width: 84px;
+                height: 62px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.tz-right {
+    width: 585px;
+    ul {
+        li {
+            height: 35px;
+            padding-bottom: 4px;
+            overflow: hidden;
+            zoom: 1;
+            font-size: 16px;
+            line-height: 36px;
+            border-bottom: 1px dashed #bebebe;
+            a {
+                color: #313538;
+            }
+            .rmb {
+                float: right;
+                margin-top: 6px;
+            }
+            span, i, a {
+                display: inline-block;
+            }
+            .tz-text {
+                float: left;
+            }
+            .arrow {
+                margin-top: 20px;
+                &:after {
+                    float: right;
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    overflow: hidden;
+                    border-top: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-left-color: #28abcc;
+                }
+            }
+            .new {
+                width: 33px;
+                height: 14px;
+                font-size: 12px;
+                text-align: center;
+                line-height: 12px;
+                color: #fff;
+                background: #f60;
+            }
+        }
+    }
+}
+/*投资列表 end*/
+
+/*行业资讯 begin*/
+.hyzx-list {
+    margin: 50px 0 0 0;
+    background: #fff;
+    ul {
+        width: 940px;
+        padding: 24px 0 40px 40px;
+        overflow: hidden;
+        zoom: 1;
+        font-size: 16px;
+        li {
+            float: left;
+            width: 430px;
+            height: 35px;
+            margin-right: 40px;
+            color: #313538;
+            line-height: 35px;
+            border-bottom: 1px dashed #c7c7c7;
+            a {
+                display: block;
+                color: #313538;
+                .time {
+                    float: right;
+                }
+                .text {
+                    display: block;
+                    width: 343px;
+                    .ellipsis;
+                }
+            }
+        }
+    }
+ }
+/*行业资讯 end*/
+
+/*调查问卷 begin*/
+.investigate {
+    width: 100%;
+    background: #d4e2e0;
+    .wrap {
+        padding: 40px 0 80px 0;
+    }
+    .i-title {
+        position: relative;
+        z-index: 1;
+        width: 200px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        font-size: 30px;
+        text-align: center;
+        color: #e57200;
+        border-bottom: 1px solid #b0b1b1;
+        i {
+            position: absolute;
+            bottom: -3px;
+            left: 70px;
+            z-index: 2;
+            display: block;
+            width: 65px;
+            height: 5px;
+            background: #e57200;
+        }
+    }
+}
+.i-form {
+    width: 918px;
+    padding: 40px 30px 40px 50px;
+    margin-top: 30px;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 16px;
+    color: #666;
+    background: #fff;
+    border: 1px solid #cacac8;
+    .i-left, .i-right {
+        float: left;
+    }
+    .i-left {
+        width: 400px;
+        margin-right: 55px;
+    }
+    .i-right {
+        width: 463px;
+    }
+    .i-row {
+        height: 37px;
+        margin-bottom: 12px;
+        line-height: 37px;
+        .i-row-title {
+            float: left;
+            width: 113px;
+        }
+        .i-ipt {
+            width: 248px;
+            height: 35px;
+            padding: 0 10px;
+            color: #999;
+            line-height: 35px;
+            border: 1px solid #d6d4d4;
+        }
+    }
+    input[type="radio"], input[type="checkbox"] {
+        float: left;
+        width: 20px;
+        height: 20px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        background: url("../images/list/icon.png") no-repeat -191px -85px;
+        &:checked {
+            background-position: -115px -85px;
+        }
+    }
+    .i-row2 {
+        margin-bottom: 12px;
+        height: 27px;
+        line-height: 27px;
+        .i-radio {
+            float: right;
+            label {
+                float: left;
+            }
+            .q1-1 {
+                margin-right: 16px;
+            }
+        }
+    }
+    .i-row3 {
+        margin-bottom: 15px;
+        input[type="checkbox"] {
+            margin-right: 12px;
+        }
+    }
+    input[type="submit"] {
+        width: 136px;
+        height: 43px;
+        font-size: 24px;
+        text-align: center;
+        line-height: 43px;
+        color: #fff;
+        background: #f90;
+        border: none;
+    }
+}
+/*调查问卷 end*/
 
 
 
