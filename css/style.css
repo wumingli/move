@@ -189,7 +189,7 @@ body.gray-bg {
 
 .banner {
     height: 200px;
-    background: url(../images/about-banner.jpg) center top no-repeat;
+    background:#c6e4ef url(../images/news-banner.jpg) center top no-repeat;
 }
 
 .service-banner {
