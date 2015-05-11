@@ -81,24 +81,21 @@
             margin: 4px 15px;
             em {
                 display: block;
-                width: 16px;
-                height: 16px;
-                border-radius: 100%;
-                background-color: #fff;
+                width: 18px;
+                height: 18px;
                 text-indent: -9999px;
                 cursor: pointer;
+                background: url("../images/list/icon.png") no-repeat -39px -301px;
             }
         }
         .current {
             em {
-                background-color: #28abcc;
-                &:hover {
-                    background-color: #28abcc;
-                }
+                background-position: -4px -301px;
             }
         }
     }
 }
+
 .wrap-box {
     width: 100%;
     padding: 40px 0 50px 0;
@@ -420,38 +417,19 @@
             border: 1px solid #d6d4d4;
         }
     }
-    input[type="radio"], input[type="checkbox"] {
-        float: left;
-        width: 20px;
-        height: 20px;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        -ms-appearance: none;
-        appearance: none;
-        background: url("../images/list/icon.png") no-repeat -191px -85px;
-        &:checked {
-            background-position: -115px -85px;
-        }
-    }
     .i-row2 {
         margin-bottom: 12px;
         height: 27px;
         line-height: 27px;
         .i-radio {
             float: right;
-            label {
-                float: left;
-            }
-            .q1-1 {
-                margin-right: 16px;
-            }
+            width: 135px;
         }
     }
     .i-row3 {
         margin-bottom: 15px;
-        input[type="checkbox"] {
-            margin-right: 12px;
-        }
+        overflow: hidden;
+        zoom: 1;
     }
     input[type="submit"] {
         width: 136px;
@@ -465,6 +443,43 @@
     }
 }
 /*调查问卷 end*/
+.prettyradio, .prettycheckbox {
+    a {
+        display: block;
+        float: right;
+        width: 20px;
+        height: 20px;
+        margin: 4px 13px 0 0;
+        background: url("../images/list/icon.png") no-repeat -191px -85px;
+        cursor: pointer;
+        &:focus {
+            outline: 0 none;
+            background-position: -115px -85px;
+        }
+    }
+    .checked {
+        background-position: -115px -85px;
+        &:focus {
+            background-position: -115px -85px;
+        }
+    }
+    label {
+        display: block;
+        float: right;
+        margin-right: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
+.prettycheckbox {
+    a {
+        float: left;
+        margin: 2px 12px 0 0;
+    }
+    label {
+        float: left;
+    }
+}
 
 
 

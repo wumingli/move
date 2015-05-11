@@ -8,7 +8,30 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
+    <script src="js/jqselect.js"></script>
+    <script src="js/Checkable.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('input.fd-radio').Checkable({
+                color: 'blue'
+            });
+            $(".fd-select1").selectbox();
+            $(".fd-select2").selectbox({containerClass:"h_selectbox-wrapper",
+                hoverClass:"h_current",
+                selectedClass:"h_selected",
+                inputClass:"h_selectbox",
+                bindDiv:["select_tab1","select_tab2","select_tab3"],
+                change:function(){
+                    var bindDiv=$(this).attr("bindDiv");
+                    var divs=["select_tab1","select_tab2","select_tab3"];
+                    $(divs).each(function(){
+                        $("#"+this).hide();
+                    });
+                    $("#"+bindDiv).show();
+                }});
+        });
+    </script>
 </head>
 <body class="gray-bg">
 <div class="wider header">
@@ -75,12 +98,15 @@
                 <dt>贷款类型：</dt>
             </dl>
             <dl class="fd-row2">
-                <dd><label><input type="radio" name="daikuan" value="个人消费贷款" checked="checked" />个人消费贷款</label></dd>
-                <dd><label><input type="radio" name="daikuan" value="企业经营贷款" />企业经营贷款</label></dd>
+                <dd>
+                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" checked="checked" />
+                    <input name="daikuan" type="radio" class="fd-radio" data-label="企业经营贷款" />
+                </dd>
+                <span class="clear"></span>
             </dl>
             <dl class="fd-row3">
                 <dt>利率：</dt>
-                <dd>
+                <dd style="position: relative; z-index: 1;">
                     <select class="fd-select2">
                         <option>基准利率1.2倍</option>
                         <option>基准利率1.0倍</option>
@@ -236,7 +262,9 @@
         <dd>
             <a href="#" class="active">全部</a>
             <a href="#">伦敦</a>
+            <a href="#">伯明翰</a>
             <a href="#">利物浦</a>
+            <a href="#">曼彻斯特</a>
         </dd>
     </dl>
     <dl>
@@ -260,16 +288,31 @@
     <dl>
         <dt>更多条件：</dt>
         <dd>
-            <select>
-                <option>卧室数量:</option>
-                <option>1</option>
-                <option>2</option>
-            </select>
-            <select>
-                <option>使用面积</option>
-                <option>100平米</option>
-                <option>200平米</option>
-            </select>
+            <div class="fd-selectbox">
+                <select class="fd-select2">
+                    <option>卧室数量:</option>
+                    <option>1室</option>
+                    <option>2室</option>
+                    <option>3室</option>
+                    <option>4室</option>
+                    <option>5室</option>
+                    <option>6室</option>
+                    <option>6室及以上</option>
+                </select>
+            </div>
+            <div class="fd-selectbox">
+                <select class="fd-select2">
+                    <option>使用面积</option>
+                    <option>50-100</option>
+                    <option>100-150</option>
+                    <option>150-200</option>
+                    <option>200-300</option>
+                    <option>300-400</option>
+                    <option>400-500</option>
+                    <option>500-1000</option>
+                    <option>1000以上</option>
+                </select>
+            </div>
         </dd>
     </dl>
 </div>

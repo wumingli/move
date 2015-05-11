@@ -39,21 +39,6 @@
   width: 1000px;
   margin: 0 auto;
 }
-.footer {
-  width: 100%;
-  padding: 30px 0 40px 0;
-  font-size: 14px;
-  color: #999;
-  background: #333;
-}
-.footer a {
-  color: #999;
-  margin: 0 15px;
-}
-.footer p {
-  margin-bottom: 15px;
-  text-align: center;
-}
 /*首页*/
 .ck-slide {
   position: relative;
@@ -130,18 +115,14 @@
 }
 .ck-slidebox ul li em {
   display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #fff;
+  width: 18px;
+  height: 18px;
   text-indent: -9999px;
   cursor: pointer;
+  background: url("../images/list/icon.png") no-repeat -39px -301px;
 }
 .ck-slidebox ul .current em {
-  background-color: #28abcc;
-}
-.ck-slidebox ul .current em:hover {
-  background-color: #28abcc;
+  background-position: -4px -301px;
 }
 .wrap-box {
   width: 100%;
@@ -458,21 +439,6 @@
   line-height: 35px;
   border: 1px solid #d6d4d4;
 }
-.i-form input[type="radio"],
-.i-form input[type="checkbox"] {
-  float: left;
-  width: 20px;
-  height: 20px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background: url("../images/list/icon.png") no-repeat -191px -85px;
-}
-.i-form input[type="radio"]:checked,
-.i-form input[type="checkbox"]:checked {
-  background-position: -115px -85px;
-}
 .i-form .i-row2 {
   margin-bottom: 12px;
   height: 27px;
@@ -480,18 +446,12 @@
 }
 .i-form .i-row2 .i-radio {
   float: right;
-}
-.i-form .i-row2 .i-radio label {
-  float: left;
-}
-.i-form .i-row2 .i-radio .q1-1 {
-  margin-right: 16px;
+  width: 135px;
 }
 .i-form .i-row3 {
   margin-bottom: 15px;
-}
-.i-form .i-row3 input[type="checkbox"] {
-  margin-right: 12px;
+  overflow: hidden;
+  zoom: 1;
 }
 .i-form input[type="submit"] {
   width: 136px;
@@ -504,3 +464,41 @@
   border: none;
 }
 /*调查问卷 end*/
+.prettyradio a,
+.prettycheckbox a {
+  display: block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 4px 13px 0 0;
+  background: url("../images/list/icon.png") no-repeat -191px -85px;
+  cursor: pointer;
+}
+.prettyradio a:focus,
+.prettycheckbox a:focus {
+  outline: 0 none;
+  background-position: -115px -85px;
+}
+.prettyradio .checked,
+.prettycheckbox .checked {
+  background-position: -115px -85px;
+}
+.prettyradio .checked:focus,
+.prettycheckbox .checked:focus {
+  background-position: -115px -85px;
+}
+.prettyradio label,
+.prettycheckbox label {
+  display: block;
+  float: right;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.prettycheckbox a {
+  float: left;
+  margin: 2px 12px 0 0;
+}
+.prettycheckbox label {
+  float: left;
+}

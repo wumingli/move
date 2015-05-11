@@ -39,21 +39,6 @@
   width: 1000px;
   margin: 0 auto;
 }
-.footer {
-  width: 100%;
-  padding: 30px 0 40px 0;
-  font-size: 14px;
-  color: #999;
-  background: #333;
-}
-.footer a {
-  color: #999;
-  margin: 0 15px;
-}
-.footer p {
-  margin-bottom: 15px;
-  text-align: center;
-}
 .banner {
   width: 1280px;
   height: 200px;
@@ -256,16 +241,9 @@
   color: #fff;
   background: #ff6600;
 }
-.search-option dl dd select {
-  width: 136px;
-  height: 31px;
-  font-size: 14px;
-  color: #333;
-  background: url("../images/list/icon.png") no-repeat 0 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+.search-option dl dd .fd-selectbox {
+  float: left;
+  margin: 2px 10px 0 0;
 }
 .search-active {
   width: 654px;
@@ -496,6 +474,7 @@
   text-align: center;
   color: #333;
   line-height: 24px;
+  background: url("../images/list/page-bg.jpg") repeat-x 0 0;
   border: 1px solid #ccc;
 }
 .pagejump .active {
@@ -528,7 +507,11 @@
   line-height: 24px;
   text-align: center;
   color: #666;
+  background: url("../images/list/page-ipt.jpg") repeat-x 0 0;
   border: 1px solid #ccc;
+}
+.pagejump .submit {
+  background: url("../images/list/page-bg.jpg") repeat-x 0 0;
 }
 .pagejump .goto-input {
   margin-right: 5px;
@@ -572,17 +555,6 @@
   border: none;
   border-right: 1px solid #d6d4d4;
 }
-.side-box .fd-row1 .fd-select1 {
-  width: 136px;
-  height: 31px;
-  font-size: 16px;
-  color: #333;
-  background: url("../images/list/icon.png") no-repeat 0 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
 .side-box .fd-row1 .sum {
   display: inline-block;
   float: left;
@@ -622,37 +594,12 @@
   border: none;
 }
 .side-box .fd-row2 dd {
-  float: left;
-  width: 48%;
-  margin-right: 7px;
+  display: inline-block;
   font-size: 14px;
 }
-.side-box .fd-row2 dd:last-child {
-  margin-right: 0;
-}
-.side-box .fd-row2 dd input[type="radio"] {
-  width: 14px;
-  height: 14px;
-  margin: 2px 2px 0 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background: url("../images/list/icon.png") no-repeat -107px -211px;
-}
-.side-box .fd-row2 dd input[type="radio"]:checked {
-  background: url("../images/list/icon.png") no-repeat -107px -189px;
-}
-.side-box .fd-row3 .fd-select2 {
-  width: 170px;
-  height: 31px;
-  font-size: 16px;
-  color: #333;
-  background: url("../images/list/icon.png") no-repeat 0 -39px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+.side-box .fd-row3 dt,
+.side-box .fd-row3 dd {
+  float: left;
 }
 .side-box .fd-row4 {
   padding: 0 15px 20px 15px;
@@ -679,6 +626,84 @@
 }
 .side-box .fd-row4 dd button {
   background: #999;
+}
+.prettyradio {
+  float: left;
+  margin-right: 8px;
+}
+.prettyradio a {
+  display: block;
+  float: left;
+  width: 14px;
+  height: 14px;
+  margin: 8px 2px 0 0;
+  background: url("../images/list/icon.png") no-repeat -107px -211px;
+  cursor: pointer;
+}
+.prettyradio a:focus {
+  outline: 0 none;
+  background: url("../images/list/icon.png") no-repeat -107px -189px;
+}
+.prettyradio .checked {
+  background: url("../images/list/icon.png") no-repeat -107px -189px;
+}
+.prettyradio .checked:focus {
+  background: url("../images/list/icon.png") no-repeat -107px -189px;
+}
+.prettyradio label {
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.selectbox {
+  display: block;
+  width: 132px;
+  height: 31px;
+  padding-left: 4px;
+  font-size: 16px;
+  color: #333;
+  line-height: 31px;
+  cursor: pointer;
+  background: url("../images/list/icon.png") no-repeat 0 0;
+  border: none;
+}
+.h_selectbox {
+  display: inline-block;
+  width: 160px;
+  height: 31px;
+  padding-left: 4px;
+  font-size: 16px;
+  color: #333;
+  line-height: 31px;
+  cursor: pointer;
+  background: url("../images/list/icon.png") no-repeat 0 -326px;
+  border: none;
+}
+.selectbox-wrapper,
+.h_selectbox-wrapper {
+  position: absolute;
+  width: 134px;
+  margin-top: -5px;
+  text-align: left;
+  font-size: 14px;
+  background-color: #fff;
+  border: #c7c8dc 1px solid;
+}
+.selectbox-wrapper ul li,
+.h_selectbox-wrapper ul li {
+  padding: 0 3px;
+  cursor: pointer;
+  line-height: 30px;
+}
+.selectbox-wrapper ul .current,
+.h_selectbox-wrapper ul .current,
+.selectbox-wrapper ul .h_current,
+.h_selectbox-wrapper ul .h_current {
+  color: #fff;
+  background-color: #34b5d0;
+}
+.h_selectbox-wrapper {
+  width: 158px;
 }
 .consult-form {
   padding: 20px 15px;

@@ -39,18 +39,3 @@
   width: 1000px;
   margin: 0 auto;
 }
-.footer {
-  width: 100%;
-  padding: 30px 0 40px 0;
-  font-size: 14px;
-  color: #999;
-  background: #333;
-}
-.footer a {
-  color: #999;
-  margin: 0 15px;
-}
-.footer p {
-  margin-bottom: 15px;
-  text-align: center;
-}

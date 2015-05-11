@@ -9,7 +9,15 @@
 <link href="css/main.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
 <script src="js/slide.js"></script>
+<script src="js/Checkable.js"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('input.i-radio-checkbox').Checkable({
+            color: 'blue'
+        });
+    });
+</script>
 </head>
 <body>
 <div class="wider header">
@@ -235,16 +243,16 @@
                 </div>
                 <div class="i-row2">
                     <div class="i-radio">
-                        <label for="q1-1">是</label><input type="radio" name="q1" id="q1-1" class="q1-1" checked="checked" />
-                        <label for="q1-2">是</label><input type="radio" name="q1" id="q1-2" />
+                        <input name="q1" type="radio" value="" class="i-radio-checkbox" id="q1-1" data-label="不是">
+                        <input name="q1" type="radio" value="" class="i-radio-checkbox" id="q1-2" data-label="是" checked="checked">
                     </div>
                     <span>由于雾霾是否考虑到海外置业？</span>
                     <div class="clear"></div>
                 </div>
                 <div class="i-row2">
                     <div class="i-radio">
-                        <label for="q2-1">是</label><input type="radio" name="q2" id="q2-1" class="q1-1" checked="checked" />
-                        <label for="q2-2">是</label><input type="radio" name="q2" id="q2-2" />
+                        <input name="q2" type="radio" value="" class="i-radio-checkbox" id="q2-1" data-label="不是">
+                        <input name="q2" type="radio" value="" class="i-radio-checkbox" id="q2-2" data-label="是" checked="checked">
                     </div>
                     <span>您是否愿意盘活不动产而创造收益？</span>
                     <div class="clear"></div>
@@ -254,8 +262,8 @@
                 </div>
                 <div class="i-row2">
                     <div class="i-radio">
-                        <label for="q3-1">是</label><input type="radio" name="q2" id="q3-1" class="q1-1" checked="checked" />
-                        <label for="q3-2">是</label><input type="radio" name="q2" id="q3-2" />
+                        <input name="q3" type="radio" value="" class="i-radio-checkbox" id="q3-1" data-label="不是">
+                        <input name="q3" type="radio" value="" class="i-radio-checkbox" id="q3-2" data-label="是" checked="checked">
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -263,22 +271,22 @@
             <div class="i-right">
                 <div class="i-row3">如果您想盘活不动产但遇到的问题是？（可复选）</div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-1" checked="checked" /><label for="q4-1">资质、个人征信不良</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="资质、个人征信不良" checked="checked" />
                 </div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-2" /><label for="q4-2">个人流水不够</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="个人流水不够" />
                 </div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-3" /><label for="q4-3">房产已抵押或还有按揭贷款</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="房产已抵押或还有按揭贷款" />
                 </div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-4" /><label for="q4-4">没有公司或无法提供企业发票、消费发票或上下游销售合同</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="没有公司或无法提供企业发票、消费发票或上下游销售合同" />
                 </div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-5" /><label for="q4-5">贷款人年龄超过银行规定或房屋为央产房、经适房、小产权</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="贷款人年龄超过银行规定或房屋为央产房、经适房、小产权" />
                 </div>
                 <div class="i-row3">
-                    <input type="checkbox" name="q4" id="q4-6" /><label for="q4-6">银行以贷款额度用完为由拖延放款时间</label>
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="银行以贷款额度用完为由拖延放款时间" />
                 </div>
                 <input type="submit" value="提交" />
             </div>

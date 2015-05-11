@@ -206,16 +206,9 @@
                 color: #fff;
                 background: #ff6600;
             }
-            select {
-                width: 136px;
-                height: 31px;
-                font-size: 14px;
-                color: #333;
-                background: url("../images/list/icon.png") no-repeat 0 0;
-                -moz-appearance: none;
-                -webkit-appearance: none;
-                -ms-appearance: none;
-                appearance: none;
+            .fd-selectbox {
+                float: left;
+                margin: 2px 10px 0 0;
             }
         }
     }
@@ -450,6 +443,7 @@
         text-align: center;
         color: #333;
         line-height: 24px;
+        background: url("../images/list/page-bg.jpg") repeat-x 0 0;
         border: 1px solid #ccc;
     }
     .active {
@@ -484,7 +478,11 @@
         line-height: 24px;
         text-align: center;
         color: #666;
+        background: url("../images/list/page-ipt.jpg") repeat-x 0 0;
         border: 1px solid #ccc;
+    }
+    .submit {
+        background: url("../images/list/page-bg.jpg") repeat-x 0 0;
     }
     .goto-input {
         margin-right: 5px;
@@ -530,17 +528,6 @@
                 border-right: 1px solid #d6d4d4;
             }
         }
-        .fd-select1 {
-            width: 136px;
-            height: 31px;
-            font-size: 16px;
-            color: #333;
-            background: url("../images/list/icon.png") no-repeat 0 0;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            -ms-appearance: none;
-            appearance: none;
-        }
         .sum {
             display: inline-block;
             float: left;
@@ -582,39 +569,13 @@
     }
     .fd-row2 {
         dd {
-            float: left;
-            width: 48%;
-            margin-right: 7px;
+            display: inline-block;
             font-size: 14px;
-            &:last-child {
-                margin-right: 0;
-            }
-            input[type="radio"] {
-                width: 14px;
-                height: 14px;
-                margin: 2px 2px 0 0;
-                -moz-appearance: none;
-                -webkit-appearance: none;
-                -ms-appearance: none;
-                appearance: none;
-                background: url("../images/list/icon.png") no-repeat -107px -211px;
-                &:checked {
-                    background: url("../images/list/icon.png") no-repeat -107px -189px;
-                }
-            }
         }
     }
     .fd-row3 {
-        .fd-select2 {
-            width: 170px;
-            height: 31px;
-            font-size: 16px;
-            color: #333;
-            background: url("../images/list/icon.png") no-repeat 0 -39px;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            -ms-appearance: none;
-            appearance: none;
+        dt, dd {
+            float: left;
         }
     }
     .fd-row4 {
@@ -643,7 +604,83 @@
         }
     }
 }
+.prettyradio {
+    float: left;
+    margin-right: 8px;
+    a {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 14px;
+        margin: 8px 2px 0 0;
+        background: url("../images/list/icon.png") no-repeat -107px -211px;
+        cursor: pointer;
+        &:focus {
+            outline: 0 none;
+            background: url("../images/list/icon.png") no-repeat -107px -189px;
+        }
+    }
+    .checked {
+        background: url("../images/list/icon.png") no-repeat -107px -189px;
+        &:focus {
+            background: url("../images/list/icon.png") no-repeat -107px -189px;
+        }
+    }
+    label {
+        display: block;
+        float: left;
+        cursor: pointer;
+    }
+}
+.selectbox {
+    display: block;
+    width: 132px;
+    height: 31px;
+    padding-left: 4px;
+    font-size: 16px;
+    color: #333;
+    line-height: 31px;
+    cursor: pointer;
+    background: url("../images/list/icon.png") no-repeat 0 0;
+    border: none;
+}
+.h_selectbox {
+    display: inline-block;
+    width: 160px;
+    height: 31px;
+    padding-left: 4px;
+    font-size: 16px;
+    color: #333;
+    line-height: 31px;
+    cursor: pointer;
+    background: url("../images/list/icon.png") no-repeat 0 -326px;
+    border: none;
+}
 
+.selectbox-wrapper, .h_selectbox-wrapper {
+    position: absolute;
+    width: 134px;
+    margin-top: -5px;
+    text-align: left;
+    font-size: 14px;
+    background-color: #fff;
+    border: #c7c8dc 1px solid;
+    ul {
+        li {
+            padding: 0 3px;
+            cursor: pointer;
+            line-height: 30px;
+        }
+        .current, .h_current {
+            color: #fff;
+            background-color: #34b5d0;
+        }
+    }
+}
+.h_selectbox-wrapper {
+    width: 158px;
+
+}
 .consult-form {
     padding: 20px 15px;
     p {
