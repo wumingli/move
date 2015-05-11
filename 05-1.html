@@ -10,6 +10,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/main.js"></script>
+<script src="js/slider.js"></script>
 </head>
 <body>
 <div class="wider header">
@@ -59,7 +60,7 @@
                 <li data-target="#slider" data-slide-to="3" class=""></li>
                 <li data-target="#slider" data-slide-to="4" class=""></li>
             </ol>
-            <a class="left slider-btn slider-thumbs-control" href="#slider" data-slide="prev"></a>
+            <a class="left slider-btn" href="#slider" data-slide="prev"></a>
             <div class="slider-inner">
                 <dl class="item active">
                     <dt><img src="images/list/america.png" alt=""></dt>
@@ -97,26 +98,28 @@
                     </dd>
                 </dl>
             </div>
-            <a class="right slider-btn slider-thumbs-control" href="#slider" data-slide="next"></a>
+            <a class="right slider-btn" href="#slider" data-slide="next"></a>
             <div class="clear"></div>
             <div class="slider-thumbs">
                 <ul class="slider-thumbs-list">
-                    <li data-target="#slider" data-slide-to="0" class="active">
-                        <img src="images/list/america.png" alt="">
-                    </li>
-                    <li data-target="#slider" data-slide-to="1" class="">
-                        <img src="images/list/canada.png" alt="">
-                    </li>
-                    <li data-target="#slider" data-slide-to="2" class="">
-                        <img src="images/list/australia.png" alt="">
-                    </li>
-                    <li data-target="#slider" data-slide-to="3" class="">
-                        <img src="images/list/england.png" alt="">
-                    </li>
-                    <li data-target="#slider" data-slide-to="4" class="">
-                        <img src="images/list/wechat.jpg" alt="">
-                    </li>
-                </ul>
+                        <li data-target="#slider" data-slide-to="0" class="active">
+                            <img src="images/list/america.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="1" class="">
+                            <img src="images/list/canada.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="2" class="">
+                            <img src="images/list/australia.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="3" class="">
+                            <img src="images/list/england.png" alt="">
+                        </li>
+                        <li data-target="#slider" data-slide-to="4" class="">
+                            <img src="images/list/wechat.jpg" alt="">
+                        </li>
+                    </ul>
+                <a class="left slider-thumbs-control" href="#slider" data-thumbs-slide="prev">‹</a>
+                <a class="right slider-thumbs-control inactive" href="#slider" data-thumbs-slide="next">›</a>
             </div>
 
 
@@ -327,17 +330,16 @@
     </div>
 <div class="clear"></div>
 </div>
-<div class="footer">
-    <div class="wrap">
-        <p>
-            <a href="#">关于我们</a>
-            <a href="#">招贤纳士</a>
-            <a href="#">网站地图</a>
-            <a href="#">帮助中心</a>
-            <a href="#">联系我们</a>
-        </p>
-        <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
-    </div>
+<br><br><br><br>
+<div class="wider footer">
+    <ul>
+        <li><a href="">关于我们</a></li>
+        <li><a href="">招贤纳士</a></li>
+        <li><a href="">网站地图</a></li>
+        <li><a href="">帮助中心</a></li>
+        <li><a href="">联系我们</a></li>
+    </ul>
+    <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
 </div>
 <script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/core/js/core.min.js"></script>
 <script src="http://static01.babytreeimg.com/img/bui/2.0.0/build/support/js/support.min.js"></script>
