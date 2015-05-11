@@ -40,10 +40,15 @@
   margin: 0 auto;
 }
 .banner {
-  width: 1280px;
+  /*width: 1280px;*/
   height: 200px;
   margin: 0 auto 50px;
-  background: none;
+  width: 100%;
+  text-align: center;
+  /*background: none;*/
+}
+.list-banner {
+  background-color: #acd8e8;
 }
 /*投资列表*/
 .part1 {
@@ -199,6 +204,11 @@
 .country-nav li a .bor {
   float: right;
   color: #ccc;
+  font-size: 0;
+  width: 0;
+  border-right: 1px solid #ccc;
+  height: 19px;
+  margin-top: 11px;
 }
 .country-nav .active a {
   background: #34b5d0;
