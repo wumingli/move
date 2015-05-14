@@ -12,6 +12,8 @@
 <script src="js/slide.js"></script>
 <script src="js/main.js"></script>
 <script src="js/slider.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript">
+</script>
 </head>
 <body>
 <div class="wider header">
@@ -303,10 +305,11 @@
         <a name="map"></a>
         <ul class="article-tab">
             <li class="map active"><a href="#"><i></i><span>地图</span></a></li>
-            <li class="street"><a href="#"><i></i>街景</a></li>
+            <!-- <li class="street"><a href="#"><i></i>街景</a></li> -->
         </ul>
-        <div class="mapinfo">
-            <img src="images/map.jpg">
+        <div class="map-con">
+            <div class="mapinfo" id="map-info"></div>
+            <!-- <div class="mapinfo" id="map-info-full"></div> -->
         </div>
         <!-- 地图 & 街景end -->
         <!-- 房价走势 -->

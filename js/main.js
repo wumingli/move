@@ -33,7 +33,6 @@ $(function () {
             if (searchStr === '') {
                 return '';
             }
-            console.log(searchStr)
             searchStr = searchStr.substring(1).split('&');
             for (var i = 0; i < searchStr.length; i++) {
                 var kv = searchStr[i].split('=');
@@ -60,4 +59,16 @@ $(function () {
     highLight('city');
     highLight('property');
     highLight('price');
+    /*地图*/
+    function initialize() {
+        var obj = $("#map-info");
+        var point = new google.maps.LatLng(51.3279330000,-0.2987030000);// location, （纬度, 经度）
+        var option = {
+            zoom: 12,
+            center: point,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map($("#map-info")[0], option);
+    }
+    $("#map-info").length && initialize();
 });

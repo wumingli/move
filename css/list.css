@@ -949,6 +949,9 @@ div.pos {
 .article-tab .street i {
   background-position: -164px -257px;
 }
+.article-tab .street.active i {
+  background-position: -164px -257px;
+}
 .article-tab .zoushi i {
   background-position: -188px -155px;
 }
@@ -987,6 +990,7 @@ div.pos {
   margin-bottom: 15px;
   font-size: 14px;
   color: #fff;
+  cursor: pointer;
 }
 .count-list .count1 {
   margin-right: 15px;
@@ -1206,4 +1210,10 @@ div.pos {
 .detail-content img {
   display: block;
   margin: 0 auto 20px;
+}
+.mapinfo {
+  width: 648px;
+  height: 387px;
+  margin-top: 15px;
+  background-color: #efefef;
 }
