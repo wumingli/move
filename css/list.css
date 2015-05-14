@@ -315,10 +315,8 @@
   display: block;
   width: 7px;
   height: 4px;
+  margin-top: 8px;
   cursor: pointer;
-}
-.sort dd .asc {
-  margin: 3px 0 4px 0;
 }
 .sort dd .asc:after {
   float: right;
