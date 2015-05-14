@@ -49,6 +49,7 @@ button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button
 body {
     background-color: #fff;
     font-family: Microsoft Yahei, Simsun;
+    overflow-x: hidden;
 }
 
 body.gray-bg {
@@ -207,7 +208,10 @@ body.gray-bg {
     background-image: url(../images/qsf-banner.jpg);
     background-color: #c6e4ef;
 }
-
+.about-banner {
+    background-image: url(../images/about-banner.jpg);
+    background-color: #c6e4ef;
+}
 .country-container {
     display: none;
 }
@@ -355,8 +359,12 @@ div.pos {
 }
 p.ys {
     line-height: 36px;
-    font-size: 18px;
+    font-size: 16px;
     text-indent: 2em;
+    color: #4d4e53;
+}
+.about-img {
+    margin-top: 20px;
 }
 .service-wrap .item {
     margin-top: 35px;

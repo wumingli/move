@@ -7,31 +7,6 @@
     <meta name="keywords" content="动不动，活用您的不动产">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/jqselect.js"></script>
-    <script src="js/Checkable.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('input.fd-radio').Checkable({
-                color: 'blue'
-            });
-            $(".fd-select1").selectbox();
-            $(".fd-select2").selectbox({containerClass:"h_selectbox-wrapper",
-                hoverClass:"h_current",
-                selectedClass:"h_selected",
-                inputClass:"h_selectbox",
-                bindDiv:["select_tab1","select_tab2","select_tab3"],
-                change:function(){
-                    var bindDiv=$(this).attr("bindDiv");
-                    var divs=["select_tab1","select_tab2","select_tab3"];
-                    $(divs).each(function(){
-                        $("#"+this).hide();
-                    });
-                    $("#"+bindDiv).show();
-                }});
-        });
-    </script>
 </head>
 <body class="gray-bg">
 <div class="wider header">
@@ -77,20 +52,20 @@
             <dl class="fd-row1">
                 <dt>贷款成数：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>七成</option>
-                        <option>八成</option>
-                        <option>九成</option>
+                    <select id="fsq-rate">
+                        <option value="0.7">七成</option>
+                        <option value="0.8">八成</option>
+                        <option value="0.9">九成</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>年限：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>12个月</option>
-                        <option>24个月</option>
-                        <option>36个月</option>
+                    <select id="fd-month">
+                        <option value="12">12个月</option>
+                        <option value="24">24个月</option>
+                        <option value="36">36个月</option>
                     </select>
                 </dd>
             </dl>
@@ -99,43 +74,43 @@
             </dl>
             <dl class="fd-row2">
                 <dd>
-                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" checked="checked" />
-                    <input name="daikuan" type="radio" class="fd-radio" data-label="企业经营贷款" />
+                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
+                    <input name="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
                 </dd>
                 <span class="clear"></span>
             </dl>
             <dl class="fd-row3">
                 <dt>利率：</dt>
                 <dd style="position: relative; z-index: 1;">
-                    <select class="fd-select2">
-                        <option>基准利率1.2倍</option>
-                        <option>基准利率1.0倍</option>
-                        <option>基准利率0.8倍</option>
+                    <select id="lilv-rate">
+                        <option value="1.2">基准利率1.2倍</option>
+                        <option value="1.0">基准利率1.0倍</option>
+                        <option value="0.8">基准利率0.8倍</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row4">
                 <dd>
                     <input type="submit" value="计算" />
-                    <button>重置</button>
+                    <button type="reset">重置</button>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>贷款总额：</dt>
                 <dd>
-                   <span class="sum"></span><span>元</span>
+                   <span class="sum" id="fd-total"></span><span>元</span>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>每月还息：</dt>
                 <dd>
-                    <span class="sum"></span><span>元</span>
+                    <span class="sum" id="fd-lixi"></span><span>元</span>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>合计还款：</dt>
                 <dd>
-                    <span class="sum"></span><span>元</span>
+                    <span class="sum" id="fd-return"></span><span>元</span>
                 </dd>
             </dl>
         </form>
@@ -150,37 +125,37 @@
             <dl class="fd-row1">
                 <dt>持有货币：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>人民币</option>
-                        <option>美元</option>
+                    <select id="i-have">
+                        <option value="CNY">人民币</option>
+                        <option value="USD">美元</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>兑换货币：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>人民币</option>
-                        <option>美元</option>
+                    <select id="i-want">
+                        <option value="USD">美元</option>
+                        <option value="CNY">人民币</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>持有金额：</dt>
                 <dd class="sum-have">
-                    <input type="text" value="">人民币
+                    <input type="text" value="100"><span class="sum-have-type">人民币</span>
                 </dd>
             </dl>
             <dl class="fd-row4">
                 <dd>
-                    <input type="submit" value="计算">
-                    <button>重置</button>
+                    <input type="submit" id="huilv-btn" value="计算">
+                    <button id="huilv-reset">重置</button>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>兑换金额：</dt>
                 <dd class="sum-cash">
-                    <input type="text" value="">美元
+                    <input type="text" value=""><span class="sum-cash-type">美元</span>
                 </dd>
             </dl>
         </form>
@@ -562,5 +537,31 @@
     </ul>
     <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
 </div>
+<script src="js/jquery.js"></script>
+<script src="js/jqselect.js"></script>
+<script src="js/Checkable.js"></script>
+<script src="js/jsq.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('input.fd-radio').Checkable({
+            color: 'blue'
+        });
+        $(".fd-select1").selectbox();
+        $(".fd-select2").selectbox({containerClass:"h_selectbox-wrapper",
+            hoverClass:"h_current",
+            selectedClass:"h_selected",
+            inputClass:"h_selectbox",
+            bindDiv:["select_tab1","select_tab2","select_tab3"],
+            change:function(){
+                var bindDiv=$(this).attr("bindDiv");
+                var divs=["select_tab1","select_tab2","select_tab3"];
+                $(divs).each(function(){
+                    $("#"+this).hide();
+                });
+                $("#"+bindDiv).show();
+                console.log(this);
+            }});
+    });
+</script>
 </body>
 </html>

@@ -573,6 +573,7 @@
   margin-right: 5px;
   background: #ddd;
   border: 1px solid #d6d4d4;
+  text-align: center;
 }
 .side-box .fd-row1 .sum-have {
   width: 136px;
@@ -588,6 +589,11 @@
   background: none;
   border: none;
 }
+.side-box .fd-row1 .sum-have span {
+  display: inline-block;
+  width: 49px;
+  text-align: right;
+}
 .side-box .fd-row1 .sum-cash {
   width: 136px;
   height: 29px;
@@ -596,12 +602,17 @@
   border: 1px solid #d6d4d4;
 }
 .side-box .fd-row1 .sum-cash input {
-  width: 85px;
+  width: 72px;
   height: 29px;
   padding: 0 5px;
   color: #313538;
   background: none;
   border: none;
+}
+.side-box .fd-row1 .sum-cash span {
+  display: inline-block;
+  width: 49px;
+  text-align: right;
 }
 .side-box .fd-row2 dd {
   display: inline-block;
