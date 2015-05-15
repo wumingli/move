@@ -104,7 +104,8 @@ body.gray-bg {
 	font-size: 16px;
 	color: #666;
 	display: block;
-	margin: 0 20px 5px;
+	padding: 0 10px;
+	margin: 0 10px 5px;
 	padding-bottom: 3px;
 }
 
@@ -164,7 +165,7 @@ body.gray-bg {
 }
 
 .green-bg {
-	background-color: #d4e2e0;
+	background-color: #e1ebe9;
 }
 
 .green2-bg {
@@ -317,7 +318,7 @@ div.pos {
 
 /*04服务优势*/
 .service-wrap h1 {
-	margin: 50px auto 35px;
+	margin: 42px auto 20px;
 	color: #0ebfdd;
 	font-size: 30px;
 	width: 205px;
@@ -336,8 +337,38 @@ div.pos {
 }
 
 .service-img {
+	position: relative;
+	z-index: 1;
 	display: block;
+	width: 898px;
+	height: 111px;
 	margin: 0 auto 35px;
+	background: url("../images/about5.jpg") no-repeat 0 0;
+}
+.service-img p {
+	position: absolute;
+	top: 35px;
+	z-index: 2;
+	width: 73px;
+	height: 45px;
+	font-size: 18px;
+	color: #3582ae;
+	text-align: center;
+}
+.service-img .p1 {
+	left: 108px;
+}
+.service-img .p2, .service-img .p4 {
+	width: 92px;
+}
+.service-img .p2 {
+	left: 329px;
+}
+.service-img .p3 {
+	left: 572px;
+}
+.service-img .p4 {
+	left: 790px;
 }
 
 .service-list {
@@ -359,7 +390,12 @@ div.pos {
 	font-weight: normal;
 	line-height: 32px;
 }
-
+.service-list dl dt h4 {
+	display: inline-block;
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 32px;
+}
 .service-list dl dt i {
 	width: 30px;
 	height: 30px;
@@ -421,6 +457,7 @@ p.ys {
 	border: 0;
 	font-size: 18px;
 	line-height: 2;
+	text-indent: 2rem;
 	background: #fff url(../images/04_dk.png) 50px 85px no-repeat;
 	padding: 85px 50px 30px 240px;
 }
@@ -813,7 +850,12 @@ p.ys {
 	background: #fff;
 }
 .country-container .tzsj h2 {
-	background: url("../images/03-slist.png") no-repeat 0 0;
+	width: 517px;
+	background: url("../images/03-c6.jpg") no-repeat 0 0;
+}
+.country-container .xxl h2 {
+	width: 560px;
+	background: url("../images/03-x4.jpg") no-repeat 0 0;
 }
 .tzsj ol {
 	padding: 25px 0 15px 0;
@@ -931,13 +973,16 @@ p.ys {
     margin-bottom: 40px;
 }
 .about-contact {
+	padding: 88px 0 45px;
+	margin-bottom: 130px;
+	overflow: hidden;
+	zoom: 1;
     text-align: left;
     background: #fff url(../images/about-contact.png) 0 0 no-repeat;
-    padding: 88px 0 45px;
-    margin-bottom: 130px;
 }
 .about-contact ul {
     display: inline-block;
+	float: left;
     vertical-align: middle;
 }
 .about-contact li {
@@ -948,6 +993,7 @@ p.ys {
 }
 .about-contact .wechat {
     display: inline-block;
+	float: left;
     margin-left: 50px;
     padding-left: 50px;
     border-left: 1px solid #ccc;
@@ -956,6 +1002,101 @@ p.ys {
     font-size: 18px;
     color: #666;
     margin-bottom: 13px;
+}
+.about-box {
+	padding: 25px 0;
+	overflow: hidden;
+	zoom: 1;
+	background: #92cedd url("../images/about4.png") no-repeat 340px 66px;
+}
+.about-box dd {
+	float: left;
+	width: 244px;
+	padding: 0 44px;
+	line-height: 1.8;
+}
+.about-box dd img {
+	display: block;
+	margin: 0 auto;
+}
+.about-box dd h3 {
+	position: relative;
+	z-index: 1;
+	width: 120px;
+	padding-bottom: 8px;
+	margin: 17px auto 20px;
+	font-size: 24px;
+	color: #fff;
+	border-bottom: 1px solid #6c7476;
+}
+.about-box dd h3 i {
+	position: absolute;
+	bottom: -2px;
+	left: 36px;
+	z-index: 2;
+	display: block;
+	width: 40px;
+	height: 4px;
+	background: #fff;
+}
+.about-box dd .p1 {
+	padding-top: 10px;
+}
+.fsq-service {
+	position: relative;
+	z-index: 1;
+	width: 1000px;
+	height: 180px;
+	margin-bottom: 45px;
+	background: url("../images/fsq-img.jpg") no-repeat 0 0;
+}
+.fsq-service p {
+	position: absolute;
+	top: 20px;
+	z-index: 2;
+	width: 152px;
+	font-size: 21px;
+	color: #fff;
+}
+.fsq-service .p1 {
+	left: 47px;
+}
+.fsq-service .p2 {
+	left: 306px;
+}
+.fsq-service .p3 {
+	left: 565px;
+}
+.fsq-service .p4 {
+	left: 817px;
+}
+.qsf-service {
+	position: relative;
+	z-index: 1;
+	width: 1000px;
+	height: 180px;
+	margin-bottom: 45px;
+	background: url("../images/qsf-img.jpg") no-repeat 0 0;
+}
+.qsf-service p {
+	position: absolute;
+	top: 20px;
+	z-index: 2;
+	width: 152px;
+	font-size: 21px;
+	color: #fff;
+}
+.qsf-service .p1 {
+	left: 39px;
+}
+.qsf-service .p2 {
+	left: 307px;
+}
+.qsf-service .p3 {
+	left: 568px;
+}
+.qsf-service .p4 {
+	left: 830px;
 }
 
 /*地图*/
