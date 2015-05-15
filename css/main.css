@@ -208,7 +208,7 @@
 .tz-nav li {
   display: inline-block;
   height: 33px;
-  padding: 0 18px;
+  padding: 0 36px;
   line-height: 33px;
   background: url("../images/border-right.jpg") no-repeat right 9px;
 }
@@ -223,7 +223,7 @@
 .tz-nav li i {
   width: 51px;
   height: 33px;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 .tz-nav .england i {
   background: url("../images/list/england.png") no-repeat 0 0;
