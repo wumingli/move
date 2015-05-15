@@ -467,7 +467,7 @@
 }*/
 /*翻页*/
 .pagejump {
-  margin: 40px 0 75px 0;
+  margin-top: 65px;
   font-size: 14px;
   color: #333;
   text-align: center;
@@ -758,7 +758,7 @@
 }
 /*05投资列表-1*/
 .wrap-detail {
-  padding: 15px 0 150px 0;
+  padding: 15px 0 115px 0;
   color: #333;
 }
 .wrap .article {
@@ -1042,6 +1042,9 @@ div.pos {
   margin-top: 30px;
   border: 1px solid #ccc;
 }
+.hot-house-source .hs-list {
+  margin-top: 20px;
+}
 .hs-title {
   height: 39px;
   padding: 0 20px 0 23px;
@@ -1072,7 +1075,7 @@ div.pos {
   font-size: 16px;
 }
 .hs-list {
-  padding: 20px 18px 0 18px;
+  padding: 0 18px 0 18px;
 }
 .hs-list dl {
   margin-bottom: 20px;
@@ -1171,12 +1174,12 @@ div.pos {
 }
 .nw-list dl dt {
   width: 175px;
-  height: 129px;
+  height: 128px;
   margin-right: 28px;
 }
 .nw-list dl dt img {
   width: 173px;
-  height: 127px;
+  height: 128px;
 }
 .nw-list dl dd {
   width: 447px;
@@ -1217,13 +1220,21 @@ div.pos {
   line-height: 1.6;
   text-indent: 2em;
 }
+.detail-content p.center {
+  text-align: center;
+  text-indent: 0;
+  font-size: 14px;
+}
 .detail-content img {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 }
 .mapinfo {
   width: 648px;
   height: 387px;
   margin-top: 15px;
   background-color: #efefef;
+}
+.ad-content {
+  margin-top: 50px;
 }
