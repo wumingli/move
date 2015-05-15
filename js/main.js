@@ -59,7 +59,7 @@ $(function () {
     highLight('city');
     highLight('property');
     highLight('price');
-    /*地图*/
+    /*地图---》已迁移至页面中
     function initialize() {
         var obj = $("#map-info");
         var point = new google.maps.LatLng(51.3279330000,-0.2987030000);// location, （纬度, 经度）
@@ -70,5 +70,11 @@ $(function () {
         }
         var map = new google.maps.Map($("#map-info")[0], option);
     }
-    $("#map-info").length && initialize();
+    $("#map-info").length && initialize();*/
+    //目标国推荐小图切换
+    $('.tz-left ul li a').attr('href', 'javascript:void(0);');
+    $('.tz-left ul li').on('click', function () {
+        $('.tz-left .tz-left-img img').attr('src', $(this).find('img').attr('src'));
+        return false;
+    });
 });

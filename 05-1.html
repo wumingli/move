@@ -230,8 +230,8 @@
         <!-- 地图 & 街景 -->
         <a name="map"></a>
         <ul class="article-tab">
-            <li class="map active"><a href="#"><i></i><span>地图</span></a></li>
-            <!-- <li class="street"><a href="#"><i></i>街景</a></li> -->
+            <li class="map active"><a href="javascript:void(0);"><i></i><span>地图</span></a></li>
+            <li class="street"><a href="javascript:void(0);"><i></i>街景</a></li>
         </ul>
         <div class="map-con">
             <div class="mapinfo" id="map-info"></div>
@@ -403,6 +403,150 @@
 <script src="js/slide.js"></script>
 <script src="js/main.js"></script>
 <script src="js/slider.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="http://ditu.google.cn/maps/api/js?sensor=false&v=3.5" type="text/javascript"></script>
+<script>
+var Pos_X = "-37.9096655";
+var Pos_Y = "144.7609761";
+var pin_home = 'http://js.youtx.com/js_en/images/pin_home.png';
+var latlng;
+var panorama;
+function initialize() {
+
+    if (Pos_X != "0" && Pos_Y != "0") {
+        latlng = new google.maps.LatLng(-37.9096655, 144.7609761);
+
+        var MapTypeIds = new Array();
+        MapTypeIds[0] = "roadmap";
+        MapTypeIds[1] = "bybird";
+        var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeId: 'roadmap',
+                scrollwheel: false,
+                MapTypeControlOptions: MapTypeIds
+            }
+        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+        var locationMarker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "墨尔本西南区海滨别墅-Paragon",
+            draggable: false,
+            icon: pin_home
+        });
+        locationMarker.setVisible(true);
+
+    } else {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+            'address': ""
+        }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var myOptions = {
+                    zoom: 13,
+                    center: results[0].geometry.location,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    zoomControl: true
+                };
+                map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+                var locationMarker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    title: "墨尔本西南区海滨别墅-Paragon",
+                    draggable: false,
+                    icon: pin_home
+                });
+                locationMarker.setVisible(true);
+            } else {
+                geocoder.geocode({
+                    'address': "Melbourne"
+                }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var myOptions = {
+                            zoom: 13,
+                            center: results[0].geometry.location,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            zoomControl: true
+                        };
+                        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+                        var locationMarker = new google.maps.Marker({
+                            position: results[0].geometry.location,
+                            map: map,
+                            title: "墨尔本西南区海滨别墅-Paragon",
+                            draggable: false,
+                            icon: pin_home
+                        });
+                        locationMarker.setVisible(true);
+                    } else {
+                        geocoder.geocode({
+                            'address': "澳大利亚"
+                        }, function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                var myOptions = {
+                                    zoom: 13,
+                                    center: results[0].geometry.location,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                    zoomControl: true
+                                };
+                                map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+                                var locationMarker = new google.maps.Marker({
+                                    position: results[0].geometry.location,
+                                    map: map,
+                                    title: "墨尔本西南区海滨别墅-Paragon",
+                                    draggable: false,
+                                    icon: pin_home
+                                });
+                                locationMarker.setVisible(true);
+                            } else {
+
+                                geocoder.geocode({
+                                    'address': ""
+                                }, function (results, status) {
+                                    if (status == google.maps.GeocoderStatus.OK) {
+                                        var myOptions = {
+                                            zoom: 13,
+                                            center: results[0].geometry.location,
+                                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                            zoomControl: true
+                                        };
+                                        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+                                        var locationMarker = new google.maps.Marker({
+                                            position: results[0].geometry.location,
+                                            map: map,
+                                            title: "墨尔本西南区海滨别墅-Paragon",
+                                            draggable: false,
+                                            icon: pin_home
+                                        });
+                                        locationMarker.setVisible(true);
+
+                                    }
+                                });
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+}
+initialize();
+function streetView() {
+    var panoramaOptions = {
+        position: latlng
+    };
+    panorama = new google.maps.StreetViewPanorama(document.getElementById("map-info"), panoramaOptions);
+    map.setStreetView(panorama);
+}
+$('.street').on('click', function () {
+    $(this).addClass('active').siblings('li').removeClass('active');
+    streetView();
+    return false;
+});
+$('.map').on('click', function () {
+    $(this).addClass('active').siblings('li').removeClass('active');
+    initialize();
+    return false;
+});
+</script>
 </body>
 </html>

@@ -959,7 +959,8 @@ div.pos {
   background-position: -164px -257px;
 }
 .article-tab .street.active i {
-  background-position: -164px -257px;
+  /*background-position: -164px -257px;*/
+  background-position: 0 -376px;
 }
 .article-tab .zoushi i {
   background-position: -188px -155px;
