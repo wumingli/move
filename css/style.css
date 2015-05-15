@@ -1088,4 +1088,9 @@ p.ys {
 	left: 830px;
 }
 
-
+/*地图*/
+#dituContent {
+	width: 1000px;
+	height: 480px;
+	margin: 0 auto 40px;
+}
