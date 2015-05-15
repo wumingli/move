@@ -256,6 +256,7 @@
   margin: 2px 10px 0 0;
 }
 .search-active {
+  display: none;
   width: 654px;
   padding: 0 23px;
   font-size: 14px;
@@ -273,7 +274,7 @@
 }
 .search-active .s-option {
   float: left;
-  width: 515px;
+  /*width: 515px;*/
 }
 .search-active .s-option span {
   padding: 0 10px;
@@ -284,6 +285,12 @@
   float: right;
   margin-left: 10px;
   cursor: pointer;
+}
+.search-active .s-option span i {
+  font-style: normal;
+}
+.search-active-show {
+  display: block;
 }
 .sort {
   margin-bottom: 4px;
@@ -364,6 +371,9 @@
 .house-list dl:hover {
   background-color: #fff;
 }
+.house-list dl:hover a {
+  text-decoration: underline;
+}
 .house-list dt,
 .house-list dd {
   float: left;
@@ -384,6 +394,7 @@
   zoom: 1;
   color: #f60;
   font-size: 18px;
+  font-weight: bold;
 }
 .house-list .h-title .rmb {
   float: right;
@@ -454,10 +465,10 @@
   background-position: -4px -199px;
 }
 .h-info li .area {
-  background-position: -4px -230px;
+  background-position: -57px -159px;
 }
 .h-info li .type {
-  background-position: -57px -159px;
+  background-position: -4px -230px;
 }
 .h-info li .carport {
   background-position: -59px -188px;
@@ -562,6 +573,8 @@
   background: none;
   border: none;
   border-right: 1px solid #d6d4d4;
+  font-size: 16px;
+  color: #999;
 }
 .side-box .fd-row1 .sum {
   display: inline-block;
@@ -678,13 +691,16 @@
   display: block;
   width: 132px;
   height: 31px;
-  padding-left: 4px;
+  padding-left: 7px;
   font-size: 16px;
-  color: #333;
+  color: #666;
   line-height: 31px;
   cursor: pointer;
   background: url("../images/list/icon.png") no-repeat 0 0;
   border: none;
+}
+#lilv-rate_input {
+  font-size: 14px;
 }
 .h_selectbox {
   display: inline-block;
@@ -710,7 +726,7 @@
 }
 .selectbox-wrapper ul li,
 .h_selectbox-wrapper ul li {
-  padding: 0 3px;
+  padding: 0 7px;
   cursor: pointer;
   line-height: 30px;
 }
@@ -797,9 +813,16 @@ div.pos {
   display: inline-block;
   color: #666;
   font-size: 16px;
+  font-weight: bold;
 }
 .price-info li.red {
   color: #f60;
+}
+.price-info li.line {
+  font-weight: normal;
+  font-size: 12px;
+  vertical-align: top;
+  margin: 0 10px;
 }
 .content {
   border: 1px solid #ccc;

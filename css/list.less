@@ -225,6 +225,7 @@
 }
 
 .search-active {
+    display: none;
     width: 654px;
     padding: 0 23px;
     font-size: 14px;
@@ -241,7 +242,7 @@
     }
     .s-option {
         float: left;
-        width: 515px;
+        /*width: 515px;*/
         span {
             padding: 0 10px;
             color: #fff;
@@ -251,10 +252,15 @@
                 margin-left: 10px;
                 cursor: pointer;
             }
+            i {
+                font-style: normal;
+            }
         }
     }
 }
-
+.search-active-show {
+    display: block;
+}
 .sort {
     margin-bottom: 4px;
     dl {
@@ -343,6 +349,9 @@
         border-bottom: 1px dashed #bebebe;
         &:hover {
             background-color: #fff;
+            a {
+                text-decoration: underline;
+            }
         }
     }
     dt, dd {
@@ -364,6 +373,7 @@
         zoom: 1;
         color: #f60;
         font-size: 18px;
+        font-weight: bold;
         .rmb {
             float: right;
         }
@@ -424,10 +434,10 @@
             background-position: -4px -199px;
         }
         .area {
-            background-position: -4px -230px;
+            background-position: -57px -159px;
         }
         .type {
-            background-position: -57px -159px;
+            background-position: -4px -230px;
         }
         .carport {
             background-position: -59px -188px;
@@ -536,6 +546,8 @@
                 background: none;
                 border: none;
                 border-right: 1px solid #d6d4d4;
+                font-size: 16px;
+                color: #999;
             }
         }
         .sum {
@@ -657,13 +669,16 @@
     display: block;
     width: 132px;
     height: 31px;
-    padding-left: 4px;
+    padding-left: 7px;
     font-size: 16px;
-    color: #333;
+    color: #666;
     line-height: 31px;
     cursor: pointer;
     background: url("../images/list/icon.png") no-repeat 0 0;
     border: none;
+}
+#lilv-rate_input {
+    font-size: 14px;
 }
 .h_selectbox {
     display: inline-block;
@@ -688,7 +703,7 @@
     border: #c7c8dc 1px solid;
     ul {
         li {
-            padding: 0 3px;
+            padding: 0 7px;
             cursor: pointer;
             line-height: 30px;
         }
@@ -774,9 +789,16 @@ div.pos {
     display: inline-block;
     color: #666;
     font-size: 16px;
+    font-weight: bold;
 }
 .price-info li.red {
     color: #f60;
+}
+.price-info li.line {
+    font-weight: normal;
+    font-size: 12px;
+    vertical-align: top;
+    margin: 0 10px;
 }
 .content {
     border: 1px solid #ccc;
