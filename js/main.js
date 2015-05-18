@@ -28,7 +28,7 @@ $(function() {
     }).eq(0).trigger('click');
 
     //根据搜索条件，高亮当前选项
-
+    /*
     function getValueByKey(key) {
         var searchStr = location.search;
         if (searchStr === '') {
@@ -44,8 +44,9 @@ $(function() {
         }
         return '';
     }
+    */
     /*高亮功能*/
-    function highLight(type) {
+    /*function highLight(type) {
         var str = getValueByKey(type);
         if (str) {
             $('.' + type + '-option a').each(function() {
@@ -60,7 +61,7 @@ $(function() {
     }
     highLight('city');
     highLight('property');
-    highLight('price');
+    highLight('price');*/
 
     var loc = window.location.search,
         arrLoc,

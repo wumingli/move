@@ -2,12 +2,104 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>投资列表——动不动 | 活用您的不动产</title>
-<meta name="description" content="不动产,海外置业,买房,房产">
-<meta name="keywords" content="动不动，活用您的不动产">
+<title>点击地图获取坐标</title>
+<style>
+    * {
+        margin: 0;
+        top: 0;
+    }
+    #map-cover {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    #map-containter {
+        width: 900px;
+        height: 550px;
+        background: #ffeeca;
+        position: absolute;
+        left: 50%;
+        margin-left: -350px;
+        top: 50%;
+        margin-top: -275px;
+    }
+    #map-containter h3 {
+        margin: 15px 0 10px 15px;
+        font-size: 14px;
+        color: #ff993e;
+    }
+    #map-containter i.close {
+        font-style: normal;
+        font-size: 18px;
+        color: #ff993e;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+        font-family: Microsoft Yahei;
+    }
+    #map-info {
+        background: #fff;
+        width: 860px;
+        height: 490px;
+        margin: 0 auto;
+    }
+</style>
 </head>
 <body>
-<div id="map_0" style="width: 600px;height: 600px;position:absolute;top:0;left:0;"></div>
-    <iframe src="http://www.gpsspg.com/apps/maps/google_140724.htm" width="600" height="500"></iframe>
+<input type="text" id="test" size="35" />
+<br>
+<input type="button" id="getPos" value="点击地图获取坐标">
+<div id="map-cover" style="display: none;">
+    <div id="map-containter">
+        <h3>选择地图坐标点</h3>
+        <i class="close" id="close-map">X</i>
+        <div id="map-info">
+            
+        </div>
+    </div>
+</div>
+<script src="http://ditu.google.cn/maps/api/js?sensor=false&v=3.5" type="text/javascript"></script>
+<script>
+window.onload = function () {
+    var getMap = document.getElementById('getPos'),
+        closeMap = document.getElementById('close-map'),
+        map;
+    function initialize() {
+        latlng = new google.maps.LatLng(39.913423004886894, 116.400146484375);
+        var myOptions = {
+                zoom: 15,
+                center: latlng
+            }
+        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+        var locationMarker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            draggable: false
+        });
+        locationMarker.setVisible(false);
+      }
+    function mapClose() {
+        document.getElementById('map-cover').style.display = "none";
+    }
+    getMap.onclick = function () {
+        document.getElementById('map-cover').style.display = "block";
+        initialize();
+        google.maps.event.addListener(map, "click", function(event) {
+            var lat = event.latLng.lat();
+            var lng = event.latLng.lng();
+            // 经纬度
+            document.getElementById('test').value = lat + ", " + lng;
+            mapClose();
+        });
+    };
+    closeMap.onclick = function () {
+        mapClose();
+    }
+};
+</script>
 </body>
 </html>
