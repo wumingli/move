@@ -4,7 +4,7 @@
  * @date    2015-04-15 21:22:34
  * @version $Id$
  */
-$(function () {
+$(function() {
     //房生钱贷款计算器
     function houseToMoney() {
         var $parent = $('.fangdai-form'),
@@ -17,7 +17,7 @@ $(function () {
             lixiMonth = 0,
             needReturn = 0;
         $('#fsq-rate').selectbox({
-            change: function () {
+            change: function() {
                 rate = $(this).attr('id').match(/\d+\.\d+/g);
                 if (rate !== null) {
                     rate = parseFloat(rate[0]);
@@ -25,7 +25,7 @@ $(function () {
             }
         });
         $('#fd-month').selectbox({
-            change: function () {
+            change: function() {
                 month = $(this).attr('id').match(/\d+/g);
                 if (month !== null) {
                     month = parseFloat(month[0]);
@@ -34,14 +34,14 @@ $(function () {
             }
         });
         $('#lilv-rate').selectbox({
-            change: function () {
+            change: function() {
                 lilv = $(this).attr('id').match(/\d+\.\d+/g);
                 if (lilv !== null) {
                     lilv = parseFloat(lilv[0]);
                 }
             }
         });
-        $parent.find('input[type="submit"]').on('click', function () {
+        $parent.find('input[type="submit"]').on('click', function() {
             if (!/^\d+$/.test($acount.val())) {
                 alert('贷款总额必须为正整数！');
                 return false;
@@ -70,20 +70,20 @@ $(function () {
             amount = 100,
             $amount = $('.sum-have').find('input');
         $('#i-have').selectbox({
-            change: function () {
+            change: function() {
                 var id = $(this).attr('id');
                 from = id.substring(id.lastIndexOf('_') + 1);
                 $('.sum-have-type').text(type[from]);
             }
         });
         $('#i-want').selectbox({
-            change: function () {
+            change: function() {
                 var id = $(this).attr('id');
                 to = id.substring(id.lastIndexOf('_') + 1);
                 $('.sum-cash-type').text(type[to]);
             }
         });
-        $('#huilv-btn').on('click', function () {
+        $('#huilv-btn').on('click', function() {
             if (!/^\d+$/.test($amount.val())) {
                 alert('持有金额必须为正整数！');
                 return false;
@@ -97,7 +97,7 @@ $(function () {
                     to: to,
                     amount: amount
                 },
-                success: function (data) {
+                success: function(data) {
                     if (data.status == 1) {
                         $('.sum-cash input').val(data.data);
                     }
@@ -107,4 +107,18 @@ $(function () {
         });
     }
     originCountry();
+
+
+    function showJSQ($obj) {
+        var id = $obj.attr('id');
+        console.log(id);
+    }
+    //
+    $('#fsq-jsq').on('click', function() {
+        showJSQ($(this));
+    });
+    //关闭
+    $('.jsq-container .s-title em').on('click', function() {
+        $(this).parents('.jsq-container').hide();
+    });
 });

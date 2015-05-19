@@ -104,11 +104,13 @@ body.gray-bg {
 	font-size: 16px;
 	color: #666;
 	display: block;
-	padding: 0 10px;
-	margin: 0 10px 5px;
+	padding: 0;
+	margin: 0 20px 5px;
 	padding-bottom: 3px;
 }
-
+.nav > ul > li:first-child > a {
+	padding: 0 10px;
+}
 .subnav {
 	position: absolute;
 	top: 35px;
@@ -354,6 +356,7 @@ div.pos {
 	font-size: 18px;
 	color: #3582ae;
 	text-align: center;
+	font-weight: bold;
 }
 .service-img .p1 {
 	left: 108px;
@@ -389,12 +392,17 @@ div.pos {
 	font-size: 20px;
 	font-weight: normal;
 	line-height: 32px;
+	color: #333;
+}
+.service-list dl dt h3 {
+	font-weight: bold;
 }
 .service-list dl dt h4 {
 	display: inline-block;
 	font-size: 26px;
-	font-weight: normal;
+	/* font-weight: normal; */
 	line-height: 32px;
+	color: #4d4e53;
 }
 .service-list dl dt i {
 	width: 30px;
@@ -1008,6 +1016,7 @@ p.ys {
 	overflow: hidden;
 	zoom: 1;
 	background: #92cedd url("../images/about4.png") no-repeat 340px 66px;
+	margin-top: 30px;
 }
 .about-box dd {
 	float: left;
@@ -1057,6 +1066,7 @@ p.ys {
 	width: 152px;
 	font-size: 21px;
 	color: #fff;
+	font-weight: bold;
 }
 .fsq-service .p1 {
 	left: 47px;
@@ -1085,6 +1095,7 @@ p.ys {
 	width: 152px;
 	font-size: 21px;
 	color: #fff;
+	font-weight: bold;
 }
 .qsf-service .p1 {
 	left: 39px;
@@ -1104,4 +1115,10 @@ p.ys {
 	width: 1000px;
 	height: 480px;
 	margin: 0 auto 40px;
+}
+
+.service-wrap p.ys {
+	width: 91%;
+	font-size: 18px;
+	margin: 0 auto;
 }

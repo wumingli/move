@@ -57,7 +57,7 @@
   background: #f4f4f4;
 }
 .part1 .wrap {
-  padding-bottom: 150px;
+  padding-bottom: 75px;
 }
 .sidecol {
   float: left;
@@ -221,7 +221,7 @@
   display: none;
 }
 .search-option {
-  margin: 20px 0 10px 0;
+  margin: 20px 0 15px 0;
   background: #fff;
   border: 1px solid #d6d4d4;
 }
@@ -243,7 +243,7 @@
 .search-option dl dd a {
   display: inline-block;
   height: 20px;
-  padding: 0 10px;
+  padding: 0 15px;
   color: #333;
   line-height: 20px;
 }
@@ -289,6 +289,10 @@
 .search-active .s-option span i {
   font-style: normal;
 }
+.search-active .s-option span a {
+  color: #fff;
+  text-decoration: none;
+}
 .search-active-show {
   display: block;
 }
@@ -321,8 +325,8 @@
 .sort dd i {
   display: block;
   width: 7px;
-  height: 4px;
-  margin-top: 8px;
+  height: 9px;
+  margin-top: 5px;
   cursor: pointer;
 }
 .sort dd .asc:after {
@@ -332,9 +336,21 @@
   height: 0px;
   overflow: hidden;
   border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top-color: #666;
+}
+.sort dd .asc:before {
+  float: right;
+  content: "";
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border-left: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom-color: #666;
+  margin-bottom: 1px;
 }
 .sort dd .desc:after {
   float: right;
@@ -345,17 +361,39 @@
   border-top: 5px solid transparent;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top-color: #666;
+  border-top-color: #fff;
+}
+.sort dd .desc:before {
+  float: right;
+  content: "";
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom-color: #fff;
+  margin-bottom: 1px;
 }
 .sort .active {
   color: #fff;
   background: #ff6600;
   border: 1px solid #ff6600;
 }
+.sort .active dd .asc:before {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
 .sort .active dd .asc:after {
   border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+.sort .active dd .desc:before {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
 }
 .sort .active dd .desc:after {
+  border-bottom-color: #fff;
   border-top-color: #fff;
 }
 .house-list {
@@ -445,7 +483,7 @@
 }
 .h-info li {
   float: left;
-  width: 210px;
+  width: 275px;
   margin: 10px 10px 0 0;
   font-size: 14px;
   color: #333;
@@ -454,6 +492,7 @@
 .h-info li span {
   display: block;
   float: left;
+  max-width: 240px;
 }
 .h-info li i {
   width: 20px;
@@ -483,6 +522,9 @@
   color: #333;
   text-align: center;
   white-space: nowrap;
+}
+.pagejump form {
+  display: inline-block;
 }
 .pagejump a {
   display: inline-block;
@@ -596,14 +638,16 @@
   width: 72px;
   height: 29px;
   padding: 0 5px;
-  color: #313538;
+  color: #666;
   background: none;
   border: none;
+  font-size: 16px;
 }
 .side-box .fd-row1 .sum-have span {
   display: inline-block;
   width: 49px;
   text-align: right;
+  color: #666;
 }
 .side-box .fd-row1 .sum-cash {
   width: 136px;
@@ -616,7 +660,7 @@
   width: 72px;
   height: 29px;
   padding: 0 5px;
-  color: #313538;
+  color: #666;
   background: none;
   border: none;
 }
@@ -624,6 +668,7 @@
   display: inline-block;
   width: 49px;
   text-align: right;
+  color: #666;
 }
 .side-box .fd-row2 dd {
   display: inline-block;
@@ -746,6 +791,7 @@
 .consult-form p {
   font-size: 18px;
   color: #666;
+  font-weight: bold;
 }
 .consult-form input[type="text"],
 .consult-form textarea {
@@ -1260,4 +1306,36 @@ div.pos {
 }
 .ad-content {
   margin-top: 50px;
+}
+.jsq-con {
+  width: 292px;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  margin-left: -146px;
+}
+.jsq-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.jsq-container .s-title {
+  width: 257px;
+}
+.jsq-container .s-title em {
+  display: block;
+  width: 13px;
+  height: 11px;
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  background: url(../images/list/jsq-close-btn.png) no-repeat;
+  cursor: pointer;
+}
+.jsq-container .side-box {
+  width: 290px;
 }

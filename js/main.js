@@ -63,7 +63,7 @@ $(function() {
     highLight('property');
     highLight('price');*/
 
-    var loc = window.location.search,
+    /*var loc = window.location.search,
         arrLoc,
         searchHtml = '';
     if (loc !== '') {
@@ -76,7 +76,7 @@ $(function() {
                 break;
             }
             text = decodeURIComponent(currSearch[1]);
-            searchHtml += '<div class="s-option"><span><em>X</em><i>' + text + '</i></span></div>';
+            searchHtml += '<div class="s-option"><span><a href=""><em>X</em></a><i>' + text + '</i></span></div>';
         }
         $('.s-option-t').after(searchHtml);
     }
@@ -97,7 +97,7 @@ $(function() {
     }
     $('.s-option span em').on('click', function () {
         deleteByText($(this).next('i').text());
-    });
+    });*/
     /*地图---》已迁移至页面中
     function initialize() {
         var obj = $("#map-info");
@@ -114,6 +114,71 @@ $(function() {
     $('.tz-left ul li a').attr('href', 'javascript:void(0);');
     $('.tz-left ul li').on('click', function() {
         $('.tz-left .tz-left-img img').attr('src', $(this).find('img').attr('src'));
+        return false;
+    });
+
+    //调查Ajax
+    $('.move-survey').on('submit', function() {
+        /*if ($.trim($('[name="contact"]').val()) === '') {
+            alert('请输入您的联系方式');
+            $('[name="contact"]').focus();
+            return false;
+        }*/
+        if ($.trim($('[name="username"]').val()) === '') {
+            alert('请输入您的姓名');
+            $('[name="username"]').focus();
+            return false;
+        }
+        if ($.trim($('[name="useremail"]').val()) === '') {
+            alert('请输入您的邮箱');
+            $('[name="useremail"]').focus();
+            return false;
+        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="useremail"]').val())) {
+            alert('邮箱格式不正确');
+            $('[name="useremail"]').select();
+            return false;
+        }
+        $.ajax({
+            url: 'index.php', //这里改成调查的URL
+            data: $('.move-survey').serialize(),
+            success: function(data) {
+                alert('问卷提交成功，感谢您的参与');
+            }
+        });
+        return false;
+    });
+    //快速咨询您感兴趣的房源
+    $('.consult-form').on('submit', function() {
+        if ($.trim($('[name="username"]').val()) === '') {
+            alert('请输入您的姓名');
+            $('[name="username"]').focus();
+            return false;
+        }
+        if ($.trim($('[name="phone"]').val()) === '') {
+            alert('请输入手机号码');
+            $('[name="phone"]').focus();
+            return false;
+        } else if (!/^1[34578]\d{9}$/.test($('[name="phone"]').val())) {
+            alert('手机号码格式不正确');
+            $('[name="phone"]').select();
+            return false;
+        }
+        if ($.trim($('[name="email"]').val()) === '') {
+            alert('请输入您的邮箱');
+            $('[name="email"]').focus();
+            return false;
+        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="email"]').val())) {
+            alert('邮箱格式不正确');
+            $('[name="email"]').select();
+            return false;
+        }
+        $.ajax({
+            url: 'index.php', //这里改成调查的URL
+            data: $('.consult-form').serialize(),
+            success: function(data) {
+                alert('咨询提交成功');
+            }
+        });
         return false;
     });
 });

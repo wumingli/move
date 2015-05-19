@@ -186,10 +186,10 @@
     <div class="side-box">
         <form class="consult-form">
             <p>快速咨询您感兴趣的房源</p>
-            <input type="text" placeholder="您的姓名"/>
-            <input type="text" placeholder="手机号码"/>
-            <input type="text" placeholder="您的邮箱"/>
-            <textarea placeholder="填写您的购买意向"></textarea>
+            <input type="text" name="username" placeholder="您的姓名"/>
+            <input type="text" name="phone" placeholder="手机号码"/>
+            <input type="text" name="email" placeholder="您的邮箱"/>
+            <textarea name="buy" placeholder="填写您的购买意向"></textarea>
             <input type="submit" value="联系经纪人"/>
         </form>
     </div>
@@ -258,7 +258,7 @@
             <a href="?price=100-300万">100-300万</a>
             <a href="?price=300-500万">300-500万</a>
             <a href="?price=700-900万">700-900万</a>
-            <a href="?price=900万以上人民币">900万以上人民币</a>
+            <a href="?price=900万以上人民币">900万以上</a>
         </dd>
     </dl>
     <dl>
@@ -277,11 +277,11 @@
                 </select>
             </div>
             <div class="fd-selectbox">
-                <select class="fd-select2">
+                <select class="fd-select3">
                     <option>使用面积</option>
                     <option>50-100</option>
                     <option>100-150</option>
-                    <option>150-200</option>
+                    <option selected="">150-200</option>
                     <option>200-300</option>
                     <option>300-400</option>
                     <option>400-500</option>
@@ -292,11 +292,11 @@
         </dd>
     </dl>
 </div>
-<div class="search-active">
+<div class="search-active search-active-show">
     <span class="s-option-t">当前您的搜索条件：</span>
-    <!-- <div class="s-option">
+    <div class="s-option">
         <span><em>X</em>别墅（HOUSE）</span>
-    </div> -->
+    </div> <!-- -->
     <div class="clear"></div>
 </div>
 <div class="sort">
@@ -307,7 +307,7 @@
             <i class="desc"></i>
         </dd>
     </dl>
-    <dl>
+    <dl class="active">
         <dt>总价</dt>
         <dd>
             <i class="asc"></i>
@@ -503,7 +503,6 @@
  </div>
  <!--翻页-->
 <div class="pagejump">
-    <form>
         <a href="#" class="page-prev"><i></i></a>
         <a href="#" class="active">1</a>
         <a href="#">2</a>
@@ -514,21 +513,20 @@
         <a href="#">10</a>
         <a href="#">11</a>
         <a href="#" class="page-next"><i></i></a>
-    <span class="goto">跳转到
-        <input type="text" class="goto-input"/>
-        <input type="button" class="submit" value="GO">
-    </span>
+        <form>
+        <span class="goto">跳转到
+            <input type="text" class="goto-input"/>
+            <input type="button" class="submit" value="GO">
+        </span>
+        </form>
         <span class="bar-number">总共111条</span>
         <span class="page-number">共11页</span>
-    </form>
 </div>
 <!--翻页-->
 </div>
 <div class="clear"></div>
 </div>
 </div>
-<br><br><br><br>
-
 <div class="wider footer">
     <ul>
         <li><a href="">关于我们</a></li>
@@ -550,20 +548,25 @@
             color: 'blue'
         });
         $(".fd-select1").selectbox();
-        $(".fd-select2").selectbox({containerClass:"h_selectbox-wrapper",
+        $(".fd-select2").selectbox({
+            containerClass:"h_selectbox-wrapper",
             hoverClass:"h_current",
             selectedClass:"h_selected",
             inputClass:"h_selectbox",
-            bindDiv:["select_tab1","select_tab2","select_tab3"],
-            change:function(){
-                var bindDiv=$(this).attr("bindDiv");
-                var divs=["select_tab1","select_tab2","select_tab3"];
-                $(divs).each(function(){
-                    $("#"+this).hide();
-                });
-                $("#"+bindDiv).show();
-                console.log(this);
-            }});
+            change: function(){
+                location.search = 'room=' + $(".fd-select2").val();
+            }
+        });
+        $(".fd-select3").selectbox({
+            containerClass:"h_selectbox-wrapper",
+            hoverClass:"h_current",
+            selectedClass:"h_selected",
+            inputClass:"h_selectbox",
+            //bindDiv:["select_tab1","select_tab2","select_tab3"],
+            change: function(){
+                location.search = 'roomprice=' + $(".fd-select3").val();
+            }
+        });
     });
 </script>
 </body>

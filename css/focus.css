@@ -32,3 +32,19 @@
 a.s_pre{ background-position:0 0;top:200px;left:0px;}
 a.s_next{ background-position:-30px 0;top:200px;right:0px; }
 .qk_f1 { position: absolute; bottom:10px; left:10px;}
+
+#current-tab {
+    position: absolute;
+    bottom: 89px;
+    left: 42px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 550px;
+    background-color: #fff;
+    z-index: 2;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}

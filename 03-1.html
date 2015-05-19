@@ -136,77 +136,80 @@
 </div>
 
 
-<div class="investigate-wrap">
-    <div class="i-title"><i></i>调查问卷</div>
-    <div class="i-form">
-        <div class="i-left">
-            <div class="i-row">
-                <p class="i-row-title">您的联系方式：</p>
-                <input type="text" class="i-ipt" />
-                <div class="clear"></div>
-            </div>
-            <div class="i-row">
-                <p class="i-row-title">您的姓名：</p>
-                <input type="text" class="i-ipt" />
-                <div class="clear"></div>
-            </div>
-            <div class="i-row">
-                <p class="i-row-title">您的邮箱：</p>
-                <input type="text" class="i-ipt" />
-                <div class="clear"></div>
-            </div>
-            <div class="i-row2">
-                <div class="i-radio">
-                    <input name="q1" type="radio" value="" class="i-radio-checkbox" id="q1-1" data-label="不是">
-                    <input name="q1" type="radio" value="" class="i-radio-checkbox" id="q1-2" data-label="是" checked="checked">
+<div class="investigate">
+    <div class="investigate-wrap">
+        <div class="i-title"><i></i>调查问卷</div>
+        <form action="" method="get" class="move-survey">
+        <div class="i-form">
+            <div class="i-left">
+                <div class="i-row">
+                    <p class="i-row-title">您的联系方式：</p>
+                    <input type="text" name="contact" class="i-ipt" />
+                    <div class="clear"></div>
                 </div>
-                <span>由于雾霾是否考虑到海外置业？</span>
-                <div class="clear"></div>
-            </div>
-            <div class="i-row2">
-                <div class="i-radio">
-                    <input name="q2" type="radio" value="" class="i-radio-checkbox" id="q2-1" data-label="不是">
-                    <input name="q2" type="radio" value="" class="i-radio-checkbox" id="q2-2" data-label="是" checked="checked">
+                <div class="i-row">
+                    <p class="i-row-title">您的姓名：</p>
+                    <input type="text" name="username" class="i-ipt" />
+                    <div class="clear"></div>
                 </div>
-                <span>您是否愿意盘活不动产而创造收益？</span>
-                <div class="clear"></div>
-            </div>
-            <div class="i-row2">
-                <span>3-5年100%收回海外投资房产的模式您是否足够吸引？ </span>
-            </div>
-            <div class="i-row2">
-                <div class="i-radio">
-                    <input name="q3" type="radio" value="" class="i-radio-checkbox" id="q3-1" data-label="不是">
-                    <input name="q3" type="radio" value="" class="i-radio-checkbox" id="q3-2" data-label="是" checked="checked">
+                <div class="i-row">
+                    <p class="i-row-title">您的邮箱：</p>
+                    <input type="text" name="useremail" class="i-ipt" />
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
+                <div class="i-row2">
+                    <div class="i-radio">
+                        <input name="q1" type="radio" class="i-radio-checkbox" id="q1-1" value="不是" data-label="不是">
+                        <input name="q1" type="radio" class="i-radio-checkbox" id="q1-2" value="是" data-label="是" checked="checked">
+                    </div>
+                    <span>由于雾霾是否考虑到海外置业？</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="i-row2">
+                    <div class="i-radio">
+                        <input name="q2" type="radio" class="i-radio-checkbox" id="q2-1" value="不是" data-label="不是">
+                        <input name="q2" type="radio" class="i-radio-checkbox" id="q2-2" value="是" data-label="是" checked="checked">
+                    </div>
+                    <span>您是否愿意盘活不动产而创造收益？</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="i-row2">
+                    <span>3-5年100%收回海外投资房产的模式您是否足够吸引？ </span>
+                </div>
+                <div class="i-row2">
+                    <div class="i-radio">
+                        <input name="q3" type="radio" class="i-radio-checkbox" id="q3-1" value="不是" data-label="不是">
+                        <input name="q3" type="radio" class="i-radio-checkbox" id="q3-2" value="是" data-label="是" checked="checked">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="i-right">
+                <div class="i-row3">如果您想盘活不动产但遇到的问题是？（可复选）</div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="资质、个人征信不良" data-label="资质、个人征信不良" checked="checked" />
+                </div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="个人流水不够" data-label="个人流水不够" />
+                </div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="房产已抵押或还有按揭贷款" data-label="房产已抵押或还有按揭贷款" />
+                </div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="没有公司或无法提供企业发票、消费发票或上下游销售合同" data-label="没有公司或无法提供企业发票、消费发票或上下游销售合同" />
+                </div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="贷款人年龄超过银行规定或房屋为央产房、经适房、小产权" data-label="贷款人年龄超过银行规定或房屋为央产房、经适房、小产权" />
+                </div>
+                <div class="i-row3">
+                    <input type="checkbox" class="i-radio-checkbox" name="q4" value="银行以贷款额度用完为由拖延放款时间" data-label="银行以贷款额度用完为由拖延放款时间" />
+                </div>
+                <input type="submit" value="提交" />
             </div>
         </div>
-        <div class="i-right">
-            <div class="i-row3">如果您想盘活不动产但遇到的问题是？（可复选）</div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="资质、个人征信不良" checked="checked" />
-            </div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="个人流水不够" />
-            </div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="房产已抵押或还有按揭贷款" />
-            </div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="没有公司或无法提供企业发票、消费发票或上下游销售合同" />
-            </div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="贷款人年龄超过银行规定或房屋为央产房、经适房、小产权" />
-            </div>
-            <div class="i-row3">
-                <input type="checkbox" class="i-radio-checkbox" name="q4" data-label="银行以贷款额度用完为由拖延放款时间" />
-            </div>
-            <input type="submit" value="提交" />
-        </div>
+        </form>
     </div>
 </div>
-
 
 <div class="wider footer">
     <ul>

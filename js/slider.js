@@ -1,10 +1,11 @@
-$(function () {
+$(function() {
     var lbToPos = 0; // 当前第几个顶在最前面
     var currentPosi = 0;
     var anchorPosi = 0;
     var lbTotalNum = $("#imageShowSmall li").length;
     var anchorNum = 4;
     $("#imageShowBig li")[0].style.display = "block";
+    $('#current-tab').text('1/' + lbTotalNum);
 
     function SmallImgSliderTo(ind) {
         // 判断imageShowSmall的第几个顶到第一个的位置上
@@ -28,7 +29,7 @@ $(function () {
         currentPosi = ind;
         lbToPos = toPos;
         SmallImgSliderMoveto(toPos);
-        $("#imageShow ul.imagepoint a").each(function (ind1, Ele1) {
+        $("#imageShow ul.imagepoint a").each(function(ind1, Ele1) {
             if (ind == ind1) {
                 $(this).addClass("hover");
             } else {
@@ -38,9 +39,10 @@ $(function () {
     }
 
     function setLbBigImgShow(ind) {
-        $("#imageShowBig li").each(function (index, ele) {
+        $("#imageShowBig li").each(function(index, ele) {
             if (ind == index) {
                 $(this).show().css("display", "block");
+                $('#current-tab').text((index + 1) + '/' + lbTotalNum);
             } else {
                 $(this).hide();
             }
@@ -60,20 +62,20 @@ $(function () {
             left: toleft + 'px'
         }, 200);*/
     }
-    $("#imageShow ul.imagepoint a").each(function (ind, Ele) {
-        $(this).click(function () {
+    $("#imageShow ul.imagepoint a").each(function(ind, Ele) {
+        $(this).click(function() {
             SmallImgSliderTo(ind);
         });
     });
-    $("#imageShowSmall li img").each(function (ind, Ele) {
-        $(this).click(function () {
+    $("#imageShowSmall li img").each(function(ind, Ele) {
+        $(this).click(function() {
             SmallImgSliderTo(ind);
         });
     });
-    $("#imageShowSmallNext").click(function () {
+    $("#imageShowSmallNext").click(function() {
         SmallImgSliderTo(currentPosi + 1);
     });
-    $("#imageShowSmallPre").click(function () {
+    $("#imageShowSmallPre").click(function() {
         SmallImgSliderTo(currentPosi - 1);
     });
 });
