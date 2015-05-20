@@ -197,7 +197,7 @@
                 <ul class="h-info">
                     <li><i class="property"></i><span>物业类型：公寓</span></li>
                     <li><i class="area"></i><span>使用面积：155平米</span></li>
-                    <li><i class="type"></i><span>主力户型：3卧2卫 </span></li>
+                    <li><i class="type"></i><span>主力户型：3卧2卫 3卧2卫 3卧2卫 3卧2卫 3卧2卫 3卧2卫 3卧2卫 </span></li>
                     <li><i class="carport"></i><span>车位信息：双车位可上锁车库</span></li>
                 </ul>
                 <div class="clear"></div>
@@ -252,10 +252,10 @@
     <div class="sidecol">
         <ul class="count-list">
             <li class="s-title1 count1" id="jsq-fsq"><i></i><span>房生钱贷款计算器</span></li>
-            <li class="s-title2" id="fsq-mbg"><i></i><span>目标国汇率计算器</span></li>
-            <li class="s-title3 count1" id="fsq-hwfd"><i></i><span>海外房贷计算器</span></li>
-            <li class="s-title4" id="fsq-gfnl"><i></i><span>客户购房能力评估</span></li>
-            <li class="s-title5 count1" id="fsq-tzhb"><i></i><span>投资回报率计算器</span></li>
+            <li class="s-title2" id="jsq-mbg"><i></i><span>目标国汇率计算器</span></li>
+            <li class="s-title3 count1" id="jsq-hwfd"><i></i><span>海外房贷计算器</span></li>
+            <li class="s-title4" id="jsq-gfnl"><i></i><span>客户购房能力评估</span></li>
+            <li class="s-title5 count1" id="jsq-tzhb"><i></i><span>投资回报率计算器</span></li>
         </ul>
 
         <div class="side-box">
@@ -401,8 +401,9 @@
     <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
 </div>
 
+<!-- 计算器开始 -->
 <div class="jsq-container">
-    <div class="jsq-con" data-jsq-type="fsq-jsq">
+    <div class="jsq-con" data-jsq-type="jsq-fsq">
         <div class="s-title s-title1">
             <i></i>
             <span>房生钱贷款计算器</span>
@@ -483,54 +484,220 @@
             </form>
         </div>
     </div>
-    <div class="jsq-con" data-jsq-type="fsq-jsq">
+    <div class="jsq-con" data-jsq-type="jsq-mbg">
         <div class="s-title s-title2">
-        <i></i>
-        <span>目标国汇率计算器</span>
+            <i></i>
+            <span>目标国汇率计算器</span>
+            <em></em>
+        </div>
+        <div class="side-box">
+            <form class="huilv-form">
+                <dl class="fd-row1">
+                    <dt>持有货币：</dt>
+                    <dd>
+                        <select id="i-have">
+                            <option value="CNY">人民币</option>
+                            <option value="USD">美元</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>兑换货币：</dt>
+                    <dd>
+                        <select id="i-want">
+                            <option value="USD">美元</option>
+                            <option value="CNY">人民币</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>持有金额：</dt>
+                    <dd class="sum-have">
+                        <input type="text" value="100"><span class="sum-have-type">人民币</span>
+                    </dd>
+                </dl>
+                <dl class="fd-row4">
+                    <dd>
+                        <input type="submit" id="huilv-btn" value="计算">
+                        <button id="huilv-reset">重置</button>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>兑换金额：</dt>
+                    <dd class="sum-cash">
+                        <input type="text" value=""><span class="sum-cash-type">美元</span>
+                    </dd>
+                </dl>
+            </form>
+        </div>
     </div>
-    <div class="side-box">
-        <form class="huilv-form">
-            <dl class="fd-row1">
-                <dt>持有货币：</dt>
-                <dd>
-                    <select id="i-have">
-                        <option value="CNY">人民币</option>
-                        <option value="USD">美元</option>
-                    </select>
-                </dd>
-            </dl>
-            <dl class="fd-row1">
-                <dt>兑换货币：</dt>
-                <dd>
-                    <select id="i-want">
-                        <option value="USD">美元</option>
-                        <option value="CNY">人民币</option>
-                    </select>
-                </dd>
-            </dl>
-            <dl class="fd-row1">
-                <dt>持有金额：</dt>
-                <dd class="sum-have">
-                    <input type="text" value="100"><span class="sum-have-type">人民币</span>
-                </dd>
-            </dl>
-            <dl class="fd-row4">
-                <dd>
-                    <input type="submit" id="huilv-btn" value="计算">
-                    <button id="huilv-reset">重置</button>
-                </dd>
-            </dl>
-            <dl class="fd-row1">
-                <dt>兑换金额：</dt>
-                <dd class="sum-cash">
-                    <input type="text" value=""><span class="sum-cash-type">美元</span>
-                </dd>
-            </dl>
-        </form>
+    <div class="jsq-con" data-jsq-type="jsq-hwfd">
+        <div class="s-title s-title2 s-title3">
+            <i></i>
+            <span>海外房贷计算器</span>
+            <em></em>
+        </div>
+        <div class="side-box">
+            <form class="fangdai-form">
+                <dl class="fd-row1">
+                    <dt>贷款总额：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>贷款期限：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value="120"/>月
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>国家：</dt>
+                    <dd>
+                        <select id="hwfd-country">
+                            <option value="0.7">英国</option>
+                            <option value="0.8">美国</option>
+                            <option value="0.9">加拿大</option>
+                            <option value="0.9">澳洲</option>
+                            <option value="0.9">新西兰</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>银行：</dt>
+                    <dd>
+                        <select id="hwfd-bank">
+                            <option>请选择银行</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>年利率：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value="120"/>%
+                    </dd>
+                </dl>
+                <dl class="fd-row4">
+                    <dd>
+                        <input type="submit" value="计算" />
+                        <button type="reset">重置</button>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>月均还款：</dt>
+                    <dd>
+                        <span class="sum" id="fd-lixi"></span><span>元</span>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>支付利息：</dt>
+                    <dd>
+                        <span class="sum" id="fd-return"></span><span>元</span>
+                    </dd>
+                </dl>
+            </form>
+        </div>
     </div>
+    <div class="jsq-con" data-jsq-type="jsq-gfnl" id="khgfnl-con">
+        <div class="s-title s-title2 s-title4">
+            <i></i>
+            <span>客户购房能力评估</span>
+            <em></em>
+        </div>
+        <div class="side-box">
+            <form class="gfnl-form">
+                <dl class="fd-row1">
+                    <dt>现持有资金：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>家庭月收入：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>月固定支出：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>还款年限：</dt>
+                    <dd>
+                        <select id="gfnl-years">
+                            <option value="0.7">2年（24期）</option>
+                            <option value="0.7">3年（36期）</option>
+                            <option value="0.7">5年（60期）</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>房屋面积：</dt>
+                    <dd class="market house-area">
+                        <input type="text" class="market-ipt" value=""/>平方米
+                    </dd>
+                </dl>
+                <dl class="fd-row4">
+                    <dd>
+                        <input type="submit" value="计算" />
+                        <button type="reset">重置</button>
+                    </dd>
+                </dl>
+                <dl class="fd-row1 fd-row-lang">
+                    <dt>可购买房屋总价：</dt>
+                    <dd>
+                        <span class="sum" id="fd-lixi"></span><span>元</span>
+                    </dd>
+                </dl>
+                <dl class="fd-row1 fd-row-lang">
+                    <dt>可购买房屋单价：</dt>
+                    <dd>
+                        <span class="sum" id="fd-return"></span><span>元</span>
+                    </dd>
+                </dl>
+            </form>
+        </div>
+    </div>
+    <div class="jsq-con" data-jsq-type="jsq-tzhb" id="tzhbl-con">
+        <div class="s-title s-title5">
+            <i></i>
+            <span>投资回报率计算器</span>
+            <em></em>
+        </div>
+        <div class="side-box">
+            <form class="huilv-form">
+                <dl class="fd-row1">
+                    <dt>购房总价：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>每月租金：</dt>
+                    <dd class="market">
+                        <input type="text" class="market-ipt" value=""/>元
+                    </dd>
+                </dl>
+                <dl class="fd-row4">
+                    <dd>
+                        <input type="submit" value="计算">
+                        <button id="huilv-reset">重置</button>
+                    </dd>
+                </dl>
+                <dl class="fd-row1">
+                    <dt>投资回报率：</dt>
+                    <dd class="sum-cash">
+                        <span class="sum"></span><span>%</span>
+                    </dd>
+                </dl>
+            </form>
+        </div>
     </div>
 </div>
-
+<!-- //计算器结束 -->
 <script src="js/jquery.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/main.js"></script>

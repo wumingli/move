@@ -124,59 +124,70 @@ $(function() {
             $('[name="contact"]').focus();
             return false;
         }*/
-        if ($.trim($('[name="username"]').val()) === '') {
+        if ($.trim($('[name="user_name"]').val()) === '') {
             alert('请输入您的姓名');
-            $('[name="username"]').focus();
+            $('[name="user_name"]').focus();
             return false;
         }
-        if ($.trim($('[name="useremail"]').val()) === '') {
+        if ($.trim($('[name="user_email"]').val()) === '') {
             alert('请输入您的邮箱');
-            $('[name="useremail"]').focus();
+            $('[name="user_email"]').focus();
             return false;
-        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="useremail"]').val())) {
+        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="user_email"]').val())) {
             alert('邮箱格式不正确');
-            $('[name="useremail"]').select();
+            $('[name="user_email"]').select();
             return false;
         }
         $.ajax({
-            url: 'index.php', //这里改成调查的URL
+            url: 'index.php?m=Survey&a=setInfo', //这里改成调查的URL
             data: $('.move-survey').serialize(),
+            dataType: 'json',
             success: function(data) {
-                alert('问卷提交成功，感谢您的参与');
+                if (data.status == 1) {
+                    alert('问卷提交成功，感谢您的参与');
+                } else {
+                    alert('问卷提交失败');
+                }
+                
             }
         });
         return false;
     });
     //快速咨询您感兴趣的房源
     $('.consult-form').on('submit', function() {
-        if ($.trim($('[name="username"]').val()) === '') {
+        if ($.trim($('[name="user_name"]').val()) === '') {
             alert('请输入您的姓名');
-            $('[name="username"]').focus();
+            $('[name="user_name"]').focus();
             return false;
         }
-        if ($.trim($('[name="phone"]').val()) === '') {
+        if ($.trim($('[name="user_phone"]').val()) === '') {
             alert('请输入手机号码');
-            $('[name="phone"]').focus();
+            $('[name="user_phone"]').focus();
             return false;
-        } else if (!/^1[34578]\d{9}$/.test($('[name="phone"]').val())) {
+        } else if (!/^1[34578]\d{9}$/.test($('[name="user_phone"]').val())) {
             alert('手机号码格式不正确');
-            $('[name="phone"]').select();
+            $('[name="user_phone"]').select();
             return false;
         }
-        if ($.trim($('[name="email"]').val()) === '') {
+        if ($.trim($('[name="user_email"]').val()) === '') {
             alert('请输入您的邮箱');
-            $('[name="email"]').focus();
+            $('[name="user_email"]').focus();
             return false;
-        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="email"]').val())) {
+        } else if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($('[name="user_email"]').val())) {
             alert('邮箱格式不正确');
-            $('[name="email"]').select();
+            $('[name="user_email"]').select();
             return false;
         }
         $.ajax({
-            url: 'index.php', //这里改成调查的URL
+            url: 'index.php?m=Survey&a=setMessage', //这里改成调查的URL
             data: $('.consult-form').serialize(),
+            dataType: 'json',
             success: function(data) {
-                alert('咨询提交成功');
+                if (data.status == 1) {
+                    alert('咨询提交成功');
+                } else {
+                    alert('咨询提交失败');
+                }
             }
         });
         return false;

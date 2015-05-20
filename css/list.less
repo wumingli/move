@@ -74,7 +74,11 @@
 .s-title3, .s-title4, .s-title5 {
     margin-bottom: 20px;
 }
-
+.jsq-con .s-title3,
+.jsq-con .s-title4,
+.jsq-con .s-title5 {
+    margin-bottom: 0;
+}
 .s-title3 {
     background: #aabc64;
     i {
@@ -190,7 +194,7 @@
     background: #fff;
     border: 1px solid #d6d4d4;
     dl {
-        height: 38px;
+        height: 43px;
         padding: 0 20px;
         font-size: 14px;
         color: #333;
@@ -205,7 +209,7 @@
             a {
                 display: inline-block;
                 height: 20px;
-                padding: 0 15px;
+                padding: 0 11px;
                 color: #333;
                 line-height: 20px;
             }
@@ -416,7 +420,7 @@
         }
         a {
             display: block;
-            width: 400px;
+            width: 380px;
             color: #f60;
             .ellipsis;
             &:hover {
@@ -453,7 +457,7 @@
 .h-info {
     li {
         float: left;
-        width: 275px;
+        width: 230px;
         margin: 10px 10px 0 0;
         font-size: 14px;
         color: #333;
@@ -550,7 +554,34 @@
     }
 }
 
-/*房贷计算器*/
+/*客户购房能力评估*/
+.jsq-con {
+    .side-box {
+        /* .fd-row1 {
+            dd {
+                width: 168px;
+            }
+            .market {
+                width: 168px;
+                input {
+                    width: 105px;
+                    text-align: right;
+                }
+            }
+            .selectbox {
+                width: 170px;
+                background-position: 0 -39px;
+            }
+        }
+        .selectbox-wrapper,.h_selectbox-wrapper {
+            width: 175px;
+        }
+        .selectbox {
+            width: 170px;
+            background-position: 0 -39px;
+        } */
+    }
+}
 .side-box {
     .fangdai-form, .huilv-form {
         margin: 20px 0;
@@ -791,6 +822,7 @@
         color: #fff;
         background: #f60;
         border: none;
+        font-weight: bold;
     }
 }
 /*05投资列表-1*/
@@ -1041,6 +1073,11 @@ div.pos {
             background-position: -194px -188px;
         }
     }
+    .h-info {
+        li {
+            width: 275px;
+        }
+    }
 }
 .wrap-detail {
     .sidecol {
@@ -1054,6 +1091,7 @@ div.pos {
                 }
                 input[type="submit"] {
                     width: 270px;
+                    font-weight: bold;
                 }
             }
         }
@@ -1322,6 +1360,7 @@ div.pos {
     left: 50%;
     top: 15%;
     margin-left: -146px;
+    display: none;
 }
 .jsq-container {
     position: fixed;
@@ -1331,6 +1370,7 @@ div.pos {
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    display: none;
 }
 .jsq-container .s-title {
     width: 257px;
@@ -1346,5 +1386,39 @@ div.pos {
     cursor: pointer;
 }
 .jsq-container .side-box {
+    width: 270px;
+    padding-left: 20px;
+}
+.jsq-container .side-box .fd-row4 {
+    margin-left: -18px;
+    padding-left: 33px;
+}
+#khgfnl-con .side-box {
+    padding: 15px 0;
     width: 290px;
+    overflow: hidden;
+}
+#khgfnl-con .side-box .fd-row1 dt {
+    width: 110px;
+}
+.side-box .fd-row1 .house-area {
+    width: 136px;
+}
+.side-box .fd-row1 .house-area input {
+    width: 61px;
+}
+#tzhbl-con .side-box .fd-row1 {
+    margin-left: 0;
+}
+#tzhbl-con .side-box .fd-row1 dt {
+    width: 100px;
+}
+#khgfnl-con .side-box .fd-row-lang dt {
+    width: 130px;
+}
+#khgfnl-con .side-box .fd-row-lang dd {
+    width: 115px;
+}
+#khgfnl-con .side-box .fd-row-lang .sum {
+    width: 90px;
 }
