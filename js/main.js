@@ -197,6 +197,8 @@ $(function() {
         $('input.fd-radio').Checkable({
             color: 'blue'
         });
+    }
+    if ($.fn.selectbox) {
         $(".fd-select1").selectbox();
         $(".fd-select2").selectbox({
             containerClass:"h_selectbox-wrapper",
