@@ -266,27 +266,19 @@
         <dd>
             <div class="fd-selectbox">
                 <select class="fd-select2">
-                    <option>卧室数量:</option>
-                    <option>1室</option>
-                    <option>2室</option>
-                    <option>3室</option>
-                    <option>4室</option>
-                    <option>5室</option>
-                    <option>6室</option>
-                    <option>6室及以上</option>
+                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">卧室数量</option><option value="/index.php?m=invest&a=index&begroom_num=1&country_id=1">1室</option>
+                    <option value="/index.php?m=invest&a=index&begroom_num=2&country_id=1">2室</option>
+                    <option value="/index.php?m=invest&a=index&begroom_num=3&country_id=1">3室</option>
                 </select>
             </div>
             <div class="fd-selectbox">
                 <select class="fd-select3">
-                    <option>使用面积</option>
-                    <option>50-100</option>
-                    <option>100-150</option>
-                    <option selected="">150-200</option>
-                    <option>200-300</option>
-                    <option>300-400</option>
-                    <option>400-500</option>
-                    <option>500-1000</option>
-                    <option>1000以上</option>
+                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">使用面积
+                    </option>
+                    <option value="/index.php?m=invest&a=index&proportion=2&country_id=1">50-100</option>
+                    <option value="/index.php?m=invest&a=index&proportion=4&country_id=1">100-150</option>
+                    <option value="/index.php?m=invest&a=index&proportion=6&country_id=1">150-200</option>
+                    <option value="/index.php?m=invest&a=index&proportion=8&country_id=1"200-300</option>
                 </select>
             </div>
         </dd>
@@ -542,32 +534,5 @@
 <script src="js/Checkable.js"></script>
 <script src="js/main.js"></script>
 <script src="js/jsq.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('input.fd-radio').Checkable({
-            color: 'blue'
-        });
-        $(".fd-select1").selectbox();
-        $(".fd-select2").selectbox({
-            containerClass:"h_selectbox-wrapper",
-            hoverClass:"h_current",
-            selectedClass:"h_selected",
-            inputClass:"h_selectbox",
-            change: function(){
-                location.search = 'room=' + $(".fd-select2").val();
-            }
-        });
-        $(".fd-select3").selectbox({
-            containerClass:"h_selectbox-wrapper",
-            hoverClass:"h_current",
-            selectedClass:"h_selected",
-            inputClass:"h_selectbox",
-            //bindDiv:["select_tab1","select_tab2","select_tab3"],
-            change: function(){
-                location.search = 'roomprice=' + $(".fd-select3").val();
-            }
-        });
-    });
-</script>
 </body>
 </html>

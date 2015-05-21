@@ -55,6 +55,10 @@ body {
 body.gray-bg {
 	background-color: #f4f4f4;
 }
+input,
+select {
+	font-family: Microsoft Yahei, Simsun;
+}
 
 .nav {
 	height: 113px;
@@ -321,7 +325,7 @@ div.pos {
 /*04服务优势*/
 .service-wrap h1 {
 	margin: 42px auto 20px;
-	color: #0ebfdd;
+	color: #28abcc;
 	font-size: 30px;
 	width: 205px;
 	background: url(../images/04_title.png) center bottom no-repeat;
@@ -375,10 +379,12 @@ div.pos {
 }
 
 .service-list {
-	padding: 35px 0;
+	padding: 35px 0 0;
 	overflow: hidden;
 }
-
+.service-wrap .service-list {
+	padding-bottom: 45px;
+}
 .service-list dl {
 	width: 430px;
 	display: inline-block;
@@ -393,9 +399,6 @@ div.pos {
 	font-weight: normal;
 	line-height: 32px;
 	color: #333;
-}
-.service-list dl dt h3 {
-	font-weight: bold;
 }
 .service-list dl dt h4 {
 	display: inline-block;
@@ -667,9 +670,10 @@ p.ys {
 }
 
 .fsq-list dl dd h3 {
-	color: #0ebfdd;
+	color: #28abcc;
 	font-size: 21px;
 	font-weight: normal;
+	line-height: 28px;
 }
 
 .fsq-list dl dd p {
@@ -717,7 +721,7 @@ p.ys {
 }
 
 .zclh {
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	margin-top: 50px;
 	background: #e1eef3;
 }
@@ -741,7 +745,7 @@ p.ys {
 .zclh dd {
 	float: left;
 	width: 440px;
-	margin-top: 5px;
+	margin-top: 20px;
 }
 
 .pjl {
@@ -1095,7 +1099,7 @@ p.ys {
 	width: 152px;
 	font-size: 21px;
 	color: #fff;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 .qsf-service .p1 {
 	left: 39px;

@@ -309,7 +309,7 @@
   float: left;
 }
 .tz-right ul li .arrow {
-  margin-top: 20px;
+  margin: 20px 15px 0 0;
 }
 .tz-right ul li .arrow:after {
   float: right;

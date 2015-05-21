@@ -192,4 +192,30 @@ $(function() {
         });
         return false;
     });
+    //投资列表中更多条件下拉选择移到这里
+    if ($.fn.Checkable) {
+        $('input.fd-radio').Checkable({
+            color: 'blue'
+        });
+        $(".fd-select1").selectbox();
+        $(".fd-select2").selectbox({
+            containerClass:"h_selectbox-wrapper",
+            hoverClass:"h_current",
+            selectedClass:"h_selected",
+            inputClass:"h_selectbox",
+            change: function(){
+                location.href = $(".fd-select2").val();
+            }
+        });
+        $(".fd-select3").selectbox({
+            containerClass:"h_selectbox-wrapper",
+            hoverClass:"h_current",
+            selectedClass:"h_selected",
+            inputClass:"h_selectbox",
+            //bindDiv:["select_tab1","select_tab2","select_tab3"],
+            change: function(){
+                location.href = $(".fd-select3").val();
+            }
+        });
+    }
 });
