@@ -129,43 +129,27 @@
   padding: 40px 0 50px 0;
   background: #f4f4f4;
 }
-.index-h1 {
-  width: 200px;
+.index-h {
+  width: 313px;
   height: 59px;
-  padding: 0 35px 0 44px;
-  font-size: 26px;
-  color: #fff;
-  line-height: 59px;
-  background: #28abcc;
 }
-.index-h1 .icon1,
-.index-h1 .icon2 {
+.index-h a {
   display: block;
-  float: left;
-  width: 33px;
-  height: 33px;
-  margin: 11px 20px 0 0;
-  background: url("../images/list/icon.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url("../images/icon-hover.png") no-repeat;
 }
-.index-h1 .icon1 {
-  background-position: -107px -114px;
+.index-h .index-h1 {
+  background-position: -103px -66px;
 }
-.index-h1 .icon2 {
-  background-position: -172px -114px;
+.index-h .index-h1:hover {
+  background-position: -432px -66px;
 }
-.index-h1:after {
-  float: right;
-  content: "";
-  width: 0px;
-  height: 0px;
-  margin-right: -65px;
-  overflow: hidden;
-  border-top: 40px solid transparent;
-  border-left: 10px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top-color: #28abcc;
-  border-left-color: #28abcc;
+.index-h .index-h2 {
+  background-position: -103px -138px;
+}
+.index-h .index-h2:hover {
+  background-position: -430px -138px;
 }
 /*房生钱 begin*/
 .fsq {
@@ -309,7 +293,7 @@
   float: left;
 }
 .tz-right ul li .arrow {
-  margin: 20px 15px 0 0;
+  margin-top: 20px;
 }
 .tz-right ul li .arrow:after {
   float: right;
@@ -362,7 +346,7 @@
 }
 .hyzx-list ul li a .text {
   display: block;
-  width: 330px;
+  width: 343px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -454,15 +438,15 @@
   zoom: 1;
 }
 .i-form input[type="submit"] {
-  width: 136px;
+  width: 135px;
   height: 43px;
-  font-size: 24px;
-  text-align: center;
-  line-height: 43px;
-  color: #fff;
-  background: #f90;
+  font-size: 0;
+  line-height: 0;
+  background: url("../images/icon-hover.png") no-repeat -109px -221px;
   border: none;
-  font-weight: bold;
+}
+.i-form input[type="submit"]:hover {
+  background: url("../images/icon-hover.png") no-repeat -272px -221px;
 }
 /*调查问卷 end*/
 .prettyradio a,
