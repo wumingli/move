@@ -3,103 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>点击地图获取坐标</title>
-<style>
-    * {
-        margin: 0;
-        top: 0;
-    }
-    #map-cover {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-    #map-containter {
-        width: 900px;
-        height: 550px;
-        background: #ffeeca;
-        position: absolute;
-        left: 50%;
-        margin-left: -350px;
-        top: 50%;
-        margin-top: -275px;
-    }
-    #map-containter h3 {
-        margin: 15px 0 10px 15px;
-        font-size: 14px;
-        color: #ff993e;
-    }
-    #map-containter i.close {
-        font-style: normal;
-        font-size: 18px;
-        color: #ff993e;
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        cursor: pointer;
-        font-family: Microsoft Yahei;
-    }
-    #map-info {
-        background: #fff;
-        width: 860px;
-        height: 490px;
-        margin: 0 auto;
-    }
-</style>
+<script src="js/map.js"></script>
+<script src="https://apis.google.com/js/plusone.js?sensor=false"></script>
 </head>
 <body>
-<input type="text" id="test" size="35" />
+点击坐标：<input type="text" size="50" id="map-zb" />
 <br>
-<input type="button" id="getPos" value="点击地图获取坐标">
-<div id="map-cover" style="display: none;">
-    <div id="map-containter">
-        <h3>选择地图坐标点</h3>
-        <i class="close" id="close-map">X</i>
-        <div id="map-info">
-            
-        </div>
-    </div>
+<div style="border: 1px solid #ccc;" class="webStandard vpcMapCoordinatesAdvancedGoogleMapCoords">
+    <input type="hidden" class="options" value="{'controllerUrl':'\/admin\/component\/edit\/Vpc_MapCoordinates_Advanced_GoogleMapCoords_Component\/Component','coordinates':'40.7143528;-74.0059731','latitude':'40.7143528','longitude':'-74.0059731','zoom_properties':1,'zoom':10,'height':600,'width':780,'scale':1,'satelite':1,'overview':1,'showSearchBox':1,'routing':1,'markers':[{'latitude':'40.7143528','longitude':'-74.0059731','draggable':true}],'language':{'moveInfo':'\u6309\u4e0b\u9f20\u6807\u6309\u94ae\u7684\u79fb\u52a8\u6807\u8bb0','lat':'\u7eac\u5ea6','lng':'\u7ecf\u5ea6','seaHeight':'\u6d77\u62d4'}}" />
+    <input id="pac-input" class="controls" type="text" placeholder="显示位置">
+    <div class="container" style="height: 600px;"></div>
+
+    <div class="mapDir"></div>
 </div>
-<script src="http://ditu.google.cn/maps/api/js?sensor=false&v=3.5" type="text/javascript"></script>
-<script>
-window.onload = function () {
-    var getMap = document.getElementById('getPos'),
-        closeMap = document.getElementById('close-map'),
-        map;
-    function initialize() {
-        latlng = new google.maps.LatLng(39.913423004886894, 116.400146484375);
-        var myOptions = {
-                zoom: 15,
-                center: latlng
-            }
-        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-        var locationMarker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-            draggable: false
-        });
-        locationMarker.setVisible(false);
-      }
-    function mapClose() {
-        document.getElementById('map-cover').style.display = "none";
-    }
-    getMap.onclick = function () {
-        document.getElementById('map-cover').style.display = "block";
-        initialize();
-        google.maps.event.addListener(map, "click", function(event) {
-            var lat = event.latLng.lat();
-            var lng = event.latLng.lng();
-            // 经纬度
-            document.getElementById('test').value = lat + ", " + lng;
-            mapClose();
-        });
-    };
-    closeMap.onclick = function () {
-        mapClose();
-    }
-};
-</script>
 </body>
 </html>

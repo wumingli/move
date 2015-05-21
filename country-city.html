@@ -3,53 +3,109 @@
 <head>
 <meta charset="utf-8">
 <title>国家、城市联动</title>
-<style>
-    * {
-        margin: 0;
-        top: 0;
+<script src="js/jquery.js"></script>
+<script>
+$(function () {
+    var arrCountry = ['英国', '美国', '加拿大', '澳洲', '新西兰'];
+    var arrCity = [
+        {
+            'key': '2',
+            'name': '西雅图',
+            'country': '美国'
+        }, {
+            'key': '3',
+            'name': '温哥华',
+            'country': '加拿大'
+        }, {
+            'key': '4',
+            'name': '旧金山',
+            'country': '美国'
+        }, {
+            'key': '7',
+            'name': '蒙特利尔',
+            'country': '加拿大'
+        }, {
+            'key': '8',
+            'name': '伦敦',
+            'country': '英国'
+        }, {
+            'key': '9',
+            'name': '伯明翰',
+            'country': '英国'
+        }, {
+            'key': '10',
+            'name': '利物浦',
+            'country': '英国'
+        }, {
+            'key': '11',
+            'name': '曼彻斯特',
+            'country': '英国'
+        }, {
+            'key': '12',
+            'name': '纽约',
+            'country': '美国'
+        }, {
+            'key': '13',
+            'name': '洛杉矶',
+            'country': '美国'
+        }, {
+            'key': '14',
+            'name': '多伦多',
+            'country': '加拿大'
+        }, {
+            'key': '15',
+            'name': '卡尔加里',
+            'country': '加拿大'
+        }, {
+            'key': '16',
+            'name': '布里斯班',
+            'country': '澳洲'
+        }, {
+            'key': '17',
+            'name': '墨尔本',
+            'country': '澳洲'
+        }, {
+            'key': '18',
+            'name': '悉尼',
+            'country': '澳洲'
+        }, {
+            'key': '19',
+            'name': '奥克兰',
+            'country': '新西兰'
+        }
+    ],
+    cityHtml = '';
+
+    for (var i = 0; i < arrCity.length; i++) {
+        cityHtml += '<option value="'+arrCity[i]['key']+'">'+arrCity[i]['name']+'</option>';
     }
-    #map-cover {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.6);
+    $('[name="house[city_id]"]').append(cityHtml);
+    function findKeyNameByCountry(country) {
+        var theCityHtml = '<option value="0">全部</option>';
+        for (var i = 0; i < arrCity.length; i++) {
+            if (arrCity[i]['country'] === country) {
+                theCityHtml += '<option value="' + arrCity[i]['key'] + '">' + arrCity[i]['name'] + '</option>';
+            }
+        }
+        $('[name="house[city_id]"]').html(theCityHtml);
     }
-    #map-containter {
-        width: 900px;
-        height: 550px;
-        background: #ffeeca;
-        position: absolute;
-        left: 50%;
-        margin-left: -350px;
-        top: 50%;
-        margin-top: -275px;
-    }
-    #map-containter h3 {
-        margin: 15px 0 10px 15px;
-        font-size: 14px;
-        color: #ff993e;
-    }
-    #map-containter i.close {
-        font-style: normal;
-        font-size: 18px;
-        color: #ff993e;
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        cursor: pointer;
-        font-family: Microsoft Yahei;
-    }
-    #map-info {
-        background: #fff;
-        width: 860px;
-        height: 490px;
-        margin: 0 auto;
-    }
-</style>
+    $('[name="house[country_id]"]').on('change', function () {
+        findKeyNameByCountry(arrCountry[$(this).val() - 1]);
+    });
+});
+</script>
 </head>
 <body>
-
+<select name="house[country_id]" class="normal_select">
+    <option value='0'>全部</option>
+    <option value='1'>英国</option>
+    <option value='2'>美国</option>
+    <option value='3'>加拿大</option>
+    <option value='4'>澳洲</option>
+    <option value='5'>新西兰</option>
+</select>
+<select name="house[city_id]"  class="normal_select">
+    <option value="0">全部</option>
+</select>
 </body>
 </html>
