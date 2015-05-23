@@ -269,12 +269,12 @@
   width: 585px;
 }
 .tz-right ul li {
-  height: 35px;
-  padding-bottom: 4px;
+  height: 30px;
+  padding-bottom: 3px;
   overflow: hidden;
   zoom: 1;
   font-size: 16px;
-  line-height: 36px;
+  line-height: 30px;
   border-bottom: 1px dashed #bebebe;
 }
 .tz-right ul li a {
@@ -293,7 +293,7 @@
   float: left;
 }
 .tz-right ul li .arrow {
-  margin-top: 20px;
+
 }
 .tz-right ul li .arrow:after {
   float: right;

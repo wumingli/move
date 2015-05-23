@@ -1126,3 +1126,10 @@ p.ys {
 	font-size: 18px;
 	margin: 0 auto;
 }
+.index-h1 {
+	width: 261px;
+	height: 54px;
+	font-size: 0;
+	line-height: 0;
+	background: url("../images/list/index-h1.png") no-repeat 0 0;
+}
