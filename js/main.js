@@ -113,7 +113,7 @@ $(function() {
     //目标国推荐小图切换
     $('.tz-left ul li a').attr('href', 'javascript:void(0);');
     $('.tz-left ul li').on('click', function() {
-        $('.tz-left .tz-left-img img').attr('src', $(this).find('img').attr('src'));
+        $(this).parents('.tz-left').find('.tz-left-img img').attr('src', $(this).find('img').attr('src'));
         return false;
     });
 
