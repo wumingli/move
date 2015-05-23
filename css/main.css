@@ -196,6 +196,9 @@
   line-height: 33px;
   background: url("../images/border-right.jpg") no-repeat right 9px;
 }
+.tz-nav li a {
+  color: #666;
+}
 .tz-nav li:last-child {
   background: none;
 }
@@ -293,7 +296,11 @@
   float: left;
 }
 .tz-right ul li .arrow {
+<<<<<<< HEAD
 
+=======
+  margin: 20px 17px 0 0;
+>>>>>>> cadbb3463dd28991ae36584a74cbd7c84ef5400f
 }
 .tz-right ul li .arrow:after {
   float: right;
@@ -346,7 +353,7 @@
 }
 .hyzx-list ul li a .text {
   display: block;
-  width: 343px;
+  width: 330px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -419,9 +426,11 @@
   width: 248px;
   height: 35px;
   padding: 0 10px;
-  color: #999;
+  color: #666;
   line-height: 35px;
   border: 1px solid #d6d4d4;
+  font-size: 16px;
+  font-family: Microsoft Yahei, Simhei, Simsun;
 }
 .i-form .i-row2 {
   margin-bottom: 12px;
