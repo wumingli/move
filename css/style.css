@@ -1126,7 +1126,6 @@ p.ys {
     font-size: 18px;
     margin: 0 auto;
 }
-<<<<<<< HEAD
 .index-h1 {
 	width: 261px;
 	height: 54px;
@@ -1134,8 +1133,11 @@ p.ys {
 	line-height: 0;
 	background: url("../images/list/index-h1.png") no-repeat 0 0;
 }
-=======
+.index-h1 a {
+    display: block;
+    width: 261px;
+    height: 54px;
+}
 .service-wrap p.ys-fst {
     margin-top: -10px;
 }
->>>>>>> cadbb3463dd28991ae36584a74cbd7c84ef5400f
