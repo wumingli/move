@@ -7,31 +7,6 @@
     <meta name="keywords" content="动不动，活用您的不动产">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/jqselect.js"></script>
-    <script src="js/Checkable.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('input.fd-radio').Checkable({
-                color: 'blue'
-            });
-            $(".fd-select1").selectbox();
-            $(".fd-select2").selectbox({containerClass:"h_selectbox-wrapper",
-                hoverClass:"h_current",
-                selectedClass:"h_selected",
-                inputClass:"h_selectbox",
-                bindDiv:["select_tab1","select_tab2","select_tab3"],
-                change:function(){
-                    var bindDiv=$(this).attr("bindDiv");
-                    var divs=["select_tab1","select_tab2","select_tab3"];
-                    $(divs).each(function(){
-                        $("#"+this).hide();
-                    });
-                    $("#"+bindDiv).show();
-                }});
-        });
-    </script>
 </head>
 <body class="gray-bg">
 <div class="wider header">
@@ -71,26 +46,26 @@
             <dl class="fd-row1">
                 <dt>房屋市值：</dt>
                 <dd class="market">
-                    <input type="text" class="market-ipt" value="500" />万元
+                    <input type="text" class="market-ipt" value="500"/>万元
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>贷款成数：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>七成</option>
-                        <option>八成</option>
-                        <option>九成</option>
+                    <select id="fsq-rate">
+                        <option value="0.7">七成</option>
+                        <option value="0.8">八成</option>
+                        <option value="0.9">九成</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>年限：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>12个月</option>
-                        <option>24个月</option>
-                        <option>36个月</option>
+                    <select id="fd-month">
+                        <option value="12">12个月</option>
+                        <option value="24">24个月</option>
+                        <option value="36">36个月</option>
                     </select>
                 </dd>
             </dl>
@@ -99,43 +74,43 @@
             </dl>
             <dl class="fd-row2">
                 <dd>
-                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" checked="checked" />
-                    <input name="daikuan" type="radio" class="fd-radio" data-label="企业经营贷款" />
+                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
+                    <input name="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
                 </dd>
                 <span class="clear"></span>
             </dl>
             <dl class="fd-row3">
                 <dt>利率：</dt>
                 <dd style="position: relative; z-index: 1;">
-                    <select class="fd-select2">
-                        <option>基准利率1.2倍</option>
-                        <option>基准利率1.0倍</option>
-                        <option>基准利率0.8倍</option>
+                    <select id="lilv-rate">
+                        <option value="1.2">基准利率1.2倍</option>
+                        <option value="1.0">基准利率1.0倍</option>
+                        <option value="0.8">基准利率0.8倍</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row4">
                 <dd>
                     <input type="submit" value="计算" />
-                    <button>重置</button>
+                    <button type="reset">重置</button>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>贷款总额：</dt>
                 <dd>
-                   <span class="sum"></span><span>元</span>
+                    <span class="sum" id="fd-total"></span><span>元</span>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>每月还息：</dt>
                 <dd>
-                    <span class="sum"></span><span>元</span>
+                    <span class="sum" id="fd-lixi"></span><span>元</span>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>合计还款：</dt>
                 <dd>
-                    <span class="sum"></span><span>元</span>
+                    <span class="sum" id="fd-return"></span><span>元</span>
                 </dd>
             </dl>
         </form>
@@ -150,57 +125,54 @@
             <dl class="fd-row1">
                 <dt>持有货币：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>人民币</option>
-                        <option>美元</option>
+                    <select id="i-have">
+                        <option value="CNY">人民币</option>
+                        <option value="USD">美元</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>兑换货币：</dt>
                 <dd>
-                    <select class="fd-select1">
-                        <option>人民币</option>
-                        <option>美元</option>
+                    <select id="i-want">
+                        <option value="USD">美元</option>
+                        <option value="CNY">人民币</option>
                     </select>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>持有金额：</dt>
                 <dd class="sum-have">
-                    <input type="text" value="">人民币
+                    <input type="text" value="100"><span class="sum-have-type">人民币</span>
                 </dd>
             </dl>
             <dl class="fd-row4">
                 <dd>
-                    <input type="submit" value="计算">
-                    <button>重置</button>
+                    <input type="submit" id="huilv-btn" value="计算">
+                    <button id="huilv-reset">重置</button>
                 </dd>
             </dl>
             <dl class="fd-row1">
                 <dt>兑换金额：</dt>
                 <dd class="sum-cash">
-                    <input type="text" value="">美元
+                    <input type="text" value=""><span class="sum-cash-type">美元</span>
                 </dd>
             </dl>
         </form>
     </div>
     <div class="s-title s-title3">
-        <i></i>
-        <span>海外房贷计算器</span>
+        <a href="#">海外房贷计算器</a>
     </div>
 
     <div class="s-title s-title4">
-        <i></i>
-        <span>客户购房能力评估</span>
+        <a href="#">客户购房能力评估</a>
     </div>
 
     <div class="s-title s-title5">
-        <i></i>
-        <span>投资回报率计算器</span>
+        <a href="#">投资回报率计算器</a>
     </div>
     <div class="wechat">
-        <img src="images/list/wechat.jpg" />
+        <img src="images/list/wechat.jpg"/>
         <dl>
             <dt>动不动官方微信</dt>
             <dd>关注我们，制定您的专属投资方案，实时了解海外最新房源和资讯</dd>
@@ -211,17 +183,17 @@
     <div class="side-box">
         <form class="consult-form">
             <p>快速咨询您感兴趣的房源</p>
-            <input type="text" placeholder="您的姓名" />
-            <input type="text" placeholder="手机号码" />
-            <input type="text" placeholder="您的邮箱" />
-            <textarea placeholder="填写您的购买意向"></textarea>
-            <input type="submit" value="联系经纪人" />
+            <input type="text" name="username" placeholder="您的姓名"/>
+            <input type="text" name="phone" placeholder="手机号码"/>
+            <input type="text" name="email" placeholder="您的邮箱"/>
+            <textarea name="buy" placeholder="填写您的购买意向"></textarea>
+            <input type="submit" value="联系经纪人"/>
         </form>
     </div>
 </div>
 <div class="maincol">
 <ul class="country-nav">
-    <li>
+    <li
         <a href="05.html">
             <span class="bor">|</span>
             <img src="images/list/england.png"/>
@@ -259,27 +231,31 @@
 <div class="search-option">
     <dl>
         <dt>城市：</dt>
-        <dd>
-            <a href="#" class="active">全部</a>
-            <a href="#">奥克兰</a>
+        <dd class="city-option">
+            <a href="?city=全部">全部</a>
+            <a href="?city=伦敦">伦敦</a>
+            <a href="?city=伯明翰">伯明翰</a>
+            <a href="?city=利物浦">利物浦</a>
+            <a href="?city=曼彻斯特">曼彻斯特</a>
         </dd>
     </dl>
     <dl>
         <dt>物业类型：</dt>
-        <dd>
-            <a href="#">全部</a>
-            <a href="#" class="active">别墅（HOUSE）</a>
-            <a href="#">公寓(CONDO)</a>
+        <dd class="property-option">
+            <a href="?property=全部">全部</a>
+            <a href="?property=别墅（HOUSE）">别墅（HOUSE）</a>
+            <a href="?property=公寓(CONDO)">公寓(CONDO)</a>
         </dd>
     </dl>
     <dl>
         <dt>房屋总价：</dt>
-        <dd>
-            <a href="#" class="active">全部</a>
-            <a href="#">100万以下</a>
-            <a href="#">100-300万</a>
-            <a href="#">300-500万</a>
-            <a href="#">700-900万</a>
+        <dd class="price-option">
+            <a href="?price=全部">全部</a>
+            <a href="?price=100万以下">100万以下</a>
+            <a href="?price=100-300万">100-300万</a>
+            <a href="?price=300-500万">300-500万</a>
+            <a href="?price=700-900万">700-900万</a>
+            <a href="?price=900万以上人民币">900万以上</a>
         </dd>
     </dl>
     <dl>
@@ -287,38 +263,29 @@
         <dd>
             <div class="fd-selectbox">
                 <select class="fd-select2">
-                    <option>卧室数量:</option>
-                    <option>1室</option>
-                    <option>2室</option>
-                    <option>3室</option>
-                    <option>4室</option>
-                    <option>5室</option>
-                    <option>6室</option>
-                    <option>6室及以上</option>
+                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">卧室数量</option><option value="/index.php?m=invest&a=index&begroom_num=1&country_id=1">1室</option>
+                    <option value="/index.php?m=invest&a=index&begroom_num=2&country_id=1">2室</option>
+                    <option value="/index.php?m=invest&a=index&begroom_num=3&country_id=1">3室</option>
                 </select>
             </div>
             <div class="fd-selectbox">
-                <select class="fd-select2">
-                    <option>使用面积</option>
-                    <option>50-100</option>
-                    <option>100-150</option>
-                    <option>150-200</option>
-                    <option>200-300</option>
-                    <option>300-400</option>
-                    <option>400-500</option>
-                    <option>500-1000</option>
-                    <option>1000以上</option>
+                <select class="fd-select3">
+                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">使用面积
+                    </option>
+                    <option value="/index.php?m=invest&a=index&proportion=2&country_id=1">50-100</option>
+                    <option value="/index.php?m=invest&a=index&proportion=4&country_id=1">100-150</option>
+                    <option value="/index.php?m=invest&a=index&proportion=6&country_id=1">150-200</option>
+                    <option value="/index.php?m=invest&a=index&proportion=8&country_id=1"200-300</option>
                 </select>
             </div>
         </dd>
     </dl>
 </div>
-<div class="search-active">
+<div class="search-active search-active-show">
     <span class="s-option-t">当前您的搜索条件：</span>
-
     <div class="s-option">
-        <span><em>X</em>别墅（HOUSE）</span>
-    </div>
+        <a><em>X</em>别墅（HOUSE）</a>
+    </div> <!-- -->
     <div class="clear"></div>
 </div>
 <div class="sort">
@@ -336,9 +303,10 @@
             <i class="desc"></i>
         </dd>
     </dl>
-    <dl class="active">
+    <dl class="shijian">
         <dt>发布时间</dt>
         <dd>
+            <!--把类名变一下 asc--asc-active , desc desc-active -->
             <i class="asc"></i>
             <i class="desc"></i>
         </dd>
@@ -535,10 +503,12 @@
     <a href="#">10</a>
     <a href="#">11</a>
     <a href="#" class="page-next"><i></i></a>
-    <span class="goto">跳转到
-        <input type="text" class="goto-input" />
-        <input type="button" class="submit" value="GO">
-    </span>
+    <form>
+        <span class="goto">跳转到
+            <input type="text" class="goto-input"/>
+            <input type="button" class="submit" value="GO">
+        </span>
+    </form>
     <span class="bar-number">总共111条</span>
     <span class="page-number">共11页</span>
 </div>
@@ -558,5 +528,10 @@
     </ul>
     <p>© 2015 动不动   All rights reserved   北京众信泰富投资担保有限公司   京ICP备15018054号</p>
 </div>
+<script src="js/jquery.js"></script>
+<script src="js/jqselect.js"></script>
+<script src="js/Checkable.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jsq.js"></script>
 </body>
 </html>
