@@ -74,8 +74,8 @@
             </dl>
             <dl class="fd-row2">
                 <dd>
-                    <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
-                    <input name="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
+                    <input name="daikuan" id="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
+                    <input name="daikuan" id="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
                 </dd>
                 <span class="clear"></span>
             </dl>
@@ -83,7 +83,8 @@
                 <dt>利率：</dt>
                 <dd style="position: relative; z-index: 1;">
                     <select id="lilv-rate">
-                        <option value="1.2">基准利率1.2倍</option>
+                        <option value="1.3">基准利率1.3倍</option>
+                        <option value="1.2" selected="selected">基准利率1.2倍</option>
                         <option value="1.0">基准利率1.0倍</option>
                         <option value="0.8">基准利率0.8倍</option>
                     </select>
@@ -149,7 +150,7 @@
             <dl class="fd-row4">
                 <dd>
                     <input type="submit" id="huilv-btn" value="计算">
-                    <button id="huilv-reset">重置</button>
+                    <button type="reset">重置</button>
                 </dd>
             </dl>
             <dl class="fd-row1">
@@ -296,14 +297,14 @@
             <i class="desc"></i>
         </dd>
     </dl>
-    <dl>
+    <dl class="shijian">
         <dt>总价</dt>
         <dd>
             <i class="asc"></i>
             <i class="desc"></i>
          </dd>
      </dl>
-     <dl class="shijian">
+     <dl>
          <dt>发布时间</dt>
          <dd>
              <!--把类名变一下 asc--asc-active , desc desc-active -->
@@ -540,7 +541,7 @@
                 <dl class="fd-row1">
                     <dt>贷款总额：</dt>
                     <dd class="market">
-                        <input id="loadMoney" type="text" class="market-ipt" value=""/>元
+                        <input id="loadMoney" type="text" class="market-ipt" value=""/>万元
                     </dd>
                 </dl>
                 <dl class="fd-row1">
@@ -643,12 +644,12 @@
                         </select>
                     </dd>
                 </dl>
-                <dl class="fd-row1">
+                <!-- <dl class="fd-row1">
                     <dt>房屋面积：</dt>
                     <dd class="market house-area">
                         <input id="mianji" type="text" class="market-ipt" value=""/>平方米
                     </dd>
-                </dl>
+                </dl> -->
                 <dl class="fd-row4">
                     <dd>
                         <input id="nlstart" type="submit" value="计算" />
@@ -661,12 +662,12 @@
                         <span class="sum" id="zongjia"></span><span>元</span>
                     </dd>
                 </dl>
-                <dl class="fd-row1 fd-row-lang">
+                <!-- <dl class="fd-row1 fd-row-lang">
                     <dt>可购买房屋单价：</dt>
                     <dd>
                         <span class="sum" id="danjia"></span><span>元</span>
                     </dd>
-                </dl>
+                </dl> -->
             </form>
         </div>
     </div>
@@ -679,29 +680,42 @@
         <div class="side-box">
             <form class="huilv-form">
                 <dl class="fd-row1">
-                    <dt>购房总价：</dt>
+                    <dt>国内房屋市值约：</dt>
                     <dd class="market">
-                        <input id="touzizongjia" type="text" class="market-ipt" value=""/>元
+                        <input id="gnsz" type="text" class="market-ipt" value="700"/>万元
                     </dd>
                 </dl>
                 <dl class="fd-row1">
-                    <dt>每月租金：</dt>
-                    <dd class="market">
-                        <input id="touzizujin" type="text" class="market-ipt" value=""/>元
+                    <dt>置业目标国：</dt>
+                    <dd>
+                        <select id="zymbg">
+                            <option value="英国" selected="selected">英国</option>
+                            <option value="美国">美国</option>
+                            <option value="加拿大">加拿大</option>
+                            <option value="澳洲">澳洲</option>
+                            <option value="新西兰">新西兰</option>
+                        </select>
                     </dd>
                 </dl>
                 <dl class="fd-row4">
                     <dd>
                         <input type="submit" id="touzistart" value="计算">
-                        <button id="huilv-reset">重置</button>
+                        <button type="reset">重置</button>
                     </dd>
                 </dl>
                 <dl class="fd-row1 fd-row-lang">
-                    <dt>投资回报率：</dt>
+                    <dt>推荐购买房屋总价约：</dt>
                     <dd>
-                        <span id="touzijieguo" class="sum" id="fd-return"></span><span>%</span>
+                        <span id="touzijieguo" class="sum" id="fd-return"></span><span>元</span>
                     </dd>
                 </dl>
+                <dl class="fd-row1 fd-row-lang">
+                    <dt>五年投资回报金额约：</dt>
+                    <dd>
+                        <span id="touzijieguo" class="sum" id="fd-5years"></span><span>元</span>
+                    </dd>
+                </dl>
+                <p class="info">* 回报率结果仅作参考，以实际计算金额为准</p>
             </form>
         </div>
     </div>

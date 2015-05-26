@@ -193,7 +193,7 @@
         </ul>
         <div class="con-with-border">
             <div class="content">
-                <div class="city"><i></i><span>项目地址：英国，伦敦，Greenwich,London</span></div>
+                <div class="city"><i></i><span>项目地址：项目地址：加拿大，温哥华，Edwards Street New Road, Flinders View, Brisbane,Brisbane</span></div>
                 <ul class="h-info">
                     <li><i class="property"></i><span>物业类型：公寓</span></li>
                     <li><i class="area"></i><span>使用面积：155平米</span></li>
@@ -410,79 +410,80 @@
             <em></em>
         </div>
         <div class="side-box">
-            <form class="fangdai-form">
-                <dl class="fd-row1">
-                    <dt>房屋市值：</dt>
-                    <dd class="market">
-                        <input type="text" class="market-ipt" value="500"/>万元
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>贷款成数：</dt>
-                    <dd>
-                        <select id="fsq-rate">
-                            <option value="0.7">七成</option>
-                            <option value="0.8">八成</option>
-                            <option value="0.9">九成</option>
-                        </select>
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>年限：</dt>
-                    <dd>
-                        <select id="fd-month">
-                            <option value="12">12个月</option>
-                            <option value="24">24个月</option>
-                            <option value="36">36个月</option>
-                        </select>
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>贷款类型：</dt>
-                </dl>
-                <dl class="fd-row2">
-                    <dd>
-                        <input name="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
-                        <input name="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
-                    </dd>
-                    <span class="clear"></span>
-                </dl>
-                <dl class="fd-row3">
-                    <dt>利率：</dt>
-                    <dd style="position: relative; z-index: 1;">
-                        <select id="lilv-rate">
-                            <option value="1.2">基准利率1.2倍</option>
-                            <option value="1.0">基准利率1.0倍</option>
-                            <option value="0.8">基准利率0.8倍</option>
-                        </select>
-                    </dd>
-                </dl>
-                <dl class="fd-row4">
-                    <dd>
-                        <input id="fsq-btn" type="submit" value="计算" />
-                        <button type="reset">重置</button>
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>贷款总额：</dt>
-                    <dd>
-                       <span class="sum" id="fd-total"></span><span>元</span>
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>每月还息：</dt>
-                    <dd>
-                        <span class="sum" id="fd-lixi"></span><span>元</span>
-                    </dd>
-                </dl>
-                <dl class="fd-row1">
-                    <dt>合计还款：</dt>
-                    <dd>
-                        <span class="sum" id="fd-return"></span><span>元</span>
-                    </dd>
-                </dl>
-            </form>
-        </div>
+        <form class="fangdai-form">
+            <dl class="fd-row1">
+                <dt>房屋市值：</dt>
+                <dd class="market">
+                    <input type="text" class="market-ipt" value="500"/>万元
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款成数：</dt>
+                <dd>
+                    <select id="fsq-rate">
+                        <option value="0.7">七成</option>
+                        <option value="0.8">八成</option>
+                        <option value="0.9">九成</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>年限：</dt>
+                <dd>
+                    <select id="fd-month">
+                        <option value="12">12个月</option>
+                        <option value="24">24个月</option>
+                        <option value="36">36个月</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款类型：</dt>
+            </dl>
+            <dl class="fd-row2">
+                <dd>
+                    <input name="daikuan" id="daikuan" type="radio" class="fd-radio" data-label="个人消费贷款" value="1.2" checked="checked" />
+                    <input name="daikuan" id="daikuan" value="1.3" type="radio" class="fd-radio" data-label="企业经营贷款" />
+                </dd>
+                <span class="clear"></span>
+            </dl>
+            <dl class="fd-row3">
+                <dt>利率：</dt>
+                <dd style="position: relative; z-index: 1;">
+                    <select id="lilv-rate">
+                        <option value="1.3">基准利率1.3倍</option>
+                        <option value="1.2" selected="selected">基准利率1.2倍</option>
+                        <option value="1.0">基准利率1.0倍</option>
+                        <option value="0.8">基准利率0.8倍</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="fd-row4">
+                <dd>
+                    <input id="fsq-btn" type="submit" value="计算" />
+                    <button type="reset">重置</button>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>贷款总额：</dt>
+                <dd>
+                   <span class="sum" id="fd-total"></span><span>元</span>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>每月还息：</dt>
+                <dd>
+                    <span class="sum" id="fd-lixi"></span><span>元</span>
+                </dd>
+            </dl>
+            <dl class="fd-row1">
+                <dt>合计还款：</dt>
+                <dd>
+                    <span class="sum" id="fd-return"></span><span>元</span>
+                </dd>
+            </dl>
+        </form>
+    </div>
     </div>
     <div class="jsq-con" data-jsq-type="jsq-mbg">
         <div class="s-title s-title2">
@@ -519,7 +520,7 @@
                 <dl class="fd-row4">
                     <dd>
                         <input type="submit" id="huilv-btn" value="计算">
-                        <button id="huilv-reset">重置</button>
+                        <button type="reset">重置</button>
                     </dd>
                 </dl>
                 <dl class="fd-row1">
@@ -645,12 +646,12 @@
                         </select>
                     </dd>
                 </dl>
-                <dl class="fd-row1">
+                <!-- <dl class="fd-row1">
                     <dt>房屋面积：</dt>
                     <dd class="market house-area">
                         <input id="mianji" type="text" class="market-ipt" value=""/>平方米
                     </dd>
-                </dl>
+                </dl> -->
                 <dl class="fd-row4">
                     <dd>
                         <input id="nlstart" type="submit" value="计算" />
@@ -663,12 +664,12 @@
                         <span class="sum" id="zongjia"></span><span>元</span>
                     </dd>
                 </dl>
-                <dl class="fd-row1 fd-row-lang">
+                <!-- <dl class="fd-row1 fd-row-lang">
                     <dt>可购买房屋单价：</dt>
                     <dd>
                         <span class="sum" id="danjia"></span><span>元</span>
                     </dd>
-                </dl>
+                </dl> -->
             </form>
         </div>
     </div>
@@ -681,29 +682,42 @@
         <div class="side-box">
             <form class="huilv-form">
                 <dl class="fd-row1">
-                    <dt>购房总价：</dt>
+                    <dt>国内房屋市值约：</dt>
                     <dd class="market">
-                        <input id="touzizongjia" type="text" class="market-ipt" value=""/>元
+                        <input id="gnsz" type="text" class="market-ipt" value="700"/>万元
                     </dd>
                 </dl>
                 <dl class="fd-row1">
-                    <dt>每月租金：</dt>
-                    <dd class="market">
-                        <input id="touzizujin" type="text" class="market-ipt" value=""/>元
+                    <dt>置业目标国：</dt>
+                    <dd>
+                        <select id="zymbg">
+                            <option value="英国" selected="selected">英国</option>
+                            <option value="美国">美国</option>
+                            <option value="加拿大">加拿大</option>
+                            <option value="澳洲">澳洲</option>
+                            <option value="新西兰">新西兰</option>
+                        </select>
                     </dd>
                 </dl>
                 <dl class="fd-row4">
                     <dd>
                         <input type="submit" id="touzistart" value="计算">
-                        <button id="huilv-reset">重置</button>
+                        <button type="reset">重置</button>
                     </dd>
                 </dl>
                 <dl class="fd-row1 fd-row-lang">
-                    <dt>投资回报率：</dt>
+                    <dt>推荐购买房屋总价约：</dt>
                     <dd>
-                        <span id="touzijieguo" class="sum" id="fd-return"></span><span>%</span>
+                        <span id="touzijieguo" class="sum" id="fd-return"></span><span>元</span>
                     </dd>
                 </dl>
+                <dl class="fd-row1 fd-row-lang">
+                    <dt>五年投资回报金额约：</dt>
+                    <dd>
+                        <span id="touzijieguo" class="sum" id="fd-5years"></span><span>元</span>
+                    </dd>
+                </dl>
+                <p class="info">* 回报率结果仅作参考，以实际计算金额为准</p>
             </form>
         </div>
     </div>
@@ -723,129 +737,32 @@
 </script>
 <script src="http://ditu.google.cn/maps/api/js?sensor=false&v=3.5" type="text/javascript"></script>
 <script>
-var Pos_X = "-37.9096655";
-var Pos_Y = "144.7609761";
 var pin_home = 'images/pin_home.png';
 var latlng;
 var panorama;
 function initialize() {
     try {
-        if (Pos_X != "0" && Pos_Y != "0") {
-            latlng = new google.maps.LatLng(-37.9096655, 144.7609761);
+        latlng = new google.maps.LatLng(39.67337039176558, -99.5361328125);
 
-            var MapTypeIds = new Array();
-            MapTypeIds[0] = "roadmap";
-            MapTypeIds[1] = "bybird";
-            var myOptions = {
-                    zoom: 15,
-                    center: latlng,
-                    mapTypeId: 'roadmap',
-                    scrollwheel: false,
-                    MapTypeControlOptions: MapTypeIds
-                }
-            map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-            var locationMarker = new google.maps.Marker({
-                position: latlng,
-                map: map,
-                title: "墨尔本西南区海滨别墅-Paragon",
-                draggable: false,
-                icon: pin_home
-            });
-            locationMarker.setVisible(true);
-
-        } else {
-            var geocoder = new google.maps.Geocoder();
-            geocoder.geocode({
-                'address': ""
-            }, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    var myOptions = {
-                        zoom: 13,
-                        center: results[0].geometry.location,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        zoomControl: true
-                    };
-                    map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-                    var locationMarker = new google.maps.Marker({
-                        position: results[0].geometry.location,
-                        map: map,
-                        title: "墨尔本西南区海滨别墅-Paragon",
-                        draggable: false,
-                        icon: pin_home
-                    });
-                    locationMarker.setVisible(true);
-                } else {
-                    geocoder.geocode({
-                        'address': "Melbourne"
-                    }, function (results, status) {
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            var myOptions = {
-                                zoom: 13,
-                                center: results[0].geometry.location,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                zoomControl: true
-                            };
-                            map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-                            var locationMarker = new google.maps.Marker({
-                                position: results[0].geometry.location,
-                                map: map,
-                                title: "墨尔本西南区海滨别墅-Paragon",
-                                draggable: false,
-                                icon: pin_home
-                            });
-                            locationMarker.setVisible(true);
-                        } else {
-                            geocoder.geocode({
-                                'address': "澳大利亚"
-                            }, function (results, status) {
-                                if (status == google.maps.GeocoderStatus.OK) {
-                                    var myOptions = {
-                                        zoom: 13,
-                                        center: results[0].geometry.location,
-                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                        zoomControl: true
-                                    };
-                                    map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-                                    var locationMarker = new google.maps.Marker({
-                                        position: results[0].geometry.location,
-                                        map: map,
-                                        title: "墨尔本西南区海滨别墅-Paragon",
-                                        draggable: false,
-                                        icon: pin_home
-                                    });
-                                    locationMarker.setVisible(true);
-                                } else {
-
-                                    geocoder.geocode({
-                                        'address': ""
-                                    }, function (results, status) {
-                                        if (status == google.maps.GeocoderStatus.OK) {
-                                            var myOptions = {
-                                                zoom: 13,
-                                                center: results[0].geometry.location,
-                                                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                                zoomControl: true
-                                            };
-                                            map = new google.maps.Map(document.getElementById("map-info"), myOptions);
-                                            var locationMarker = new google.maps.Marker({
-                                                position: results[0].geometry.location,
-                                                map: map,
-                                                title: "墨尔本西南区海滨别墅-Paragon",
-                                                draggable: false,
-                                                icon: pin_home
-                                            });
-                                            locationMarker.setVisible(true);
-
-                                        }
-                                    });
-
-                                }
-                            });
-                        }
-                    });
-                }
-            });
-        }
+        var MapTypeIds = new Array();
+        MapTypeIds[0] = "roadmap";
+        MapTypeIds[1] = "bybird";
+        var myOptions = {
+                zoom: 5,
+                center: latlng,
+                mapTypeId: 'roadmap',
+                scrollwheel: false,
+                MapTypeControlOptions: MapTypeIds
+            }
+        map = new google.maps.Map(document.getElementById("map-info"), myOptions);
+        var locationMarker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "墨尔本西南区海滨别墅-Paragon",
+            draggable: false,
+            icon: pin_home
+        });
+        locationMarker.setVisible(true);
     } catch (e) {
         //alert(e);
     }

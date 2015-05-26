@@ -56,7 +56,8 @@ body.gray-bg {
     background-color: #f4f4f4;
 }
 input,
-select {
+select,
+textarea {
     font-family: Microsoft Yahei, Simsun;
 }
 
@@ -428,9 +429,10 @@ div.pos {
 .service-list .line {
     height: 0;
     border-top: 1px solid #c0c6c6;
-    border-bottom: #e0ebeb;
+    border-bottom: 1px solid #fff;
     width: 900px;
     margin: 28px auto;
+    overflow: hidden;
 }
 
 p.ys {
@@ -562,9 +564,9 @@ p.ys {
 
 .fsq-item dl {
     background-color: #f4b453;
-    padding: 20px 30px 30px;
+    padding: 20px 30px 20px;
     width: 418px;
-    height: 200px;
+    height: 220px;
     margin: 0;
     vertical-align: top;
     margin-bottom: 40px;
@@ -656,13 +658,14 @@ p.ys {
 
 .fsq-list dl {
     clear: both;
-    border-bottom: 1px dashed #ccc;
-    padding: 30px 50px 0 0;
-    height: 149px;
+    padding: 30px 50px 30px 0;
+    background-image:url("../images/xuxian.png");
+    background-repeat:repeat-x ;
+    background-position:bottom;
 }
 
 .fsq-list dl.nb {
-    border-bottom: 0;
+    background: none;
 }
 
 .fsq-list dl dd {
@@ -674,6 +677,7 @@ p.ys {
     font-size: 21px;
     font-weight: normal;
     line-height: 28px;
+    padding-bottom:5px;
 }
 
 .fsq-list dl dd p {
@@ -706,7 +710,7 @@ p.ys {
 /*2015.05.12  by liqian*/
 .country-container {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #4d4e53;
 }
 
@@ -721,7 +725,7 @@ p.ys {
 }
 
 .zclh {
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     margin-top: 50px;
     background: #e1eef3;
 }
@@ -746,6 +750,7 @@ p.ys {
     float: left;
     width: 440px;
     margin-top: 20px;
+    line-height: 32px;
 }
 
 .pjl {
@@ -853,7 +858,7 @@ p.ys {
 .tzsx-con p {
     float: left;
     width: 440px;
-    line-height: 1.9;
+    line-height: 2.1;
 }
 .tzsx-con img {
     float: left;
@@ -926,7 +931,7 @@ p.ys {
     margin-bottom: 148px;
 }
 .a-zclh {
-    padding: 30px 40px;
+    padding: 15px 40px;
 }
 .a-zclh img {
     display: block;
@@ -1000,7 +1005,7 @@ p.ys {
 .about-contact li {
     color: #666;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     margin-left: 50px;
 }
 .about-contact .wechat {
@@ -1024,8 +1029,8 @@ p.ys {
 }
 .about-box dd {
     float: left;
-    width: 244px;
-    padding: 0 44px;
+    width: 225px;
+    padding: 0 54px;
     line-height: 1.8;
 }
 .about-box dd img {
@@ -1119,6 +1124,7 @@ p.ys {
     width: 1000px;
     height: 480px;
     margin: 0 auto 40px;
+    border:1px solid #bdbdbd;
 }
 
 .service-wrap p.ys {
@@ -1127,11 +1133,11 @@ p.ys {
     margin: 0 auto;
 }
 .index-h1 {
-	width: 261px;
-	height: 54px;
-	font-size: 0;
-	line-height: 0;
-	background: url("../images/list/index-h1.png") no-repeat 0 0;
+    width: 261px;
+    height: 54px;
+    font-size: 0;
+    line-height: 0;
+    background: url("../images/list/index-h1.png") no-repeat 0 0;
 }
 .index-h1 a {
     display: block;

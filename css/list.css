@@ -486,7 +486,9 @@
     padding: 25px 0;
     overflow: hidden;
     zoom: 1;
-    border-bottom: 1px dashed #bebebe;
+    background-image:url("../images/xuxian.png");
+    background-repeat:repeat-x ;
+    background-position:bottom;
 }
 
 .house-list dl:hover {
@@ -556,7 +558,7 @@
 }
 
 .city {
-    width: 400px;
+    width: 600px;
     margin-top: 10px;
     overflow: hidden;
     -o-text-overflow: ellipsis;
@@ -571,11 +573,14 @@
     display: block;
     float: left;
 }
-
+.city span {
+    max-width: 95%;
+    white-space: normal;
+}
 .city i {
     width: 13px;
     height: 19px;
-    margin-right: 5px;
+    margin-right: 13px;
     background: url("../images/list/icon.png") no-repeat -7px -158px;
 }
 
@@ -1501,7 +1506,9 @@ div.pos {
     overflow: hidden;
     zoom: 1;
     color: #fff;
-    border-bottom: 1px dashed #c7c7c7;
+    background-image:url("../images/xuxian.png");
+    background-repeat:repeat-x ;
+    background-position:bottom;
 }
 
 .hs-list ul li span,
@@ -1562,7 +1569,9 @@ div.pos {
     padding: 30px 0;
     overflow: hidden;
     zoom: 1;
-    border-bottom: 1px dashed #bebebe;
+    background-image:url("../images/xuxian.png");
+    background-repeat:repeat-x ;
+    background-position:bottom;
 }
 
 .nw-list dl dt,
@@ -1698,10 +1707,11 @@ div.pos {
 }
 #khgfnl-con .side-box .fd-row4 {
     margin-left: 0;
+    padding-left: 75px;
 }
 #khgfnl-con .side-box {
     padding: 15px 0;
-    width: 290px;
+    width: 359px;
     overflow: hidden;
 }
 
@@ -1717,22 +1727,68 @@ div.pos {
     width: 61px;
 }
 
+#tzhbl-con {
+    width: 355px;
+}
+#tzhbl-con .s-title {
+    width: 320px;
+}
+#tzhbl-con .side-box {
+    width: 323px;
+    padding-left: 30px;
+}
 #tzhbl-con .side-box .fd-row1 {
     margin-left: 0;
 }
 
 #tzhbl-con .side-box .fd-row1 dt {
-    width: 100px;
+    width: 143px;
 }
-
+#tzhbl-con .side-box .fd-row-lang dt {
+    width: 170px;
+}
+#tzhbl-con .side-box .fd-row1 .market {
+    width: 134px;
+}
+#tzhbl-con .side-box .fd-row4 {
+    padding-left: 70px;
+}
+#tzhbl-con .side-box p.info {
+    font-size: 12px;
+    padding: 10px 0;
+}
+#khgfnl-con {
+    width: 360px;
+}
+#khgfnl-con .s-title {
+    width: 326px;
+}
+#khgfnl-con .fd-row1 .market input {
+    width: 108px;
+}
+#khgfnl-con .selectbox {
+    width: 162px;
+    background-position: 0 -39px;
+}
+#gfnl-years_container,
+#khgfnl-con .side-box .fd-row1 .market {
+    width: 168px;
+}
+#khgfnl-con .side-box .fd-row1 .house-area input {
+    width: 90px;
+}
 #khgfnl-con .side-box .fd-row-lang dt {
     width: 130px;
 }
 
 #khgfnl-con .side-box .fd-row-lang dd {
-    width: 115px;
+    width: 170px;
 }
 
 #khgfnl-con .side-box .fd-row-lang .sum {
-    width: 90px;
+    width: 145px;
+}
+#khgfnl-con .side-box dl {
+    padding-left: 25px;
+    padding-right: 0;
 }

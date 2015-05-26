@@ -198,6 +198,11 @@
 }
 .tz-nav li a {
   color: #666;
+  font-size:18px;
+}
+.tz-nav li:hover a,
+.tz-nav li.active a {
+  color: #5381ac;
 }
 .tz-nav li:last-child {
   background: none;
@@ -215,23 +220,50 @@
 .tz-nav .england i {
   background: url("../images/list/england.png") no-repeat 0 0;
 }
+.tz-nav .england:hover i,
+.tz-nav .england.active i {
+  background-image: url("../images/list/england-hover.png");
+}
 .tz-nav .america i {
   background: url("../images/list/america.png") no-repeat 0 0;
+}
+.tz-nav .america:hover i,
+.tz-nav .america.active i {
+  background-image: url("../images/list/america-hover.png");
 }
 .tz-nav .canada i {
   background: url("../images/list/canada.png") no-repeat 0 0;
 }
+.tz-nav .canada:hover i,
+.tz-nav .canada.active i {
+  background-image: url("../images/list/canada-hover.png");
+}
 .tz-nav .australia i {
   background: url("../images/list/australia.png") no-repeat 0 0;
 }
+.tz-nav .australia:hover i,
+.tz-nav .australia.active i {
+  background-image: url("../images/list/australia-hover.png");
+}
 .tz-nav .new-zealand i {
   background: url("../images/list/new-zealand.png") no-repeat 0 0;
+}
+.tz-nav .new-zealand:hover i,
+.tz-nav .new-zealand.active i {
+  background-image: url("../images/list/new-zealand-hover.png");
 }
 .tz-box {
   height: 204px;
   margin-top: 25px;
   overflow: hidden;
   zoom: 1;
+  display: none;
+}
+.country-container .tz-box {
+  display: block;
+}
+.tz-box-active {
+  display: block;
 }
 .tz-left,
 .tz-right {
@@ -271,14 +303,19 @@
 .tz-right {
   width: 585px;
 }
+.tz-right ul {
+  margin-top: -8px;
+}
 .tz-right ul li {
-  height: 30px;
+  height: 32px;
   padding-bottom: 3px;
   overflow: hidden;
   zoom: 1;
   font-size: 16px;
-  line-height: 30px;
-  border-bottom: 1px dashed #bebebe;
+  line-height: 32px;
+  background-image:url("../images/xuxian.png");
+  background-repeat:repeat-x ;
+  background-position:bottom;
 }
 .tz-right ul li a {
   color: #313538;
@@ -296,11 +333,7 @@
   float: left;
 }
 .tz-right ul li .arrow {
-<<<<<<< HEAD
-
-=======
-  margin: 20px 17px 0 0;
->>>>>>> cadbb3463dd28991ae36584a74cbd7c84ef5400f
+  margin: 0 13px 0 0;
 }
 .tz-right ul li .arrow:after {
   float: right;
@@ -321,6 +354,7 @@
   line-height: 12px;
   color: #fff;
   background: #f60;
+  margin-left: 5px;
 }
 /*投资列表 end*/
 /*行业资讯 begin*/
@@ -329,11 +363,12 @@
   background: #fff;
 }
 .hyzx-list ul {
-  width: 940px;
+  width: 445px;
   padding: 24px 0 40px 40px;
   overflow: hidden;
   zoom: 1;
   font-size: 16px;
+  display: inline-block;
 }
 .hyzx-list ul li {
   float: left;
@@ -342,7 +377,9 @@
   margin-right: 40px;
   color: #313538;
   line-height: 35px;
-  border-bottom: 1px dashed #c7c7c7;
+  background-image:url("../images/xuxian.png");
+  background-repeat:repeat-x ;
+  background-position:bottom;
 }
 .hyzx-list ul li a {
   display: block;
@@ -368,7 +405,10 @@
   background: #d4e2e0;
 }
 .investigate-wrap {
-  padding: 40px 0 80px 0;
+  padding: 10px 0 130px 0;
+}
+.investigatee-wrap {
+  padding: 40px 0 130px 0;
 }
 .i-title {
   position: relative;
