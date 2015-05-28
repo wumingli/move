@@ -70,16 +70,15 @@ function originCountry() {
         $amount = $('.sum-have').find('input');
     $('#i-have').selectbox({
         change: function () {
-            var id = $(this).attr('id');
-            from = id.substring(id.lastIndexOf('_') + 1);
-            $('.sum-have-type').text(type[from]);
+            /*var id = $(this).attr('id');
+            from = id.substring(id.lastIndexOf('_') + 1);*/
+            $('.sum-have-type').text($.trim($('[value="' + $('#i-have').val() + '"]').html()));
         }
     });
     $('#i-want').selectbox({
         change: function () {
-            var id = $(this).attr('id');
-            to = id.substring(id.lastIndexOf('_') + 1);
-            $('.sum-cash-type').text(type[to]);
+            //to = id.substring(id.lastIndexOf('_') + 1);
+            $('.sum-cash-type').text($.trim($('[value="' + $('#i-want').val() + '"]').html()));
         }
     });
     $('#huilv-btn').on('click', function () {
@@ -147,9 +146,21 @@ $("#touzistart").click(function () {
         $("#gnsz").focus();
         return false;
     }
-
-    $("#touzijieguo").text(gnsz * 10000 * 0.7);
-
+    gnsz = gnsz * 10000;
+    $("#touzijieguo").text(gnsz * 0.7);
+    //牛逼的5年回报
+    var mbg = parseInt($('#zymbg').val()) / 100;
+    var gdzc = Math.floor((gnsz * 1.06 * 1.06 * 1.06 * 1.06 * 1.06) + (gnsz * 0.7 * 1.1 * 1.1 * 1.1 * 1.1 * 1.1) - gnsz);
+    var bj = gnsz * 0.7 - gnsz * 0.7 * mbg - gnsz * 0.7 * 0.35 - gnsz * 0.7 * 0.05;
+    var nb1 = gnsz * 0.7 * 0.05 + bj * 0.1;
+    var nb2 = (nb1 + bj - (gnsz * 0.7 * 0.07 + (gnsz * 0.7 - gnsz * 0.7 * 0.35) * mbg)) * 0.10 + gnsz * 0.7 * 0.05;
+    var nb3 = Math.ceil((bj + nb1 + nb2 - (gnsz * 0.7 * 0.07 + (gnsz * 0.7 - gnsz * 0.7 * 0.35) * mbg)) * 0.1 + gnsz * 0.7 * 0.05);
+    var nb4 = Math.ceil((bj + nb1 + nb2 + nb3 - (gnsz * 0.7 * 0.07 + (gnsz * 0.7 - gnsz * 0.7 * 0.35) * mbg)) * 0.10 + gnsz * 0.7 * 0.05);
+    var nb5 = Math.ceil((bj + nb1 + nb2 + nb3 + nb4 - (gnsz * 0.7 * 0.07 + (gnsz * 0.7 - gnsz * 0.7 * 0.35) * mbg)) * 0.1 + gnsz * 0.7 * 0.05);
+    var jx = gdzc + nb1 + nb2 + nb3 + nb4 + nb5 + bj;
+    var cx1 = (gnsz * 0.7 * 0.07 + (gnsz * 0.7 - gnsz * 0.7 * 0.35) * mbg) * 5;
+    var cx2 = gnsz * 0.7 + (gnsz * 0.7 - gnsz * 0.7 * 0.35);
+    $("#touzihuibao").text(parseInt(jx - cx1 - cx2));
     return false;
 });
 //客户购房能力评估

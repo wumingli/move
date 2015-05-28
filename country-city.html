@@ -17,7 +17,7 @@ $(function () {
     }
     $('[name="house[country_id]"]').on('change', function () {
         findKeyNameByCountry($(this).val());
-    });
+    }).trigger('change');
 });
 </script>
 </head>
@@ -25,7 +25,7 @@ $(function () {
 <select name="house[country_id]" class="normal_select">
     <option value='0'>全部</option>
     <option value='1'>英国</option>
-    <option value='2'>美国</option>
+    <option value='2' selected="selected">美国</option>
     <option value='3'>加拿大</option>
     <option value='4'>澳洲</option>
     <option value='5'>新西兰</option>

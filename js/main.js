@@ -120,7 +120,7 @@ $(function () {
     }*/
     if ($.fn.selectbox) {
         $(".fd-select1").selectbox();
-        $(".fd-select2").selectbox({
+        /*$(".fd-select2").selectbox({
             containerClass: "h_selectbox-wrapper",
             hoverClass: "h_current",
             selectedClass: "h_selected",
@@ -138,8 +138,20 @@ $(function () {
             change: function () {
                 location.href = $(".fd-select3").val();
             }
-        });
+        });*/
     }
+    //投资列表下拉修改
+    $('.fd-selectbox .h_selectbox').on('click', function (e) {
+        e.stopPropagation();
+        e.cancelBubble = true;
+        $('.h_selectbox-wrapper').hide();
+        $(this).next().show();
+        $(this).blur();
+        return false;
+    });
+    $('body').on('click', function (e) {
+        $('.h_selectbox-wrapper').hide();
+    });
     //首页投资列表Tab切换
     if ($('.tz-nav').length > 0) {
         $('.tz-nav li').on('click', function () {

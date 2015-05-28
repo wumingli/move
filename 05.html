@@ -127,8 +127,12 @@
                 <dt>持有货币：</dt>
                 <dd>
                     <select id="i-have">
-                        <option value="CNY">人民币</option>
+                        <option value="CNY" selected="selected">人民币</option>
+                        <option value="YB">英镑</option>
                         <option value="USD">美元</option>
+                        <option value="AB">澳币</option>
+                        <option value="JY">加元</option>
+                        <option value="NB">纽币</option>
                     </select>
                 </dd>
             </dl>
@@ -136,8 +140,11 @@
                 <dt>兑换货币：</dt>
                 <dd>
                     <select id="i-want">
-                        <option value="USD">美元</option>
-                        <option value="CNY">人民币</option>
+                        <option value="YB">英镑</option>
+                        <option value="USD" selected="selected">美元</option>
+                        <option value="AB">澳币</option>
+                        <option value="JY">加元</option>
+                        <option value="NB">纽币</option>
                     </select>
                 </dd>
             </dl>
@@ -263,21 +270,27 @@
         <dt>更多条件：</dt>
         <dd>
             <div class="fd-selectbox">
-                <select class="fd-select2">
-                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">卧室数量</option><option value="/index.php?m=invest&a=index&begroom_num=1&country_id=1">1室</option>
-                    <option value="/index.php?m=invest&a=index&begroom_num=2&country_id=1">2室</option>
-                    <option value="/index.php?m=invest&a=index&begroom_num=3&country_id=1">3室</option>
-                </select>
+                <input class="h_selectbox" value="卧室数量" />
+                <div class="h_selectbox-wrapper">
+                    <ul>
+                    <li><a href="index.html?m=invest">卧室数量</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=1&country_id=1">1室</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=2&country_id=1">2室</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=3&country_id=1">3室</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=4&country_id=1">4室</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="fd-selectbox">
-                <select class="fd-select3">
-                    <option value="/index.php?m=invest&a=index&country_id=1" selected="selected">使用面积
-                    </option>
-                    <option value="/index.php?m=invest&a=index&proportion=2&country_id=1">50-100</option>
-                    <option value="/index.php?m=invest&a=index&proportion=4&country_id=1">100-150</option>
-                    <option value="/index.php?m=invest&a=index&proportion=6&country_id=1">150-200</option>
-                    <option value="/index.php?m=invest&a=index&proportion=8&country_id=1"200-300</option>
-                </select>
+                <input class="h_selectbox" value="使用面积" />
+                <div class="h_selectbox-wrapper">
+                    <ul>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=1&country_id=2">50-100</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=2&country_id=2">100-150</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=3&country_id=3">150-200</a></li>
+                        <li><a href="index.html?m=invest&a=index&begroom_num=4&country_id=4">200-300</a></li>
+                    </ul>
+                </div>
             </div>
         </dd>
     </dl>
@@ -689,11 +702,11 @@
                     <dt>置业目标国：</dt>
                     <dd>
                         <select id="zymbg">
-                            <option value="英国" selected="selected">英国</option>
-                            <option value="美国">美国</option>
-                            <option value="加拿大">加拿大</option>
-                            <option value="澳洲">澳洲</option>
-                            <option value="新西兰">新西兰</option>
+                            <option value="3" selected="selected">英国</option>
+                            <option value="5">美国</option>
+                            <option value="3">加拿大</option>
+                            <option value="3">澳洲</option>
+                            <option value="3">新西兰</option>
                         </select>
                     </dd>
                 </dl>
@@ -712,7 +725,7 @@
                 <dl class="fd-row1 fd-row-lang">
                     <dt>五年投资回报金额约：</dt>
                     <dd>
-                        <span id="touzijieguo" class="sum" id="fd-5years"></span><span>元</span>
+                        <span id="touzihuibao" class="sum" id="fd-5years"></span><span>元</span>
                     </dd>
                 </dl>
                 <p class="info">* 回报率结果仅作参考，以实际计算金额为准</p>

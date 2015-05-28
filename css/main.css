@@ -198,7 +198,7 @@
 }
 .tz-nav li a {
   color: #666;
-  font-size:18px;
+  font-size:17px;
 }
 .tz-nav li:hover a,
 .tz-nav li.active a {
@@ -213,7 +213,7 @@
   float: left;
 }
 .tz-nav li i {
-  width: 51px;
+  width: 54px;
   height: 33px;
   margin-right: 7px;
 }
@@ -535,4 +535,142 @@
 }
 .prettycheckbox label {
   float: left;
+}
+
+/*网站地图*/
+
+.site-map {
+    position: relative;
+    width: 1000px;
+    height: 690px;
+    margin: 0 auto;
+    background: url(../images/line.png) center 65px no-repeat;
+}
+
+.site-map .index {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    padding: 8px 30px;
+    margin-left: -10px;
+    font-size: 18px;
+    color: #ffffff;
+    background: #33a7d8;
+}
+.site-map .col1{
+    background: #5cb9e0;
+    position: absolute;
+    left: 60px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col1.row1{
+    top: 116px;
+    left: 42px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
+}
+.site-map .col2{
+    background: #64bcb5;
+    position: absolute;
+    left: 229px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col2.row1{
+    top: 116px;
+    left: 212px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
+}
+.site-map .col2.row2{
+    width: 100px;
+    left: 250px;
+    font-size: 14px;
+}
+.site-map .col3{
+    background: #64bc7f;
+    position: absolute;
+    left: 399px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col3.row1{
+    top: 116px;
+    left: 382px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
+}
+.site-map .col4{
+    background: #d9c22a;
+    position: absolute;
+    left: 569px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col4.row1{
+    top: 116px;
+    left: 553px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
+}
+
+.site-map .col4.row2{
+    font-size: 14px;
+}
+.site-map .col5{
+    background: #e9ac39;
+    position: absolute;
+    left: 739px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col5.row1{
+    top: 116px;
+    left: 723px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
+}
+.site-map .col6{
+    background: #ff9900;
+    position: absolute;
+    left: 739px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 39px;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+}
+.site-map .col6.row1{
+    top: 116px;
+    left: 889px;
+    width: 137px;
+    height: 39px;
+    font-size: 18px;
 }
